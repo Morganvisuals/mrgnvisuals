@@ -520,7 +520,7 @@
   color: var(--main-color);
   font-size: 1.5rem;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1900px) {
   #Dev .projects-box > div[style],
   #Comprendre .projects-box > div[style] {
     width: 100% !important;
@@ -538,5 +538,6 @@
   
 
   
+
 
 
