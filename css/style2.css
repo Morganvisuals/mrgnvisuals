@@ -505,7 +505,8 @@
 .projects-box{
   grid-template-columns:  repeat(auto-fit, minmax(225px, 1fr));
   align-items: center;
-  text-align: center;  
+  text-align: center;
+  width: 100% !important;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -538,3 +539,4 @@
   
 
   
+
