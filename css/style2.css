@@ -503,7 +503,7 @@
 
 }
 .projects-box{
-  grid-template-columns:  repeat(auto-fit, minmax(325px, 1fr));
+  grid-template-columns:  repeat(auto-fit, minmax(225px, 1fr));
   align-items: center;
   text-align: center;  
 }
@@ -536,4 +536,5 @@
   
   
   
+
   
