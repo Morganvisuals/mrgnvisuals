@@ -524,12 +524,17 @@
   width: 55%;
   margin: auto;
   align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 @media only screen and (max-width: 600px) {
   .project-box-large {
     width: 100% !important;
     margin: 0 !important;
     align-self: stretch !important;
+    padding: 0 !important;
   }
 }
 .mention{
@@ -542,6 +547,7 @@
   
 
   
+
 
 
 
