@@ -520,12 +520,17 @@
   color: var(--main-color);
   font-size: 1.5rem;
 }
-@media only screen and (max-width: 1900px) {
+@media only screen and (max-width: 600px) {
   #Dev .projects-box > div[style],
   #Comprendre .projects-box > div[style] {
-    width: 100% !important;
-    margin: 0 !important;
+    flex-wrap: wrap;
+      width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     align-self: stretch !important;
+    box-sizing: border-box;
   }
 }
 .mention{
@@ -538,6 +543,7 @@
   
 
   
+
 
 
 
