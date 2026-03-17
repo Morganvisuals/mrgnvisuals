@@ -36,7 +36,7 @@ const projectsData = {
   3: {
     title: "Stratégie CoArt",
     tags: ["Stratégie", "Scolaire"],
-    image: "image/coart.png",
+    image: "image/coa.jpg",
     description: "Ce projet est la réalisation d'un espace de Coworking en Guadeloupe, nommé 'CoArt'. Ce projet a été réalisé en groupe avec 2 autres participants. Mon rôle principal dans ce projet a été de faire l'analyse des différentes stratégies de communication, et la réalisation d'un spot radio. Nous avons uniquement fait la partie communication du projet.",
     details: {
       "type de projet": "SAÉ 4.STRAT.01",
