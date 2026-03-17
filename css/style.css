@@ -757,7 +757,7 @@ section {
 
   .home {
     flex-direction: column-reverse;
-    margin: 5rem 0;
+    margin: 2rem 0;
     gap: 3rem;
     left: 0 !important;
     transform: none !important;
@@ -844,7 +844,7 @@ section {
 
   .heading {
     font-size: 4rem;
-    margin: 3rem 0;
+    margin: 2rem 0;
   }
 
   .heading2 {
@@ -922,11 +922,12 @@ section {
   }
 
   section {
-    padding: 8rem 5%;
+    padding: 4rem 5%;
   }
 
   .home {
     gap: 2rem;
+    margin: 1rem 0;
   }
 
   .home-content h1 {
