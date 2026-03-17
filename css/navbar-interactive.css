@@ -1,0 +1,525 @@
+/* ============================================
+   NAVBAR INTERACTIVE STICKY - VERSION CORRIGÉE
+   ============================================ */
+
+/* Variables pour la navbar */
+:root {
+  --navbar-height: 80px;
+  --navbar-scroll-height: 70px;
+  --navbar-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   HEADER / NAVBAR
+   ============================================ */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  padding: 0 8%;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: var(--navbar-transition);
+  border-bottom: 1px solid rgba(28, 191, 212, 0);
+}
+
+/* Header au scroll - ANIMATION FIXÉE */
+.header.scrolled {
+  height: var(--navbar-scroll-height);
+  background: rgba(0, 0, 0, 0.95);
+  box-shadow: 0 5px 30px rgba(75,0,130,0.4);
+  border-bottom: 1px solid rgba(139, 55, 198, 0.4);
+}
+
+/* Logo - ANIMATION FIXÉE */
+.logo {
+  text-decoration: none;
+  font-size: 2.8rem;
+  color: var(--text-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: var(--navbar-transition);
+  z-index: 1001;
+  user-select: none;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px rgba(75,0,130,0.4));
+}
+
+.header.scrolled .logo {
+  font-size: 2.4rem;
+}
+
+.logo span {
+  background: linear-gradient(200deg,
+      #6366F1, #2CB7FF);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Menu icon (burger) - ANIMATION FIXÉE */
+#menu-icon {
+  font-size: 3.5rem;
+  color: var(--main-color);
+  display: none;
+  cursor: pointer;
+  z-index: 1001;
+  transition: var(--navbar-transition);
+  user-select: none;
+}
+
+#menu-icon:hover {
+  transform: scale(1.1);
+  color: #6366F1;
+}
+
+#menu-icon:active {
+  transform: scale(0.95);
+}
+
+/* Animation burger vers X - CORRIGÉE */
+#menu-icon.bx-x {
+  transform: rotate(180deg);
+  color: var(--main-color);
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+.navbar {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  transition: var(--navbar-transition);
+}
+
+.navbar a {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 1rem 2rem;
+  transition: var(--navbar-transition);
+  white-space: nowrap;
+  display: inline-block;
+}
+
+/* Effet hover - FIXÉ */
+.navbar a:hover {
+  color: var(--main-color);
+  transform: translateY(-2px);
+}
+
+/* Indicateur de lien actif - ANIMATION AMÉLIORÉE */
+.navbar a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(135deg,
+rgba(127, 90, 240, 0),
+rgba(127, 90, 240, 1),
+rgba(127, 90, 240, 1),
+rgba(127, 90, 240, 0)
+);
+  border-radius: 10px;
+  transform: translateX(-50%);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px rgba(28, 191, 212, 0);
+}
+
+/* Lien actif - FIXÉ */
+.navbar a.active {
+  color: var(--main-color);
+}
+
+.navbar a.active::after {
+  width: 80%;
+  box-shadow: 0 0 15px rgba(127, 90, 240, 1);
+}
+
+/* Animation au hover sur le lien actif */
+.navbar a.active:hover::after {
+  width: 100%;
+  box-shadow: 0 0 20px rgba(127, 90, 240, 1);
+}
+
+/* ============================================
+   BOUTON GRADIENT
+   ============================================ */
+
+.gradient-btn {
+  text-decoration: none;
+  font-size: 1.6rem;
+  padding: 1rem 2.5rem;
+  border-radius: 3rem;
+  background: linear-gradient(135deg,
+      #6366F1 100%,
+      #2CB7FF 100%);
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: var(--navbar-transition);
+  color: white;
+  border: 2px solid transparent;
+  text-wrap: nowrap;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(103, 2, 174, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%);
+  transition: left 0.5s ease;
+}
+
+.gradient-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(127, 90, 240, 0.6);
+  border-color: rgba(127, 90, 240, 1);
+}
+
+.gradient-btn:hover::before {
+  left: 100%;
+}
+
+.gradient-btn:active {
+  transform: translateY(0);
+}
+
+/* ============================================
+   RESPONSIVE - TABLETTE
+   ============================================ */
+
+@media(max-width: 1024px) {
+  :root {
+    --navbar-height: 70px;
+    --navbar-scroll-height: 65px;
+  }
+
+  .header {
+    padding: 0 5%;
+  }
+
+  .logo {
+    font-size: 2.4rem;
+  }
+
+  .navbar a {
+    font-size: 1.5rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .gradient-btn {
+    font-size: 1.5rem;
+    padding: 0.9rem 2rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE - CORRIGÉ
+   ============================================ */
+
+@media(max-width: 768px) {
+  :root {
+    --navbar-height: 65px;
+    --navbar-scroll-height: 60px;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: fixed;
+    top: var(--navbar-height);
+    right: -100%;
+    width: 300px;
+    max-width: 85vw;
+    height: calc(100vh - var(--navbar-height));
+    padding: 3rem 0;
+    background: rgba(0, 0, 0, 0.98);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-left: 3px solid var(--main-color);
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  /* Menu ouvert - CORRIGÉ */
+  .navbar.active {
+    right: 0;
+  }
+
+  .navbar a {
+    display: block;
+    width: 100%;
+    font-size: 1.8rem;
+    padding: 2rem 3rem;
+    margin: 0;
+    border-bottom: 1px solid rgba(75,0,130,0.4);
+    transform: translateX(0);
+    transition: all 0.3s ease;
+  }
+
+  /* SUPPRESSION TOTALE de l'indicateur mobile - cause trop de problèmes */
+  .navbar a::after {
+    display: none !important;
+  }
+
+  /* Style du lien actif en mobile - SANS barre bleue */
+  .navbar a.active {
+    background: rgba(75,0,130,0.4);
+    color: var(--main-color);
+    border-left: 4px solid var(--main-color);
+    padding-left: calc(3rem - 4px);
+  }
+
+  .navbar a:hover {
+    background: rgba(75,0,130,0.4);
+    padding-left: 3.5rem;
+    transform: translateX(0);
+  }
+
+  .navbar a.active:hover {
+    background: rgba(75,0,130,0.4);
+  }
+
+  .gradient-btn {
+    display: none;
+  }
+
+  .logo {
+    font-size: 2.2rem;
+  }
+
+  /* Header scrolled en mobile */
+  .header.scrolled {
+    height: var(--navbar-scroll-height);
+  }
+
+  /* Ajustement de la navbar quand header est scrolled */
+  .header.scrolled .navbar {
+    top: var(--navbar-scroll-height);
+    height: calc(100vh - var(--navbar-scroll-height));
+  }
+}
+
+/* ============================================
+   RESPONSIVE - PETIT MOBILE
+   ============================================ */
+
+@media(max-width: 480px) {
+  :root {
+    --navbar-height: 60px;
+    --navbar-scroll-height: 55px;
+  }
+
+  .header {
+    padding: 0 4%;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  #menu-icon {
+    font-size: 3rem;
+  }
+
+  .navbar {
+    width: 100%;
+    border-left: none;
+    border-top: 3px solid var(--main-color);
+    right: -100%;
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .navbar a {
+    font-size: 1.6rem;
+    padding: 1.8rem 2.5rem;
+  }
+}
+
+/* ============================================
+   OVERLAY MENU MOBILE - CORRIGÉ
+   ============================================ */
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media(min-width: 769px) {
+  .menu-overlay {
+    display: none;
+  }
+}
+
+/* ============================================
+   ANIMATIONS SUPPLÉMENTAIRES
+   ============================================ */
+
+/* Animation de pulse pour le lien actif */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(127, 90, 240, 1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(127, 90, 240, 0);
+  }
+}
+
+.navbar a.active::after {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Désactiver animation au hover */
+.navbar a.active:hover::after {
+  animation: none;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset pour le scroll */
+section {
+  scroll-margin-top: calc(var(--navbar-scroll-height) + 2rem);
+}
+
+/* ============================================
+   ACCESSIBILITÉ
+   ============================================ */
+
+/* Focus visible */
+.navbar a:focus-visible,
+.gradient-btn:focus-visible,
+#menu-icon:focus-visible {
+  outline: 2px solid var(--main-color);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Réduire les animations si demandé */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ============================================
+   CORRECTIONS POUR SAFARI
+   ============================================ */
+
+@supports (-webkit-touch-callout: none) {
+  .navbar {
+    /* Fix pour iOS */
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .header {
+    /* Fix backdrop-filter sur iOS */
+    backdrop-filter: blur(10px);
+  }
+}
+
+/* ============================================
+   ANIMATIONS D'ENTRÉE DES LIENS (MOBILE) - SIMPLIFIÉE
+   ============================================ */
+
+@media(max-width: 768px) {
+  /* Animation simple sans cascade pour éviter les bugs */
+  .navbar a {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.3s ease;
+  }
+}
+
+/* ============================================
+   CORRECTIONS SUPPLÉMENTAIRES
+   ============================================ */
+
+/* Empêcher le scroll horizontal */
+body {
+  overflow-x: hidden;
+}
+
+/* Z-index hierarchy */
+.header {
+  z-index: 1000;
+}
+
+.navbar {
+  z-index: 999;
+}
+
+.menu-overlay {
+  z-index: 998;
+}
+
+#menu-icon {
+  z-index: 1001;
+}
+
+/* Smooth transitions globales */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
