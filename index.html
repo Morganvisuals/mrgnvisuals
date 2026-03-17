@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Morgan portfolio</title>
+
+  <!--css d'origine-->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/projects-modern.css" />
+  <link rel="stylesheet" href="css/navbar-interactive.css" />
+  <!--Icon-->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="image/Logo white.png">
+  <!--font-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!--navigation-->
+  <header class="header">
+    <a href="#home" class="logo">
+      Morgan <span>Visual's</span>
+    </a>
+
+    <i class="bx bx-menu" id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="#home" class="active">Accueil</a>
+      <a href="#about"> A propos</a>
+      <a href="#services"> Compétences</a>
+      <a href="#projects">Projets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="gradient-btn" href="https://www.butmmi.fr/"> Ma Formation</a>
+  </header>
+
+  <!--Accueil-->
+
+  <div>
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1>Morgan <span>Visual's</span></h1>
+        <h3>Motion <span id="clavier">Designer</span></h3>
+        <p>Salut, moi c'est Morgan !
+        </p>
+        <div class="social-icons">
+          <a href="https://www.behance.net/mrgnvisuals">
+            <i class="bx bxl-behance"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/morgan-marie-joseph-23165a2ba/">
+            <i class="bx bxl-linkedin-square"></i>
+          </a>
+          <a href="https://www.instagram.com/mrgnvisuals/">
+            <i class="bx bxl-instagram-alt"></i>
+          </a>
+          <a href="https://www.youtube.com/@morganvisuals">
+            <i class="bx bxl-youtube"></i>
+          </a>
+        </div>
+        <div class="btn-group">
+          <a href="image/cv.pdf" class="btn">CV</a>
+          <a href="#contact" class="btn">Contact</a>
+        </div>
+      </div>
+
+      <div class="home-img">
+        <video autoplay loop muted playsinline>
+          <source src="image/video home.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+    <!--About -->
+    <section class="about" id="about">
+      <div class="fade-in hidden">
+        <div class="about-img">
+          <img src="image/pp linkedin purple.png" alt="">
+        </div>
+      </div>
+
+      <div class="about-content">
+        <div class="fade-in hidden">
+          <h2>A <span>Propos</span></h2>
+          <p>Je suis Marie-Joseph Morgan, jeune artiste visuel polyvalent
+            sous le nom de "Morgan Visual's". Je suis principalement spécialisé
+            dans le motion/graphic design, le montage vidéo et le Développement web front-end.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Compétences-->
+    <div class="fade-in hidden">
+      <section class="services" id="services">
+        <h2 class="heading">Mes <span>Compétences</span></h2>
+        <div class="skills-container">
+
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i class="bx bx-code-alt"></i>
+              </div>
+              <div class="skill-title">
+                <h3>Web</h3>
+                <p>5 compétences</p>
+              </div>
+            </div>
+            <ul class="skill-tags">
+              <li class="skill-tag">HTML</li>
+              <li class="skill-tag">CSS</li>
+              <li class="skill-tag">JavaScript</li>
+              <li class="skill-tag">WordPress</li>
+              <li class="skill-tag">PHP</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i class="bx bx-palette"></i>
+              </div>
+              <div class="skill-title">
+                <h3>Design</h3>
+                <p>5 compétences</p>
+              </div>
+            </div>
+            <ul class="skill-tags">
+              <li class="skill-tag">Photoshop</li>
+              <li class="skill-tag">Illustrator</li>
+              <li class="skill-tag">Canva</li>
+              <li class="skill-tag">Figma</li>
+              <li class="skill-tag">Adobe XD</li>
+
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i class="bx bx-video"></i>
+              </div>
+              <div class="skill-title">
+                <h3>Vidéo</h3>
+                <p>3 compétences</p>
+              </div>
+            </div>
+            <ul class="skill-tags">
+              <li class="skill-tag">Premiere Pro</li>
+              <li class="skill-tag">After Effects</li>
+              <li class="skill-tag">DaVinci Resolve</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!--Projets Moderne-->
+    <section class="projects-modern" id="projects">
+      <div class="fade-in hidden">
+        <h2 class="heading">Mes <span>Projets</span></h2>
+
+        <!-- Filtres -->
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">Tous</button>
+          <button class="filter-btn" data-filter="video">Vidéo</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="design">Design</button>
+          <button class="filter-btn" data-filter="strategie">Stratégie & Communication</button>
+          <button class="filter-btn" data-filter="scolaire">Scolaire</button>
+          <button class="filter-btn" data-filter="entreprise">Entreprise</button>
+          <button class="filter-btn" data-filter="personnel">Personnel</button>
+        </div>
+
+        <!-- Grille de projets -->
+        <div class="projects-grid">
+
+          <!-- Projet 1 -->
+          <article class="project-item" data-category="video scolaire">
+            <div class="project-thumbnail">
+              <img src="image/cyparis.jpg" alt="Cyparis">
+              <div class="project-overlay">
+                <i class='bx bx-play-circle'></i>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-tag">Vidéo</span>
+                <span class="project-tag">Scolaire</span>
+              </div>
+              <h3>Documentaire Cyparis </h3>
+              <p>Dans ce projet, j'ai eu pour but de créer un documentaire sur Cyparis en animation 2D.
+              </p>
+              <button class="project-btn" data-project="1">
+                <span class="project-text-color">Voir le projet</span>
+                <i class='bx bx-right-arrow-alt'></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Projet 2 -->
+          <article class="project-item" data-category="design">
+            <div class="project-thumbnail">
+              <img src="image/DJ.png" alt="Press Kit DJ">
+              <div class="project-overlay">
+                <i class='bx bx-image'></i>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-tag">Design</span>
+              </div>
+              <h3>Press Kit DJ</h3>
+              <p>Dossier de presse conçu en tant que DJ pour mettre en valeur mes compétences et statistiques.</p>
+              <button class="project-btn" data-project="2">
+                <span class="project-text-color">Voir le projet</span>
+                <i class='bx bx-right-arrow-alt'></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Projet 3 -->
+          <article class="project-item" data-category="strategie scolaire">
+            <div class="project-thumbnail">
+              <img src="image/coart.png" alt="Vidéos NBT">
+              <div class="project-overlay">
+                <i class='bx bx-user'></i>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-tag">Stratégie</span>
+                <span class="project-tag">Scolaire</span>
+              </div>
+              <h3>Stratégie CoArt</h3>
+              <p>Stratégie de communication pour un projet crée en cours.</p>
+              <button class="project-btn" data-project="3">
+                <span class="project-text-color">Voir le projet</span>
+                <i class='bx bx-right-arrow-alt'></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Projet 4 -->
+          <article class="project-item" data-category="design scolaire">
+            <div class="project-thumbnail">
+              <img src="image/dash.png" alt="Charte DASH">
+              <div class="project-overlay">
+                <i class='bx bx-palette'></i>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-tag">Design</span>
+                <span class="project-tag">Scolaire</span>
+              </div>
+              <h3>Charte graphique "DASH"</h3>
+              <p>Charte graphique pour une plateforme de streaming avec des couleurs jaune et noir.</p>
+              <button class="project-btn" data-project="4">
+                <span class="project-text-color">Voir le projet</span>
+                <i class='bx bx-right-arrow-alt'></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Projet 5 -->
+          <article class="project-item" data-category="web scolaire">
+            <div class="project-thumbnail">
+              <img src="image/portfolionew.jpg" alt="Portfolio">
+              <div class="project-overlay">
+                <i class='bx bx-code-alt'></i>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-tag">Web</span>
+                <span class="project-tag">Scolaire</span>
+              </div>
+              <h3>Portfolio Personnel</h3>
+              <p>Portfolio développé en HTML, CSS et JavaScript mettant en avant mes projets et compétences.</p>
+              <button class="project-btn" data-project="5">
+                <span class="project-text-color">Voir le projet</span>
+                <i class='bx bx-right-arrow-alt'></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Projet 6 -->
+          <article class="project-item" data-category="video personnel">
+            <div class="project-thumbnail">
+              <img src="image/iphoneair.jpg" alt="Bahia Beach">
+              <div class="project-overlay">
+                <i class='bx bx-play-circle'></i>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-tag">Vidéo</span>
+                <span class="project-tag">Personnel</span>
+              </div>
+              <h3>Apple iPhone Air</h3>
+              <p>Animation d'un iPhone Air.</p>
+              <button class="project-btn" data-project="6">
+                <span class="project-text-color">Voir le projet</span>
+                <i class='bx bx-right-arrow-alt'></i>
+              </button>
+            </div>
+          </article>
+          <!-- Projet 7 -->
+          <article class="project-item" data-category="video entreprise ">
+            <div class="project-thumbnail">
+              <img src="image/koroko.jpg" alt="Koroko">
+              <div class="project-overlay">
+                <i class='bx bx-play-circle'></i> <!-- Ou bx-image, bx-code-alt selon le type -->
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-tag">Video</span>
+                <span class="project-tag">Entreprise</span>
+              </div>
+              <h3>Vidéos instagram pour Koroko</h3>
+              <p>J'ai réaliser en entreprise plusieurs réels pour mettre en avant l'agence de voyage Koroko.</p>
+              <button class="project-btn" data-project="7"> <!-- IMPORTANT : le numéro 7 -->
+                <span class="project-text-color">Voir le projet</span>
+                <i class='bx bx-right-arrow-alt'></i>
+              </button>
+            </div>
+          </article>
+          <!-- Projet 8 -->
+          <article class="project-item" data-category="video personnel">
+            <div class="project-thumbnail">
+              <img src="image/18coutures.jpg" alt="18 coutures">
+              <div class="project-overlay">
+                <i class='bx bx-play-circle'></i> <!-- Ou bx-image, bx-code-alt selon le type -->
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-tag">Video</span>
+                <span class="project-tag">Personnel</span>
+              </div>
+              <h3>Vidéo 18 coutures</h3>
+              <p>Animation 3D pour la marque "18 coutures".</p>
+              <button class="project-btn" data-project="8"> <!-- IMPORTANT : le numéro 8 -->
+                <span class="project-text-color">Voir le projet</span>
+                <i class='bx bx-right-arrow-alt'></i>
+              </button>
+            </div>
+          </article>
+
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Popup -->
+    <div class="project-modal" id="projectModal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="modal-close">
+          <i class='bx bx-x'></i>
+        </button>
+        <div class="modal-body">
+          <!-- Contenu dynamique injecté par JS -->
+        </div>
+      </div>
+    </div>
+
+    <!--Contact-->
+    <section class="contact" id="contact">
+      <div class="fade-in hidden">
+        <h2 class="heading"> Contactez-<span>Moi</span></h2>
+
+        <div class="contact-container">
+          <!-- Colonne Infos -->
+          <div class="contact-info">
+            <h3>Parlons de votre projet !</h3>
+            <p>N'hésitez pas à me contacter pour toute opportunité de collaboration ou simplement pour échanger.</p>
+
+            <div class="info-items">
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class='bx bx-envelope'></i>
+                </div>
+                <div class="info-text">
+                  <h4>Email</h4>
+                  <a href="mailto:morgan.rmx@gmail.com">morgan.rmx@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class='bx bx-phone'></i>
+                </div>
+                <div class="info-text">
+                  <h4>Téléphone</h4>
+                  <p>+596 696 30 12 76</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class='bx bx-map'></i>
+                </div>
+                <div class="info-text">
+                  <h4>Localisation</h4>
+                  <p>Martinique</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colonne Formulaire -->
+          <div class="contact-form-container">
+            <form action="https://formspree.io/f/xoveavyq" method="POST" class="modern-form">
+              <div class="input-group">
+                <div class="input-box">
+                  <input type="text" name="name" placeholder="Nom complet" required>
+                </div>
+                <div class="input-box">
+                  <input type="email" name="email" placeholder="Email" required>
+                </div>
+              </div>
+              <div class="input-box full-width">
+                <input type="text" name="subject" placeholder="Sujet" required>
+              </div>
+              <div class="input-box full-width">
+                <textarea name="message" placeholder="Votre Message" rows="6" required></textarea>
+              </div>
+              <button type="submit" name="submit" class="btn contact-submit-btn">
+                <span class="send-text">Envoyer</span>
+                <i class='bx bx-send'></i>
+              </button>
+
+              <div class="thanks">
+                <p id="thank-you-message"
+                  style="display: none; color: #a78bfa; font-size: 1.6rem; margin-top: 20px; text-align: center;">
+                  Merci ! Votre message a été envoyé avec succès. 😊
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!--footer-->
+    <footer class="footer">
+      <div class="social-icons">
+        <a href="https://www.behance.net/mrgnvisuals">
+          <i class="bx bxl-behance"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/morgan-marie-joseph-23165a2ba/">
+          <i class="bx bxl-linkedin-square"></i>
+        </a>
+        <a href="https://www.instagram.com/mrgnvisuals/">
+          <i class="bx bxl-instagram-alt"></i>
+        </a>
+        <a href="https://www.youtube.com/@morganvisuals">
+          <i class="bx bxl-youtube"></i>
+        </a>
+      </div>
+      <p class="copyright">
+        @Morgan Visual's | Tout droits réservés | <a class="mention" href="mentions-legales.html">Mentions Légales</a>
+      </p>
+    </footer>
+
+    <!--liens script-->
+    <script src="js/script.js"></script>
+    <script src="js/navbar-interactive.js"></script>
+    <script src="js/projects-modern.js"></script>
+
+  </div>
+</body>
+
+</html>
