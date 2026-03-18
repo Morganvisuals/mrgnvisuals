@@ -1,6 +1,15 @@
-
-
-
+// Preloader
+window.addEventListener('load', function () {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        setTimeout(() => {
+            preloader.classList.add('fade-out');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500); // 500ms transition time
+        }, 300); // Small initial delay for visual effect
+    }
+});
 
 //formulaire
 document.querySelector("form").addEventListener("submit", async function (e) {
@@ -43,25 +52,25 @@ document.querySelector("form").addEventListener("submit", async function (e) {
 
 //fade in
 document.addEventListener("DOMContentLoaded", function () {
-  const faders = document.querySelectorAll(".fade-in");
+    const faders = document.querySelectorAll(".fade-in");
 
-  const appearOptions = {
-    threshold: 0.2,
-    rootMargin: "0px 0px -50px 0px"
-  };
+    const appearOptions = {
+        threshold: 0.2,
+        rootMargin: "0px 0px -50px 0px"
+    };
 
-  const appearOnScroll = new IntersectionObserver(function (entries, observer) {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
+    const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
 
-      entry.target.classList.add("show");
-      entry.target.classList.remove("hidden");
-      observer.unobserve(entry.target);
+            entry.target.classList.add("show");
+            entry.target.classList.remove("hidden");
+            observer.unobserve(entry.target);
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
     });
-  }, appearOptions);
-
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
 });
 
