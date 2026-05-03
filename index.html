@@ -1,20 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Morgan portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morgan Visual's — Motion Designer & Développeur Front-End</title>
 
-  <!--css d'origine-->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/projects-modern.css" />
-  <link rel="stylesheet" href="css/navbar-interactive.css" />
+  <!-- SEO -->
+  <meta name="description"
+    content="Portfolio de Morgan Marie-Joseph (Morgan Visual's), motion designer, monteur vidéo et développeur front-end basé en Martinique. Découvrez mes projets en design, vidéo et web.">
+  <meta name="author" content="Morgan Marie-Joseph">
+  <meta name="theme-color" content="#6366F1">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Morgan Visual's — Motion Designer & Développeur Front-End">
+  <meta property="og:description"
+    content="Portfolio de Morgan Marie-Joseph : motion design, montage vidéo et développement web.">
+  <meta property="og:image" content="image/pp linkedin purple.png">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Morgan Visual's — Motion Designer & Développeur Front-End">
+  <meta name="twitter:description"
+    content="Portfolio de Morgan Marie-Joseph : motion design, montage vidéo et développement web.">
+  <meta name="twitter:image" content="image/pp linkedin purple.png">
+
+  <!--CSS bundle minifié (regénérer via : bash css/build.sh)-->
+  <link rel="stylesheet" href="css/bundle.min.css" />
+
   <!--Icon-->
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="icon" type="image/png" href="image/Logo white.png">
+  <link rel="preload" href="image/icons.svg" as="image" type="image/svg+xml">
   <!--font-->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Morgan Marie-Joseph",
+    "alternateName": "Morgan Visual's",
+    "jobTitle": "Motion Designer & Développeur Front-End",
+    "email": "morgan.rmx@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Martinique",
+      "addressCountry": "FR"
+    },
+    "sameAs": [
+      "https://www.behance.net/mrgnvisuals",
+      "https://www.linkedin.com/in/morgan-marie-joseph-23165a2ba/",
+      "https://www.instagram.com/mrgnvisuals/",
+      "https://www.youtube.com/@morganvisuals"
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -32,7 +78,6 @@
       Morgan <span>Visual's</span>
     </a>
 
-    <i class="bx bx-menu" id="menu-icon"></i>
     <nav class="navbar">
       <a href="#home" class="active">Accueil</a>
       <a href="#about"> À propos</a>
@@ -41,12 +86,24 @@
       <a href="#contact">Contact</a>
     </nav>
 
-    <a class="gradient-btn" href="https://www.butmmi.fr/"> Ma Formation</a>
+    <div class="header-actions">
+      <button id="theme-toggle" class="theme-switch" aria-label="Changer de mode">
+        <div class="switch-thumb">
+          <svg class="icon" id="theme-icon" aria-hidden="true">
+            <use href="image/icons.svg#i-bx-moon"></use>
+          </svg>
+        </div>
+      </button>
+      <a class="gradient-btn" href="https://www.butmmi.fr/" target="_blank" rel="noopener noreferrer"> Ma Formation</a>
+      <svg class="icon" id="menu-icon" aria-hidden="true">
+        <use href="image/icons.svg#i-bx-menu"></use>
+      </svg>
+    </div>
   </header>
 
   <!--Accueil-->
 
-  <div>
+  <main>
     <section class="home" id="home">
       <div class="home-content">
         <h1>Morgan <span>Visual's</span></h1>
@@ -54,28 +111,40 @@
         <p>Salut, moi c'est Morgan !
         </p>
         <div class="social-icons">
-          <a href="https://www.behance.net/mrgnvisuals">
-            <i class="bx bxl-behance"></i>
+          <a href="https://www.behance.net/mrgnvisuals" target="_blank" rel="noopener noreferrer"
+            aria-label="Profil Behance de Morgan Visual's">
+            <svg class="icon" aria-hidden="true">
+              <use href="image/icons.svg#i-bxl-behance"></use>
+            </svg>
           </a>
-          <a href="https://www.linkedin.com/in/morgan-marie-joseph-23165a2ba/">
-            <i class="bx bxl-linkedin-square"></i>
+          <a href="https://www.linkedin.com/in/morgan-marie-joseph-23165a2ba/" target="_blank" rel="noopener noreferrer"
+            aria-label="Profil LinkedIn de Morgan Marie-Joseph">
+            <svg class="icon" aria-hidden="true">
+              <use href="image/icons.svg#i-bxl-linkedin-square"></use>
+            </svg>
           </a>
-          <a href="https://www.instagram.com/mrgnvisuals/">
-            <i class="bx bxl-instagram-alt"></i>
+          <a href="https://www.instagram.com/mrgnvisuals/" target="_blank" rel="noopener noreferrer"
+            aria-label="Profil Instagram de Morgan Visual's">
+            <svg class="icon" aria-hidden="true">
+              <use href="image/icons.svg#i-bxl-instagram-alt"></use>
+            </svg>
           </a>
-          <a href="https://www.youtube.com/@morganvisuals">
-            <i class="bx bxl-youtube"></i>
+          <a href="https://www.youtube.com/@morganvisuals" target="_blank" rel="noopener noreferrer"
+            aria-label="Chaîne YouTube de Morgan Visual's">
+            <svg class="icon" aria-hidden="true">
+              <use href="image/icons.svg#i-bxl-youtube"></use>
+            </svg>
           </a>
         </div>
         <div class="btn-group">
-          <a href="image/CV MARIE-JOSEPH Morgan.pdf" class="btn">CV</a>
+          <a href="image/CV MARIE-JOSEPH Morgan.pdf" class="btn" target="_blank" rel="noopener">CV</a>
           <a href="#contact" class="btn">Contact</a>
         </div>
       </div>
 
       <div class="home-img">
-        <video autoplay loop muted playsinline>
-          <source src="image/video home2.mp4" type="video/mp4">
+        <video autoplay loop muted playsinline aria-hidden="true">
+          <source src="image/video home3.mp4" type="video/mp4">
         </video>
       </div>
     </section>
@@ -84,7 +153,7 @@
     <section class="about" id="about">
       <div class="fade-in hidden">
         <div class="about-img">
-          <img src="image/pp linkedin purple.png" alt="">
+          <img src="image/pp linkedin purple.jpg" alt="Portrait de Morgan Marie-Joseph" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -108,11 +177,12 @@
           <div class="skill-card">
             <div class="skill-header">
               <div class="skill-icon">
-                <i class="bx bx-code-alt"></i>
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-code-alt"></use>
+                </svg>
               </div>
               <div class="skill-title">
                 <h3>Web</h3>
-                <p>5 compétences</p>
               </div>
             </div>
             <ul class="skill-tags">
@@ -127,11 +197,12 @@
           <div class="skill-card">
             <div class="skill-header">
               <div class="skill-icon">
-                <i class="bx bx-palette"></i>
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-palette"></use>
+                </svg>
               </div>
               <div class="skill-title">
                 <h3>Design</h3>
-                <p>5 compétences</p>
               </div>
             </div>
             <ul class="skill-tags">
@@ -147,17 +218,38 @@
           <div class="skill-card">
             <div class="skill-header">
               <div class="skill-icon">
-                <i class="bx bx-video"></i>
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-video"></use>
+                </svg>
               </div>
               <div class="skill-title">
                 <h3>Vidéo</h3>
-                <p>3 compétences</p>
               </div>
             </div>
             <ul class="skill-tags">
               <li class="skill-tag">Premiere Pro</li>
               <li class="skill-tag">After Effects</li>
               <li class="skill-tag">DaVinci Resolve</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-bot"></use>
+                </svg>
+              </div>
+              <div class="skill-title">
+                <h3>AI</h3>
+              </div>
+            </div>
+            <ul class="skill-tags">
+              <li class="skill-tag">Claude</li>
+              <li class="skill-tag">Gemini</li>
+              <li class="skill-tag">ChatGPT</li>
+              <li class="skill-tag">Figma AI</li>
+              <li class="skill-tag">Lovable</li>
             </ul>
           </div>
 
@@ -171,15 +263,16 @@
         <h2 class="heading">Mes <span>Projets</span></h2>
 
         <!-- Filtres -->
-        <div class="filter-buttons">
-          <button class="filter-btn active" data-filter="all">Tous</button>
-          <button class="filter-btn" data-filter="video">Vidéo</button>
-          <button class="filter-btn" data-filter="web">Web</button>
-          <button class="filter-btn" data-filter="design">Design</button>
-          <button class="filter-btn" data-filter="strategie">Stratégie & Communication</button>
-          <button class="filter-btn" data-filter="scolaire">Scolaire</button>
-          <button class="filter-btn" data-filter="entreprise">Entreprise</button>
-          <button class="filter-btn" data-filter="personnel">Personnel</button>
+        <div class="filter-buttons" role="group" aria-label="Filtrer les projets par catégorie">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">Tous</button>
+          <button class="filter-btn" data-filter="video" aria-pressed="false">Vidéo</button>
+          <button class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+          <button class="filter-btn" data-filter="design" aria-pressed="false">Design</button>
+          <button class="filter-btn" data-filter="gestion" aria-pressed="false">Gestion de projet</button>
+          <button class="filter-btn" data-filter="strategie" aria-pressed="false">Stratégie & Com</button>
+          <button class="filter-btn" data-filter="scolaire" aria-pressed="false">Scolaire</button>
+          <button class="filter-btn" data-filter="entreprise" aria-pressed="false">Entreprise</button>
+          <button class="filter-btn" data-filter="personnel" aria-pressed="false">Personnel</button>
         </div>
 
         <!-- Grille de projets -->
@@ -188,9 +281,12 @@
           <!-- Projet 1 -->
           <article class="project-item" data-category="video scolaire">
             <div class="project-thumbnail">
-              <img src="image/cyparis.jpg" alt="Cyparis">
+              <img src="image/cyparis.jpg" alt="Documentaire animé Cyparis" width="1080" height="1080" loading="lazy"
+                decoding="async">
               <div class="project-overlay">
-                <i class='bx bx-play-circle'></i>
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-play-circle"></use>
+                </svg>
               </div>
             </div>
             <div class="project-info">
@@ -199,11 +295,14 @@
                 <span class="project-tag">Scolaire</span>
               </div>
               <h3>Documentaire Cyparis </h3>
-              <p>Dans ce projet, j'ai eu pour but de créer un documentaire sur Cyparis en animation 2D.
+              <p>Dans ce projet, j'ai eu pour but de créer un documentaire
+                sur Cyparis en animation 2D.
               </p>
               <button class="project-btn" data-project="1">
                 <span class="project-text-color">Voir le projet</span>
-                <i class='bx bx-right-arrow-alt'></i>
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-right-arrow-alt"></use>
+                </svg>
               </button>
             </div>
           </article>
@@ -211,9 +310,12 @@
           <!-- Projet 2 -->
           <article class="project-item" data-category="design">
             <div class="project-thumbnail">
-              <img src="image/DJ.png" alt="Press Kit DJ">
+              <img src="image/DJ.jpg" alt="Press Kit DJ Skylight" width="973" height="768" loading="lazy"
+                decoding="async">
               <div class="project-overlay">
-                <i class='bx bx-image'></i>
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-image"></use>
+                </svg>
               </div>
             </div>
             <div class="project-info">
@@ -224,7 +326,9 @@
               <p>Dossier de presse conçu en tant que DJ pour mettre en valeur mes compétences et statistiques.</p>
               <button class="project-btn" data-project="2">
                 <span class="project-text-color">Voir le projet</span>
-                <i class='bx bx-right-arrow-alt'></i>
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-right-arrow-alt"></use>
+                </svg>
               </button>
             </div>
           </article>
@@ -232,9 +336,12 @@
           <!-- Projet 3 -->
           <article class="project-item" data-category="strategie scolaire">
             <div class="project-thumbnail">
-              <img src="image/coa.jpg" alt="Vidéos NBT">
+              <img src="image/coa.jpg" alt="Stratégie de communication CoArt" width="1080" height="1080" loading="lazy"
+                decoding="async">
               <div class="project-overlay">
-                <i class='bx bx-user'></i>
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-user"></use>
+                </svg>
               </div>
             </div>
             <div class="project-info">
@@ -246,7 +353,9 @@
               <p>Stratégie de communication pour un projet crée en cours.</p>
               <button class="project-btn" data-project="3">
                 <span class="project-text-color">Voir le projet</span>
-                <i class='bx bx-right-arrow-alt'></i>
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-right-arrow-alt"></use>
+                </svg>
               </button>
             </div>
           </article>
@@ -254,9 +363,12 @@
           <!-- Projet 4 -->
           <article class="project-item" data-category="design scolaire">
             <div class="project-thumbnail">
-              <img src="image/dash.png" alt="Charte DASH">
+              <img src="image/dash.jpg" alt="Charte graphique DASH" width="1024" height="768" loading="lazy"
+                decoding="async">
               <div class="project-overlay">
-                <i class='bx bx-palette'></i>
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-palette"></use>
+                </svg>
               </div>
             </div>
             <div class="project-info">
@@ -268,7 +380,9 @@
               <p>Charte graphique pour une plateforme de streaming avec des couleurs jaune et noir.</p>
               <button class="project-btn" data-project="4">
                 <span class="project-text-color">Voir le projet</span>
-                <i class='bx bx-right-arrow-alt'></i>
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-right-arrow-alt"></use>
+                </svg>
               </button>
             </div>
           </article>
@@ -276,9 +390,12 @@
           <!-- Projet 5 -->
           <article class="project-item" data-category="web scolaire">
             <div class="project-thumbnail">
-              <img src="image/portfolionew.jpg" alt="Portfolio">
+              <img src="image/portfolionew.jpg" alt="Aperçu du portfolio personnel" width="1080" height="1080"
+                loading="lazy" decoding="async">
               <div class="project-overlay">
-                <i class='bx bx-code-alt'></i>
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-code-alt"></use>
+                </svg>
               </div>
             </div>
             <div class="project-info">
@@ -290,7 +407,9 @@
               <p>Portfolio développé en HTML, CSS et JavaScript mettant en avant mes projets et compétences.</p>
               <button class="project-btn" data-project="5">
                 <span class="project-text-color">Voir le projet</span>
-                <i class='bx bx-right-arrow-alt'></i>
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-right-arrow-alt"></use>
+                </svg>
               </button>
             </div>
           </article>
@@ -298,9 +417,12 @@
           <!-- Projet 6 -->
           <article class="project-item" data-category="video personnel">
             <div class="project-thumbnail">
-              <img src="image/iphoneair.jpg" alt="Bahia Beach">
+              <img src="image/iphoneair.jpg" alt="Animation Apple iPhone Air" width="1080" height="1080" loading="lazy"
+                decoding="async">
               <div class="project-overlay">
-                <i class='bx bx-play-circle'></i>
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-play-circle"></use>
+                </svg>
               </div>
             </div>
             <div class="project-info">
@@ -312,16 +434,21 @@
               <p>Animation d'un iPhone Air.</p>
               <button class="project-btn" data-project="6">
                 <span class="project-text-color">Voir le projet</span>
-                <i class='bx bx-right-arrow-alt'></i>
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-right-arrow-alt"></use>
+                </svg>
               </button>
             </div>
           </article>
           <!-- Projet 7 -->
-          <article class="project-item" data-category="video entreprise ">
+          <article class="project-item" data-category="video entreprise">
             <div class="project-thumbnail">
-              <img src="image/koroko.jpg" alt="Koroko">
+              <img src="image/koroko.jpg" alt="Réels Instagram Koroko" width="1080" height="1080" loading="lazy"
+                decoding="async">
               <div class="project-overlay">
-                <i class='bx bx-play-circle'></i> <!-- Ou bx-image, bx-code-alt selon le type -->
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-play-circle"></use>
+                </svg> <!-- Ou bx-image, bx-code-alt selon le type -->
               </div>
             </div>
             <div class="project-info">
@@ -330,19 +457,24 @@
                 <span class="project-tag">Entreprise</span>
               </div>
               <h3>Vidéos instagram pour Koroko</h3>
-              <p>J'ai réaliser en entreprise plusieurs réels pour mettre en avant l'agence de voyage Koroko.</p>
+              <p>J'ai réalisé en entreprise plusieurs réels pour mettre en avant l'agence de voyage Koroko.</p>
               <button class="project-btn" data-project="7"> <!-- IMPORTANT : le numéro 7 -->
                 <span class="project-text-color">Voir le projet</span>
-                <i class='bx bx-right-arrow-alt'></i>
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-right-arrow-alt"></use>
+                </svg>
               </button>
             </div>
           </article>
           <!-- Projet 8 -->
           <article class="project-item" data-category="video personnel">
             <div class="project-thumbnail">
-              <img src="image/18coutures.jpg" alt="18 coutures">
+              <img src="image/18coutures.jpg" alt="Animation 3D pour la marque 18 coutures" width="1080" height="1080"
+                loading="lazy" decoding="async">
               <div class="project-overlay">
-                <i class='bx bx-play-circle'></i> <!-- Ou bx-image, bx-code-alt selon le type -->
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-play-circle"></use>
+                </svg> <!-- Ou bx-image, bx-code-alt selon le type -->
               </div>
             </div>
             <div class="project-info">
@@ -354,16 +486,21 @@
               <p>Animation 3D pour la marque "18 coutures".</p>
               <button class="project-btn" data-project="8"> <!-- IMPORTANT : le numéro 8 -->
                 <span class="project-text-color">Voir le projet</span>
-                <i class='bx bx-right-arrow-alt'></i>
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-right-arrow-alt"></use>
+                </svg>
               </button>
             </div>
           </article>
           <!-- Projet 9 -->
           <article class="project-item" data-category="video personnel">
             <div class="project-thumbnail">
-              <img src="image/poukwa.png" alt="Poukwa">
+              <img src="image/poukwa.jpg" alt="Clip vidéo Krys — Poukwa" width="973" height="768" loading="lazy"
+                decoding="async">
               <div class="project-overlay">
-                <i class='bx bx-play-circle'></i> <!-- Ou bx-image, bx-code-alt selon le type -->
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-play-circle"></use>
+                </svg> <!-- Ou bx-image, bx-code-alt selon le type -->
               </div>
             </div>
             <div class="project-info">
@@ -375,7 +512,9 @@
               <p>Dans ce projet, j'ai été amené a être le VFX de ce clip vidéo.</p>
               <button class="project-btn" data-project="9"> <!-- IMPORTANT : le numéro 9 -->
                 <span class="project-text-color">Voir le projet</span>
-                <i class='bx bx-right-arrow-alt'></i>
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-right-arrow-alt"></use>
+                </svg>
               </button>
             </div>
           </article>
@@ -387,11 +526,14 @@
     </section>
 
     <!-- Modal Popup -->
-    <div class="project-modal" id="projectModal">
+    <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true"
+      aria-labelledby="modalTitle">
       <div class="modal-overlay"></div>
       <div class="modal-content">
-        <button class="modal-close">
-          <i class='bx bx-x'></i>
+        <button class="modal-close" aria-label="Fermer la fenêtre">
+          <svg class="icon" aria-hidden="true">
+            <use href="image/icons.svg#i-bx-x"></use>
+          </svg>
         </button>
         <div class="modal-body">
           <!-- Contenu dynamique injecté par JS -->
@@ -413,7 +555,9 @@
             <div class="info-items">
               <div class="info-item">
                 <div class="info-icon">
-                  <i class='bx bx-envelope'></i>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="image/icons.svg#i-bx-envelope"></use>
+                  </svg>
                 </div>
                 <div class="info-text">
                   <h4>Email</h4>
@@ -423,7 +567,9 @@
 
               <div class="info-item">
                 <div class="info-icon">
-                  <i class='bx bx-phone'></i>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="image/icons.svg#i-bx-phone"></use>
+                  </svg>
                 </div>
                 <div class="info-text">
                   <h4>Téléphone</h4>
@@ -433,7 +579,9 @@
 
               <div class="info-item">
                 <div class="info-icon">
-                  <i class='bx bx-map'></i>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="image/icons.svg#i-bx-map"></use>
+                  </svg>
                 </div>
                 <div class="info-text">
                   <h4>Localisation</h4>
@@ -445,29 +593,38 @@
 
           <!-- Colonne Formulaire -->
           <div class="contact-form-container">
-            <form action="https://formspree.io/f/xoveavyq" method="POST" class="modern-form">
+            <form action="https://formspree.io/f/xoveavyq" method="POST" class="modern-form" novalidate>
               <div class="input-group">
                 <div class="input-box">
-                  <input type="text" name="name" placeholder="Nom complet" required>
+                  <label for="contact-name" class="visually-hidden">Nom complet</label>
+                  <input id="contact-name" type="text" name="name" placeholder="Nom complet" autocomplete="name"
+                    required>
                 </div>
                 <div class="input-box">
-                  <input type="email" name="email" placeholder="Email" required>
+                  <label for="contact-email" class="visually-hidden">Email</label>
+                  <input id="contact-email" type="email" name="email" placeholder="Email" autocomplete="email" required>
                 </div>
               </div>
               <div class="input-box full-width">
-                <input type="text" name="subject" placeholder="Sujet" required>
+                <label for="contact-subject" class="visually-hidden">Sujet</label>
+                <input id="contact-subject" type="text" name="subject" placeholder="Sujet" required>
               </div>
               <div class="input-box full-width">
-                <textarea name="message" placeholder="Votre Message" rows="6" required></textarea>
+                <label for="contact-message" class="visually-hidden">Message</label>
+                <textarea id="contact-message" name="message" placeholder="Votre Message" rows="6" required></textarea>
               </div>
-              <button type="submit" name="submit" class="btn contact-submit-btn">
+              <!-- Honeypot anti-spam (invisible aux humains) -->
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true"
+                style="position:absolute;left:-9999px;opacity:0;pointer-events:none;">
+              <button type="submit" class="btn contact-submit-btn">
                 <span class="send-text">Envoyer</span>
-                <i class='bx bx-send'></i>
+                <svg class="icon" aria-hidden="true">
+                  <use href="image/icons.svg#i-bx-send"></use>
+                </svg>
               </button>
 
               <div class="thanks">
-                <p id="thank-you-message"
-                  style="display: none; color: #a78bfa; font-size: 1.6rem; margin-top: 20px; text-align: center;">
+                <p id="thank-you-message" class="thank-you-message" role="status">
                   Merci ! Votre message a été envoyé avec succès. 😊
                 </p>
               </div>
@@ -482,21 +639,33 @@
     <!--footer-->
     <footer class="footer">
       <div class="social-icons">
-        <a href="https://www.behance.net/mrgnvisuals">
-          <i class="bx bxl-behance"></i>
+        <a href="https://www.behance.net/mrgnvisuals" target="_blank" rel="noopener noreferrer"
+          aria-label="Profil Behance">
+          <svg class="icon" aria-hidden="true">
+            <use href="image/icons.svg#i-bxl-behance"></use>
+          </svg>
         </a>
-        <a href="https://www.linkedin.com/in/morgan-marie-joseph-23165a2ba/">
-          <i class="bx bxl-linkedin-square"></i>
+        <a href="https://www.linkedin.com/in/morgan-marie-joseph-23165a2ba/" target="_blank" rel="noopener noreferrer"
+          aria-label="Profil LinkedIn">
+          <svg class="icon" aria-hidden="true">
+            <use href="image/icons.svg#i-bxl-linkedin-square"></use>
+          </svg>
         </a>
-        <a href="https://www.instagram.com/mrgnvisuals/">
-          <i class="bx bxl-instagram-alt"></i>
+        <a href="https://www.instagram.com/mrgnvisuals/" target="_blank" rel="noopener noreferrer"
+          aria-label="Profil Instagram">
+          <svg class="icon" aria-hidden="true">
+            <use href="image/icons.svg#i-bxl-instagram-alt"></use>
+          </svg>
         </a>
-        <a href="https://www.youtube.com/@morganvisuals">
-          <i class="bx bxl-youtube"></i>
+        <a href="https://www.youtube.com/@morganvisuals" target="_blank" rel="noopener noreferrer"
+          aria-label="Chaîne YouTube">
+          <svg class="icon" aria-hidden="true">
+            <use href="image/icons.svg#i-bxl-youtube"></use>
+          </svg>
         </a>
       </div>
       <p class="copyright">
-        @Morgan Visual's | Tout droits réservés | <a class="mention" href="mentions-legales.html">Mentions Légales</a>
+        © Morgan Visual's | Tous droits réservés | <a class="mention" href="mentions-legales.html">Mentions Légales</a>
       </p>
     </footer>
 
@@ -505,7 +674,7 @@
     <script src="js/navbar-interactive.js?v=2"></script>
     <script src="js/projects-modern.js?v=2"></script>
 
-  </div>
+  </main>
 </body>
 
 </html>
