@@ -53,9 +53,13 @@ if (contactForm) {
 document.addEventListener("DOMContentLoaded", function () {
     const faders = document.querySelectorAll(".fade-in");
 
+    // threshold: 0 = déclenche dès qu'1 px est visible.
+    // Indispensable pour les conteneurs plus grands que le viewport mobile
+    // (sinon le ratio max ne peut jamais atteindre une valeur élevée et
+    // l'animation ne se déclenche jamais → la section reste cachée).
     const appearOptions = {
-        threshold: 0.2,
-        rootMargin: "0px 0px -50px 0px"
+        threshold: 0,
+        rootMargin: "0px 0px -100px 0px"
     };
 
     const appearOnScroll = new IntersectionObserver(function (entries, observer) {
