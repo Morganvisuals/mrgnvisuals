@@ -21,7 +21,7 @@ const projectsData = {
   },
   2: {
     title: "Press Kit DJ Skylight",
-    tags: ["Design", "Personnel"],
+    tags: ["Design", "Personnel", "Gestion de projet"],
     image: "image/DJ.jpg",
     description: "Ce projet consiste en un dossier de presse professionnel que j'ai conçu en tant que DJ, afin de mettre en valeur mes compétences musicales, présenter mes statistiques de performances et fournir mes coordonnées pour être contacté dans le cadre de prestations événementielles. Le design reflète l'identité visuelle de mon projet artistique.",
     details: {
@@ -29,7 +29,7 @@ const projectsData = {
       date: "2024",
       role: "Designer & DJ",
       outils: "Photoshop, Illustrator",
-      "U.E": "Exprimer"
+      "U.E": "Exprimer, Entreprendre"
     },
     links: [
       { url: "https://www.behance.net/gallery/234007493/DJ-SKYLIGHT-PRESS-KIT", text: "Voir sur Behance", icon: "bxl-behance" }
@@ -93,7 +93,6 @@ const projectsData = {
       date: "2025",
       role: "Motion Designer",
       outils: "After Effect",
-      "U.E": ""
     },
     links: [
       { url: "https://youtu.be/oZmUKvjlo48", text: "Voir la vidéo", icon: "bx-play-circle" }
