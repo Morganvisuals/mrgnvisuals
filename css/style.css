@@ -697,12 +697,27 @@ section {
 
 /*responsive mobile (les styles navbar/burger sont gérés dans navbar-interactive.css)*/
 @media(max-width:1024px) {
+  /* Sur mobile, le 100vh forcé crée un grand vide en bas de chaque section
+     dont le contenu est plus court que le viewport (notamment la section Accueil).
+     On laisse les sections s'adapter à leur contenu. */
+  section {
+    min-height: auto;
+  }
+
   .home {
     flex-direction: column-reverse;
     margin: 2rem 0;
     gap: 3rem;
     left: 0 !important;
     transform: none !important;
+    padding-top: 12rem;
+    padding-bottom: 4rem;
+  }
+
+  .home-img video {
+    width: 60vw;
+    max-width: 350px;
+    height: auto;
   }
 
   .home-content {
