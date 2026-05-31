@@ -291,58 +291,57 @@
     display: none;
   }
 
-  /* Logo + burger en px : la navbar rend identique sur index et mentions,
-     indépendamment du html{font-size} de chaque page (index descend à 55/50%,
-     mentions reste à 60%). Valeurs calées sur le rendu de mentions. */
+  /* Logo + burger + header-actions en px : la navbar rend identique sur index
+     et mentions, indépendamment du html{font-size} de chaque page (index descend
+     à 55/50%, mentions reste à 60%). Valeurs calées sur le rendu d'index
+     (racine 55% dans cette tranche), pour que mentions adopte la navbar d'index. */
   .logo {
-    font-size: 21px;
+    font-size: 19px;
   }
 
   #menu-icon {
-    font-size: 34px;
+    font-size: 31px;
   }
 
-  /* Header-actions (switch thème + sélecteur langue) en px pour le même rendu
-     que mentions, peu importe le html{font-size} de la page. */
   .header-actions {
-    gap: 12px;
+    gap: 11px;
   }
 
   .theme-switch {
-    width: 61px;
-    height: 31px;
-    border-radius: 31px;
+    width: 56px;
+    height: 28px;
+    border-radius: 28px;
     padding: 0 4px;
   }
 
   .switch-thumb {
-    width: 23px;
-    height: 23px;
+    width: 21px;
+    height: 21px;
   }
 
   .switch-thumb i,
   .switch-thumb .icon {
-    font-size: 13px;
-  }
-
-  body.light-mode .switch-thumb {
-    transform: translateX(26px);
-  }
-
-  .lang-current {
-    height: 31px;
-    padding: 0 11px;
-    border-radius: 31px;
-    gap: 6px;
     font-size: 12px;
   }
 
+  body.light-mode .switch-thumb {
+    transform: translateX(25px);
+  }
+
+  .lang-current {
+    height: 28px;
+    padding: 0 10px;
+    border-radius: 28px;
+    gap: 5px;
+    font-size: 11px;
+  }
+
   .lang-current .lang-globe {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .lang-current .lang-caret {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .header.scrolled {
@@ -352,7 +351,7 @@
   /* Empêche la règle desktop .header.scrolled .logo (2.4rem) de regrossir
      le logo au scroll sur mobile et de pousser les header-actions à droite. */
   .header.scrolled .logo {
-    font-size: 19px;
+    font-size: 18px;
   }
 
   .header.scrolled .navbar {
@@ -382,22 +381,57 @@
     padding: 0 4%;
   }
 
+  /* Valeurs calées sur le rendu d'index en racine 50% (1rem=8px). */
   .logo {
-    font-size: 19px;
+    font-size: 16px;
   }
 
   .header.scrolled .logo {
-    font-size: 17px;
+    font-size: 14px;
   }
 
   #menu-icon {
-    font-size: 29px;
+    font-size: 24px;
   }
 
-  /* Resserre le gap pour loger les 2 boutons + burger sur petit écran
-     (identique sur index et mentions). */
   .header-actions {
-    gap: 7px;
+    gap: 6px;
+  }
+
+  .theme-switch {
+    width: 51px;
+    height: 26px;
+    border-radius: 26px;
+  }
+
+  .switch-thumb {
+    width: 19px;
+    height: 19px;
+  }
+
+  .switch-thumb i,
+  .switch-thumb .icon {
+    font-size: 11px;
+  }
+
+  body.light-mode .switch-thumb {
+    transform: translateX(22px);
+  }
+
+  .lang-current {
+    height: 26px;
+    padding: 0 9px;
+    border-radius: 26px;
+    gap: 5px;
+    font-size: 10px;
+  }
+
+  .lang-current .lang-globe {
+    font-size: 14px;
+  }
+
+  .lang-current .lang-caret {
+    font-size: 11px;
   }
 
   .navbar {
