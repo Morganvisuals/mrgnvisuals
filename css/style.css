@@ -570,13 +570,13 @@ body.light-mode .marquee-item--swap .logo-light {
   transition: 0.3s ease;
 }
 
-.info-item:hover .info-icon {
+.info-icon:hover {
   background: var(--main-color);
   transform: scale(1.05);
 }
 
-.info-item:hover .info-icon i,
-.info-item:hover .info-icon .icon {
+.info-icon:hover i,
+.info-icon:hover .icon {
   color: #fff;
 }
 
