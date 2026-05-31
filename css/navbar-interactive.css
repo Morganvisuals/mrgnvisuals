@@ -299,6 +299,12 @@
     height: var(--navbar-scroll-height);
   }
 
+  /* Empêche la règle desktop .header.scrolled .logo (2.4rem) de regrossir
+     le logo au scroll sur mobile et de pousser les header-actions à droite. */
+  .header.scrolled .logo {
+    font-size: 2rem;
+  }
+
   .header.scrolled .navbar {
     top: var(--navbar-scroll-height);
     height: calc(100vh - var(--navbar-scroll-height));
@@ -328,6 +334,10 @@
 
   .logo {
     font-size: 2rem;
+  }
+
+  .header.scrolled .logo {
+    font-size: 1.8rem;
   }
 
   #menu-icon {
