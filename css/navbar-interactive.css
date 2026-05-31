@@ -291,8 +291,58 @@
     display: none;
   }
 
+  /* Logo + burger en px : la navbar rend identique sur index et mentions,
+     indépendamment du html{font-size} de chaque page (index descend à 55/50%,
+     mentions reste à 60%). Valeurs calées sur le rendu de mentions. */
   .logo {
-    font-size: 2.2rem;
+    font-size: 21px;
+  }
+
+  #menu-icon {
+    font-size: 34px;
+  }
+
+  /* Header-actions (switch thème + sélecteur langue) en px pour le même rendu
+     que mentions, peu importe le html{font-size} de la page. */
+  .header-actions {
+    gap: 12px;
+  }
+
+  .theme-switch {
+    width: 61px;
+    height: 31px;
+    border-radius: 31px;
+    padding: 0 4px;
+  }
+
+  .switch-thumb {
+    width: 23px;
+    height: 23px;
+  }
+
+  .switch-thumb i,
+  .switch-thumb .icon {
+    font-size: 13px;
+  }
+
+  body.light-mode .switch-thumb {
+    transform: translateX(26px);
+  }
+
+  .lang-current {
+    height: 31px;
+    padding: 0 11px;
+    border-radius: 31px;
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  .lang-current .lang-globe {
+    font-size: 17px;
+  }
+
+  .lang-current .lang-caret {
+    font-size: 13px;
   }
 
   .header.scrolled {
@@ -302,7 +352,7 @@
   /* Empêche la règle desktop .header.scrolled .logo (2.4rem) de regrossir
      le logo au scroll sur mobile et de pousser les header-actions à droite. */
   .header.scrolled .logo {
-    font-size: 2rem;
+    font-size: 19px;
   }
 
   .header.scrolled .navbar {
@@ -333,15 +383,21 @@
   }
 
   .logo {
-    font-size: 2rem;
+    font-size: 19px;
   }
 
   .header.scrolled .logo {
-    font-size: 1.8rem;
+    font-size: 17px;
   }
 
   #menu-icon {
-    font-size: 3rem;
+    font-size: 29px;
+  }
+
+  /* Resserre le gap pour loger les 2 boutons + burger sur petit écran
+     (identique sur index et mentions). */
+  .header-actions {
+    gap: 7px;
   }
 
   .navbar {
