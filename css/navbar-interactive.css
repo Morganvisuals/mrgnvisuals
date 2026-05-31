@@ -51,6 +51,7 @@
   transition: var(--navbar-transition);
   z-index: 1001;
   user-select: none;
+  white-space: nowrap;
 }
 
 .logo:hover {
