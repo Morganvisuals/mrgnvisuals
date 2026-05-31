@@ -1,0 +1,11 @@
+# Claude Code — fichiers locaux uniquement
+CLAUDE.md
+project-map.json
+.claude/
+
+# Notes internes développement IA
+.learnings/
+
+# Système
+.DS_Store
+.vscode/
