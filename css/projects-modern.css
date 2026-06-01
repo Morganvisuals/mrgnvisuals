@@ -658,3 +658,19 @@
 .project-item.hide {
   display: none;
 }
+
+/* ============================================
+   LIGHT MODE — modal
+   ============================================ */
+body.light-mode .modal-link {
+  background: var(--text-color);
+  color: #F8FAFC;
+}
+
+body.light-mode .modal-link:hover {
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+}
+
+body.light-mode .modal-overlay {
+  background: rgba(15, 23, 42, 0.7);
+}
