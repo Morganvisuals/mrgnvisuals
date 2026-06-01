@@ -418,13 +418,6 @@
   font-size: 2rem;
 }
 
-.modal-link span {
-  background: none;
-  -webkit-background-clip: unset;
-  background-clip: unset;
-  color: #fff;
-  -webkit-text-fill-color: #fff;
-}
 
 /* Scrollbar du modal */
 .modal-content::-webkit-scrollbar {
@@ -673,6 +666,14 @@
 body.light-mode .modal-link {
   background: var(--text-color);
   color: #F8FAFC;
+}
+
+body.light-mode .modal-link span {
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
 }
 
 body.light-mode .modal-link:hover {
