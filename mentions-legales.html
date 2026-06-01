@@ -22,6 +22,8 @@
 </head>
 
 <body>
+  <!-- Thème appliqué avant le premier paint pour éviter le flash dark→light -->
+  <script>if(localStorage.getItem('theme')==='light')document.body.classList.add('light-mode');</script>
   <!--navigation-->
   <header class="header">
     <a href="index.html" class="logo">

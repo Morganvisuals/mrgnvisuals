@@ -64,6 +64,8 @@
 </head>
 
 <body>
+  <!-- Thème appliqué avant le premier paint pour éviter le flash dark→light -->
+  <script>if(localStorage.getItem('theme')==='light')document.body.classList.add('light-mode');</script>
   <!-- Preloader -->
   <div class="preloader" id="preloader">
     <div class="loader-content">
