@@ -283,7 +283,290 @@ const projectsData = {
       },
       links: [{ url: "https://exterria.fr/", text: "Visit the website", icon: "bx-code-alt" }]
     }
+  },
+  11: {
+    image: "image/skylightsite.jpg",
+    fr: {
+      title: "Site web DJ Skylight",
+      tags: ["Web", "Personnel"],
+      description: "Dans ce projet, j'ai été amené à être le webdesigner et le concepteur de ce site web, c'est un site web pour promouvoir mon activité de DJ et de compositeur. Ce projet remplace mon press kit papier, et a pour but de présenter mes créations musicales ainsi que ma biographie et mes coordonnées pour être contacté dans le cadre de prestations événementielles.",
+      details: {
+        "type de projet": "Site web (projet personnel)",
+        date: "2026",
+        role: "Web Designer & développeur",
+        outils: "HTML, CSS, JavaScript, Claude Code"
+      },
+      links: [{ url: "https://djskylight.vercel.app/", text: "Voir le site web", icon: "bx-code-alt" }]
+    },
+    en: {
+      title: "DJ Skylight Website",
+      tags: ["Web", "Personal"],
+      description: "For this project, I was in charge of building the website for the DJ and producer 'Skylight'. The goal was to create a showcase site presenting the different services offered by the artist.",
+      details: {
+        "project type": "Website (personal project)",
+        date: "2026",
+        role: "Web Designer & developer",
+        tools: "HTML, CSS, JavaScript, Claude Code"
+      },
+      links: [{ url: "https://djskylight.vercel.app/", text: "Visit the website", icon: "bx-code-alt" }]
+    }
+  },
+
+    12: {
+    image: "image/audrey.jpg",
+    fr: {
+      title: "Vidéos Personnal branding pour un client",
+      tags: ["Vidéo", "Entreprise"],
+      description: "Dans ce projet réalisé en entreprise, j'ai été chargé de créer des vidéos promotionnelles pour un client : Audrey Promeneur, fondatrice de l'agence de voyage Feeling Guadeloupe. Le but de ces vidéos est de la mettre en valeur elle et son activité principale : l'organisation de voyages sur mesure en Guadeloupe.",
+      details: {
+        "type de projet": "Vidéos (projet d'entreprise)",
+        date: "2026",
+        role: "Monteur vidéo",
+        outils: "Premiere Pro"
+      },
+      links: [{ url: "https://www.instagram.com/p/DSp-O9QAH2t/", text: "Voir une des vidéos", icon: "bx-play-circle" }]
+    },
+    en: {
+      title: "Personal Branding Videos for a Client",
+      tags: ["Video", "Company"],
+      description: "For this project, I was in charge of creating promotional videos for a client.",
+      details: {
+        "project type": "Videos (company project)",
+        date: "2026",
+        role: "Video Editor",
+        tools: "Premiere Pro"
+      },
+      links: [{ url: "https://www.instagram.com/p/DSp-O9QAH2t/", text: "Watch the video", icon: "bx-play-circle" }]
+    }
+   
+    },
+  13: {
+    image: "image/boheme.jpg",
+    fr: {
+      title: "Clip vidéo &quot;La bohème&quot;",
+      tags: ["Vidéo", "Personnel"],
+      description: "Dans ce projet, en collaboration avec Mighty Production, j'ai été amené à être le monteur vidéo et le VFX de ce clip. J'ai pu mettre en avant mes compétences en montage et en effets visuels pour donner une nouvelle dimension au clip.",
+      details: {
+        "type de projet": "Clip vidéo (projet personnel)",
+        date: "2026",
+        role: "Monteur vidéo & VFX",
+        outils: "After Effects, Premiere Pro"
+      },
+      links: [{ url: "https://www.youtube.com/watch?v=GlWtgka-Hqs&list=RDGlWtgka-Hqs&start_radio=1", text: "Voir la vidéo", icon: "bx-play-circle" }]
+    },
+    en: {
+      title: "Music Video &quot;La bohème&quot;",
+      tags: ["Video", "Personal"],
+      description: "For this project, in collaboration with Mighty Production, I was the video editor and VFX artist for this music video. I was able to showcase my skills in editing and visual effects to give the video a new dimension.",
+      details: {
+        "project type": "Music video (personal project)",
+        date: "2026",
+        role: "Video Editor & VFX",
+        tools: "After Effects, Premiere Pro"
+      },
+      links: [{ url: "https://www.youtube.com/watch?v=GlWtgka-Hqs&list=RDGlWtgka-Hqs&start_radio=1", text: "Watch the video", icon: "bx-play-circle" }]
+    }
+  },
+  14: {
+    image: "image/Businessprocessmanagement.jpg",
+    fr: {
+      title: "Business Process Management",
+      tags: ["Stratégie", "Scolaire"],
+      description: "Dans ce projet, j'ai appris comment structurer les processus pour transformer le chaos créatif en performance durable. Nous avons analysé et identifier les meilleures façon d'optimiser l'organisation d'une entreprise avec un cas pratique.",
+      details: {
+        "type de projet": "Gestion de processus (Scolaire)",
+        date: "2025",
+        role: "Étudiant",
+        outils: "Canva, Google Docs",
+        "U.E": "Entreprendre"
+      },
+      links: [{ url: "https://canva.link/sako4q8rjo8z7i5", text: "Voir le projet", icon: "bx-download" }]
+    },
+    en: {
+      title: "Business Process Management",
+      tags: ["Strategy", "Academic"],
+      description: "In this project, I learned how to structure processes to transform creative chaos into sustainable performance. We analysed and identified the best ways to optimise a company's organisation through a practical case study.",
+      details: {
+        "project type": "Process Management (Academic)",
+        date: "2025",
+        role: "Student",
+        tools: "Canva, Google Docs",
+        "U.E": "Undertake"
+      },
+      links: [{ url: "https://canva.link/sako4q8rjo8z7i5", text: "View the project", icon: "bx-download" }]
+    }
+  },
+  15: {
+    image: "image/blok.jpg",
+    fr: {
+      title: "Réels Instagram pour Le média BLOK",
+      tags: ["Vidéo", "Scolaire"],
+      description: "Dans ce projet, j'ai réalisé des réels Instagram pour Le média BLOK. L'objectif était de créer des contenus vidéo courts et engageants.",
+      details: {
+        "type de projet": "Réels Instagram (Scolaire)",
+        date: "2026",
+        role: "Monteur vidéo",
+        outils: "Premiere Pro",
+        "U.E": "Exprimer"
+      },
+      links: [{ url: "https://www.instagram.com/p/DWbq6hojroH/", text: "Voir une des vidéos", icon: "bx-play-circle" }]
+    },
+    en: {
+      title: "Instagram Reels for BLOK Media",
+      tags: ["Video", "Academic"],
+      description: "For this project, I created Instagram reels for BLOK Media. The goal was to produce short, engaging video content.",
+      details: {
+        "project type": "Instagram Reels (Academic)",
+        date: "2026",
+        role: "Video Editor",
+        tools: "Premiere Pro",
+        "U.E": "Express"
+      },
+      links: [{ url: "https://www.instagram.com/p/DWbq6hojroH/", text: "Watch the video", icon: "bx-play-circle" }]
+    }
+  },
+  16: {
+    image: "image/flora.jpg",
+    fr: {
+      title: "Flora Beauty",
+      tags: ["Gestion de projet", "Stratégie", "Scolaire"],
+      description: "Dans le cadre de ce projet, mon groupe et moi avons créé une marque nommée « Flora Beauty » et développé l'ensemble de sa stratégie entrepreneuriale : étude de marché, positionnement, identité visuelle, plan de communication et stratégie commerciale.",
+      details: {
+        "type de projet": "Projet entrepreneurial (Scolaire)",
+        date: "2026",
+        role: "Chef de projet & Stratégie",
+        outils: "Canva, Google Docs",
+        "U.E": "Entreprendre"
+      },
+      links: [{ url: "https://canva.link/gh9rmpqopi1t4d1", text: "Voir le projet", icon: "bx-download" }]
+    },
+    en: {
+      title: "Flora Beauty",
+      tags: ["Project Management", "Strategy", "Academic"],
+      description: "For this project, my team and I created a brand called 'Flora Beauty' and developed its entire entrepreneurial strategy: market research, positioning, visual identity, communication plan and commercial strategy.",
+      details: {
+        "project type": "Entrepreneurial project (Academic)",
+        date: "2026",
+        role: "Project Manager & Strategy",
+        tools: "Canva, Google Docs",
+        "U.E": "Undertake"
+      },
+      links: [{ url: "https://canva.link/gh9rmpqopi1t4d1", text: "View the project", icon: "bx-download" }]
+    }
+  },
+  17: {
+    image: "image/gwadamobilite.jpg",
+    fr: {
+      title: "Gwada Mobilité",
+      tags: ["Gestion de projet", "Stratégie", "Scolaire"],
+      description: "Dans le cadre de ce projet, j'ai contribué avec mon groupe à la création d'une entreprise fictive de mobilité en Guadeloupe. Nous avons développé le modèle économique, la stratégie de communication et la gestion du projet.",
+      details: {
+        "type de projet": "Projet entrepreneurial (Scolaire)",
+        date: "2025",
+        role: "Chef de projet & Communication",
+        outils: "Canva, Google Docs",
+        "U.E": "Entreprendre"
+      },
+      links: [{ url: "https://canva.link/c08ghus6vaxvh9w", text: "Voir le projet", icon: "bx-download" }]
+    },
+    en: {
+      title: "Gwada Mobilité",
+      tags: ["Project Management", "Strategy", "Academic"],
+      description: "For this project, I contributed with my team to the creation of a fictional mobility company in Guadeloupe. We developed the business model, communication strategy and project management.",
+      details: {
+        "project type": "Entrepreneurial project (Academic)",
+        date: "2025",
+        role: "Project Manager & Communication",
+        tools: "Canva, Google Docs",
+        "U.E": "Undertake"
+      },
+      links: [{ url: "https://canva.link/c08ghus6vaxvh9w", text: "View the project", icon: "bx-download" }]
+    }
+  },
+  18: {
+    image: "image/LeanManagement.jpg",
+    fr: {
+      title: "Lean Management",
+      tags: ["Stratégie", "Scolaire"],
+      description: "Dans ce projet, j'ai appris avec mon groupe les principes de la gestion lean et leur application dans un contexte professionnel. Nous avons étudié les méthodes d'élimination des gaspillages et d'amélioration continue pour optimiser les flux de production.",
+      details: {
+        "type de projet": "Gestion & Stratégie (Scolaire)",
+        date: "2025",
+        role: "Étudiant",
+        outils: "Canva, Google Docs",
+        "U.E": "Entreprendre"
+      },
+      links: [{ url: "https://canva.link/1kyqv8n5kh9yruy", text: "Voir le projet", icon: "bx-download" }]
+    },
+    en: {
+      title: "Lean Management",
+      tags: ["Strategy", "Academic"],
+      description: "In this project, I learned with my team the principles of lean management and their application in a professional context. We studied methods for eliminating waste and continuous improvement to optimise production flows.",
+      details: {
+        "project type": "Management & Strategy (Academic)",
+        date: "2025",
+        role: "Student",
+        tools: "Canva, Google Docs",
+        "U.E": "Undertake"
+      },
+      links: [{ url: "https://canva.link/1kyqv8n5kh9yruy", text: "View the project", icon: "bx-download" }]
+    }
+  },
+  19: {
+    image: "image/NBT.jpg",
+    fr: {
+      title: "Réels Instagram pour NBT",
+      tags: ["Vidéo", "Entreprise"],
+      description: "Dans ce projet, j'ai créé des réels Instagram pour promouvoir l'office du tourisme du Nord Basse-Terre. L'objectif était de mettre en avant les produits, services et partenaires de l'entreprise à travers des contenus vidéo adaptés aux codes des réseaux sociaux.",
+      details: {
+        "type de projet": "Réels Instagram (Entreprise)",
+        date: "2026",
+        role: "Monteur vidéo",
+        outils: "Premiere Pro"
+      },
+      links: [{ url: "https://www.instagram.com/p/DYX3P0uN951/", text: "Voir une des vidéos", icon: "bx-play-circle" }]
+    },
+    en: {
+      title: "Instagram Reels for NBT",
+      tags: ["Video", "Company"],
+      description: "For this project, I created Instagram reels to promote the Nord Basse-Terre tourism office. The goal was to highlight the organisation's products, services and partners through video content tailored to social media standards.",
+      details: {
+        "project type": "Instagram Reels (Company)",
+        date: "2026",
+        role: "Video Editor",
+        tools: "Premiere Pro"
+      },
+      links: [{ url: "https://www.instagram.com/p/DYX3P0uN951/", text: "Watch the video", icon: "bx-play-circle" }]
+    }
+  },
+  20: {
+    image: "image/premier-site-web.jpg",
+    fr: {
+      title: "Mon premier portfolio en HTML/CSS",
+      tags: ["Web", "Scolaire"],
+      description: "Dans ce projet, j'ai créé mon premier portfolio en utilisant HTML et CSS. Ce premier site m'a permis de poser les bases du développement web et de découvrir la structure d'une page HTML, les sélecteurs CSS et la mise en page responsive.",
+      details: {
+        "type de projet": "Site web (Scolaire)",
+        date: "2024",
+        role: "Développeur Front-End",
+        outils: "HTML, CSS, JavaScript",
+      },
+      links: [{ url: "https://morganvisuals.vercel.app/", text: "Voir le projet", icon: "bx-code-alt" }]
+    },
+    en: {
+      title: "My first HTML/CSS portfolio",
+      tags: ["Web", "Academic"],
+      description: "For this project, I built my first portfolio using HTML and CSS. This first site allowed me to lay the foundations of web development and discover HTML page structure, CSS selectors and responsive layout.",
+      details: {
+        "project type": "Website (Academic)",
+        date: "2024",
+        role: "Front-End Developer",
+        tools: "HTML, CSS, JavaScript"
+      },
+      links: [{ url: "https://morganvisuals.vercel.app/", text: "View the project", icon: "bx-code-alt" }]
+    }
   }
+
 };
 
 
