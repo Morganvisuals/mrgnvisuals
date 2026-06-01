@@ -418,6 +418,14 @@
   font-size: 2rem;
 }
 
+.modal-link span {
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+
 /* Scrollbar du modal */
 .modal-content::-webkit-scrollbar {
   width: 10px;
