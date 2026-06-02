@@ -684,7 +684,13 @@ if (modal) {
     document.body.style.left = '';
     document.body.style.right = '';
     document.body.style.width = '';
+    // Restauration instantanée : on neutralise temporairement le scroll-behavior
+    // smooth du <html>, sinon le retour s'anime depuis le haut de page.
+    const html = document.documentElement;
+    const prevBehavior = html.style.scrollBehavior;
+    html.style.scrollBehavior = 'auto';
     window.scrollTo(0, savedScrollY);
+    html.style.scrollBehavior = prevBehavior;
   }
 
   // Ouvrir le modal
