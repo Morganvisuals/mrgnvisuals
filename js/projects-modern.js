@@ -378,7 +378,7 @@ const projectsData = {
         date: "2025",
         role: "Étudiant",
         outils: "Canva, Google Docs",
-        "U.E": "Entreprendre"
+        "U.E": "Comprendre"
       },
       links: [{ url: "https://canva.link/sako4q8rjo8z7i5", text: "Voir le projet", icon: "bx-download" }]
     },
@@ -391,7 +391,7 @@ const projectsData = {
         date: "2025",
         role: "Student",
         tools: "Canva, Google Docs",
-        "U.E": "Undertake"
+        "U.E": "Understand"
       },
       links: [{ url: "https://canva.link/sako4q8rjo8z7i5", text: "View the project", icon: "bx-download" }]
     }
@@ -436,7 +436,7 @@ const projectsData = {
         date: "2026",
         role: "Chef de projet & Stratégie",
         outils: "Canva, Google Docs",
-        "U.E": "Entreprendre"
+        "U.E": "Entreprendre, Comprendre"
       },
       links: [{ url: "https://canva.link/gh9rmpqopi1t4d1", text: "Voir le projet", icon: "bx-download" }]
     },
@@ -449,7 +449,7 @@ const projectsData = {
         date: "2026",
         role: "Project Manager & Strategy",
         tools: "Canva, Google Docs",
-        "U.E": "Undertake"
+        "U.E": "Undertake, Understand"
       },
       links: [{ url: "https://canva.link/gh9rmpqopi1t4d1", text: "View the project", icon: "bx-download" }]
     }
@@ -465,7 +465,7 @@ const projectsData = {
         date: "2025",
         role: "Chef de projet & Communication",
         outils: "Canva, Google Docs",
-        "U.E": "Entreprendre"
+        "U.E": "Entreprendre, Comprendre"
       },
       links: [{ url: "https://canva.link/c08ghus6vaxvh9w", text: "Voir le projet", icon: "bx-download" }]
     },
@@ -478,7 +478,7 @@ const projectsData = {
         date: "2025",
         role: "Project Manager & Communication",
         tools: "Canva, Google Docs",
-        "U.E": "Undertake"
+        "U.E": "Undertake, Understand"
       },
       links: [{ url: "https://canva.link/c08ghus6vaxvh9w", text: "View the project", icon: "bx-download" }]
     }
@@ -494,7 +494,7 @@ const projectsData = {
         date: "2025",
         role: "Étudiant",
         outils: "Canva, Google Docs",
-        "U.E": "Entreprendre"
+        "U.E": "Comprendre"
       },
       links: [{ url: "https://canva.link/1kyqv8n5kh9yruy", text: "Voir le projet", icon: "bx-download" }]
     },
@@ -507,7 +507,7 @@ const projectsData = {
         date: "2025",
         role: "Student",
         tools: "Canva, Google Docs",
-        "U.E": "Undertake"
+        "U.E": "Understand"
       },
       links: [{ url: "https://canva.link/1kyqv8n5kh9yruy", text: "View the project", icon: "bx-download" }]
     }
