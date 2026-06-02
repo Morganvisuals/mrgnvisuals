@@ -146,7 +146,7 @@
       'legal.s9.p1': "Pour toute question concernant ces mentions légales, vous pouvez me contacter :",
       'legal.s9.email': "<strong>Email :</strong> <a href=\"mailto:morgan.rmx@gmail.com\">morgan.rmx@gmail.com</a>",
       'legal.s9.form': "<strong>Via le formulaire de contact :</strong> <a href=\"index.html#contact\">Accéder au formulaire</a>",
-      'legal.updated': "<strong>Dernière mise à jour :</strong> Avril 2026",
+      'legal.updated': "<strong>Dernière mise à jour :</strong> Juin 2026",
       'legal.backHome': "Retour à l'accueil"
     },
 
