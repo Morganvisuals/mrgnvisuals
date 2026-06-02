@@ -283,7 +283,7 @@
       'legal.s9.p1': "For any question regarding this legal notice, you can contact me:",
       'legal.s9.email': "<strong>Email:</strong> <a href=\"mailto:morgan.rmx@gmail.com\">morgan.rmx@gmail.com</a>",
       'legal.s9.form': "<strong>Via the contact form:</strong> <a href=\"index.html#contact\">Go to the form</a>",
-      'legal.updated': "<strong>Last updated:</strong> April 2026",
+      'legal.updated': "<strong>Last updated:</strong> June 2026",
       'legal.backHome': "Back to home"
     }
   };
