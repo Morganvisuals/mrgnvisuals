@@ -9,7 +9,7 @@ const projectsData = {
     fr: {
       title: "Documentaire Cyparis",
       tags: ["Vidéo", "Scolaire"],
-      description: "Dans ce projet, j'ai eu pour but de créer un documentaire sur Cyparis en animation 2D, j'ai utilisé plusieurs outils comme Artlist.IA pour la génération d'images, After Effect pour l'animation et FL Studio pour le sound design.",
+      description: "Dans ce projet, j'ai eu pour but de créer un documentaire sur Cyparis en animation 2D. Pour cela, j'ai utilisé plusieurs outils comme Artlist.IA pour la génération d'images, After Effects pour l'animation et FL Studio pour le sound design.",
       details: {
         "type de projet": "Documentaire animé",
         date: "2026",
@@ -154,7 +154,7 @@ const projectsData = {
     fr: {
       title: "Apple iPhone Air",
       tags: ["Vidéo", "Personnel"],
-      description: "Petite animation d'un iPhone Air réalisé sur After effect.",
+      description: "Petite animation d'un iPhone Air réalisée sur After Effects.",
       details: {
         "type de projet": "Animation 3D",
         date: "2025",
@@ -208,7 +208,7 @@ const projectsData = {
     fr: {
       title: "Vidéo 18 coutures",
       tags: ["Vidéo", "Personnel"],
-      description: "J'ai réalisé cette animation 3D pour la marque '18 coutures' sur After effect.",
+      description: "J'ai réalisé cette animation 3D pour la marque '18 coutures' sur After Effects.",
       details: {
         "type de projet": "Animation 3D (projet personnel)",
         date: "2025",
@@ -289,7 +289,7 @@ const projectsData = {
     fr: {
       title: "Site web DJ Skylight",
       tags: ["Web", "Personnel"],
-      description: "Dans ce projet, j'ai été amené à être le webdesigner et le concepteur de ce site web, c'est un site web pour promouvoir mon activité de DJ et de compositeur. Ce projet remplace mon press kit papier, et a pour but de présenter mes créations musicales ainsi que ma biographie et mes coordonnées pour être contacté dans le cadre de prestations événementielles.",
+      description: "Dans ce projet, j'ai été le webdesigner et le concepteur de ce site, conçu pour promouvoir mon activité de DJ et de compositeur. Il remplace mon press kit papier et a pour but de présenter mes créations musicales, ma biographie et mes coordonnées pour être contacté dans le cadre de prestations événementielles.",
       details: {
         "type de projet": "Site web (projet personnel)",
         date: "2026",
@@ -315,7 +315,7 @@ const projectsData = {
     12: {
     image: "image/audrey.jpg",
     fr: {
-      title: "Vidéos Personnal branding pour un client",
+      title: "Vidéos de personal branding pour un client",
       tags: ["Vidéo", "Entreprise"],
       description: "Dans ce projet réalisé en entreprise, j'ai été chargé de créer des vidéos promotionnelles pour un client : Audrey Promeneur, fondatrice de l'agence de voyage Feeling Guadeloupe. Le but de ces vidéos est de la mettre en valeur elle et son activité principale : l'organisation de voyages sur mesure en Guadeloupe.",
       details: {
@@ -372,7 +372,7 @@ const projectsData = {
     fr: {
       title: "Business Process Management",
       tags: ["Stratégie", "Scolaire"],
-      description: "Dans ce projet, j'ai appris comment structurer les processus pour transformer le chaos créatif en performance durable. Nous avons analysé et identifier les meilleures façon d'optimiser l'organisation d'une entreprise avec un cas pratique.",
+      description: "Dans ce projet, j'ai appris à structurer les processus pour transformer le chaos créatif en performance durable. Nous avons analysé et identifié les meilleures façons d'optimiser l'organisation d'une entreprise à travers un cas pratique.",
       details: {
         "type de projet": "Gestion de processus (Scolaire)",
         date: "2025",
