@@ -657,7 +657,7 @@ if (modal) {
       <div class="modal-links">
         ${data.links.map(link => `
           <a href="${escapeHTML(link.url)}" class="modal-link" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" aria-hidden="true"><use href="image/icons.svg#i-${escapeHTML(link.icon)}"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#i-${escapeHTML(link.icon)}"></use></svg>
             <span>${escapeHTML(link.text)}</span>
           </a>
         `).join('')}

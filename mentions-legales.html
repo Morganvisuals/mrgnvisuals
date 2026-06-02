@@ -24,6 +24,8 @@
 <body>
   <!-- Thème appliqué avant le premier paint pour éviter le flash dark→light -->
   <script>if(localStorage.getItem('theme')==='light')document.body.classList.add('light-mode');</script>
+  <!-- Sprite SVG injecté inline : Safari/iOS ne résolvent pas les <use href> vers un fichier externe. Les références utilisent donc #i-NOM (même document). -->
+  <script>fetch('image/icons.svg').then(function(r){return r.text();}).then(function(t){var d=document.createElement('div');d.setAttribute('aria-hidden','true');d.style.cssText='position:absolute;width:0;height:0;overflow:hidden';d.innerHTML=t;document.body.insertBefore(d,document.body.firstChild);}).catch(function(){});</script>
   <!--navigation-->
   <header class="header">
     <a href="index.html" class="logo">
@@ -42,7 +44,7 @@
       <button id="theme-toggle" class="theme-switch" aria-label="Changer de mode" data-i18n-aria="aria.theme">
         <div class="switch-thumb">
           <svg class="icon" id="theme-icon" aria-hidden="true">
-            <use href="image/icons.svg#i-bx-moon"></use>
+            <use href="#i-bx-moon"></use>
           </svg>
         </div>
       </button>
@@ -50,11 +52,11 @@
         <button class="lang-current" id="lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false"
           aria-label="Changer de langue" data-i18n-aria="aria.lang">
           <svg class="icon lang-globe" aria-hidden="true">
-            <use href="image/icons.svg#i-bx-globe"></use>
+            <use href="#i-bx-globe"></use>
           </svg>
           <span class="lang-code">FR</span>
           <svg class="icon lang-caret" aria-hidden="true">
-            <use href="image/icons.svg#i-bx-chevron-down"></use>
+            <use href="#i-bx-chevron-down"></use>
           </svg>
         </button>
         <ul class="lang-menu" role="listbox" aria-label="Langues">
@@ -63,7 +65,7 @@
               <span class="lang-badge">FR</span>
               Français
               <svg class="icon lang-check" aria-hidden="true">
-                <use href="image/icons.svg#i-bx-check"></use>
+                <use href="#i-bx-check"></use>
               </svg>
             </button>
           </li>
@@ -72,7 +74,7 @@
               <span class="lang-badge">EN</span>
               English
               <svg class="icon lang-check" aria-hidden="true">
-                <use href="image/icons.svg#i-bx-check"></use>
+                <use href="#i-bx-check"></use>
               </svg>
             </button>
           </li>
@@ -81,7 +83,7 @@
       <a class="gradient-btn" href="https://www.butmmi.fr/" target="_blank" rel="noopener noreferrer"
         data-i18n="header.education">Ma Formation</a>
       <svg class="icon" id="menu-icon" aria-hidden="true">
-        <use href="image/icons.svg#i-bx-menu"></use>
+        <use href="#i-bx-menu"></use>
       </svg>
     </div>
   </header>
@@ -93,7 +95,7 @@
       <div class="content-wrapper">
         <div class="legal-section fade-in hidden">
           <h2><svg class="icon" aria-hidden="true">
-              <use href="image/icons.svg#i-bx-buildings"></use>
+              <use href="#i-bx-buildings"></use>
             </svg> <span data-i18n="legal.s1.title">Éditeur du site</span></h2>
           <p data-i18n="legal.s1.name"><strong>Nom :</strong> Marie-Joseph Morgan</p>
           <p data-i18n="legal.s1.trade"><strong>Nom commercial :</strong> Morgan Visual's</p>
@@ -104,7 +106,7 @@
 
         <div class="legal-section fade-in hidden">
           <h2><svg class="icon" aria-hidden="true">
-              <use href="image/icons.svg#i-bx-server"></use>
+              <use href="#i-bx-server"></use>
             </svg> <span data-i18n="legal.s2.title">Hébergement</span></h2>
           <p data-i18n="legal.s2.host"><strong>Hébergeur :</strong> Vercel</p>
           <p data-i18n="legal.s2.address"><strong>Adresse :</strong> 650 California St, San Francisco, CA 94108,
@@ -115,7 +117,7 @@
 
         <div class="legal-section fade-in hidden">
           <h2><svg class="icon" aria-hidden="true">
-              <use href="image/icons.svg#i-bx-paint"></use>
+              <use href="#i-bx-paint"></use>
             </svg> <span data-i18n="legal.s3.title">Propriété intellectuelle</span></h2>
           <p data-i18n="legal.s3.p1">L'ensemble du contenu de ce site (textes, images, vidéos, logos, animations) est la
             propriété exclusive de Morgan Visual's, sauf mention contraire.</p>
@@ -129,7 +131,7 @@
 
         <div class="legal-section fade-in hidden">
           <h2><svg class="icon" aria-hidden="true">
-              <use href="image/icons.svg#i-bx-data"></use>
+              <use href="#i-bx-data"></use>
             </svg> <span data-i18n="legal.s4.title">Protection des données personnelles</span></h2>
           <p data-i18n="legal.s4.p1">Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi
             Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition
@@ -142,7 +144,7 @@
 
         <div class="legal-section fade-in hidden">
           <h2><svg class="icon" aria-hidden="true">
-              <use href="image/icons.svg#i-bx-cookie"></use>
+              <use href="#i-bx-cookie"></use>
             </svg> <span data-i18n="legal.s5.title">Cookies</span></h2>
           <p data-i18n="legal.s5.p1">Ce site n'utilise pas de cookies de suivi ou de cookies publicitaires.</p>
           <p data-i18n="legal.s5.p2">Seuls des cookies techniques strictement nécessaires au bon fonctionnement du site
@@ -151,7 +153,7 @@
 
         <div class="legal-section fade-in hidden">
           <h2><svg class="icon" aria-hidden="true">
-              <use href="image/icons.svg#i-bx-link-external"></use>
+              <use href="#i-bx-link-external"></use>
             </svg> <span data-i18n="legal.s6.title">Liens hypertextes</span></h2>
           <p data-i18n="legal.s6.p1">Le site peut contenir des liens vers d'autres sites internet. Morgan Visual's
             n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.</p>
@@ -167,7 +169,7 @@
 
         <div class="legal-section fade-in hidden">
           <h2><svg class="icon" aria-hidden="true">
-              <use href="image/icons.svg#i-bx-shield"></use>
+              <use href="#i-bx-shield"></use>
             </svg> <span data-i18n="legal.s7.title">Responsabilité</span></h2>
           <p data-i18n="legal.s7.p1">Morgan Visual's s'efforce d'assurer l'exactitude et la mise à jour des informations
             diffusées sur ce site.</p>
@@ -179,7 +181,7 @@
 
         <div class="legal-section fade-in hidden">
           <h2><svg class="icon" aria-hidden="true">
-              <use href="image/icons.svg#i-bx-code-alt"></use>
+              <use href="#i-bx-code-alt"></use>
             </svg> <span data-i18n="legal.s8.title">Crédits</span></h2>
           <p data-i18n="legal.s8.p1"><strong>Conception et développement :</strong> Morgan Visual's</p>
           <p data-i18n="legal.s8.p2"><strong>Technologies utilisées :</strong></p>
@@ -193,7 +195,7 @@
 
         <div class="legal-section fade-in hidden">
           <h2><svg class="icon" aria-hidden="true">
-              <use href="image/icons.svg#i-bx-envelope"></use>
+              <use href="#i-bx-envelope"></use>
             </svg> <span data-i18n="legal.s9.title">Contact</span></h2>
           <p data-i18n="legal.s9.p1">Pour toute question concernant ces mentions légales, vous pouvez me contacter :</p>
           <p data-i18n="legal.s9.email"><strong>Email :</strong> <a
@@ -204,14 +206,14 @@
 
         <div class="legal-section last-updated fade-in hidden">
           <p><svg class="icon" aria-hidden="true">
-              <use href="image/icons.svg#i-bx-calendar"></use>
+              <use href="#i-bx-calendar"></use>
             </svg> <span data-i18n="legal.updated"><strong>Dernière mise à jour :</strong> Avril 2026</span></p>
         </div>
 
         <div class="back-home fade-in hidden">
           <a href="index.html" class="btn">
             <svg class="icon" aria-hidden="true">
-              <use href="image/icons.svg#i-bx-home"></use>
+              <use href="#i-bx-home"></use>
             </svg> <span data-i18n="legal.backHome">Retour à l'accueil</span>
           </a>
         </div>
@@ -224,25 +226,25 @@
       <a href="https://www.behance.net/mrgnvisuals" target="_blank" rel="noopener noreferrer"
         aria-label="Profil Behance">
         <svg class="icon" aria-hidden="true">
-          <use href="image/icons.svg#i-bxl-behance"></use>
+          <use href="#i-bxl-behance"></use>
         </svg>
       </a>
       <a href="https://www.linkedin.com/in/morgan-marie-joseph-23165a2ba/" target="_blank" rel="noopener noreferrer"
         aria-label="Profil LinkedIn">
         <svg class="icon" aria-hidden="true">
-          <use href="image/icons.svg#i-bxl-linkedin-square"></use>
+          <use href="#i-bxl-linkedin-square"></use>
         </svg>
       </a>
       <a href="https://www.instagram.com/mrgnvisuals/" target="_blank" rel="noopener noreferrer"
         aria-label="Profil Instagram">
         <svg class="icon" aria-hidden="true">
-          <use href="image/icons.svg#i-bxl-instagram-alt"></use>
+          <use href="#i-bxl-instagram-alt"></use>
         </svg>
       </a>
       <a href="https://www.youtube.com/@morganvisuals" target="_blank" rel="noopener noreferrer"
         aria-label="Chaîne YouTube">
         <svg class="icon" aria-hidden="true">
-          <use href="image/icons.svg#i-bxl-youtube"></use>
+          <use href="#i-bxl-youtube"></use>
         </svg>
       </a>
     </div>
