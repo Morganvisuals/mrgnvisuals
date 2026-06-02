@@ -30,8 +30,8 @@ if (contactForm) {
             if (response.ok) {
                 const thankYou = document.getElementById("thank-you-message");
                 if (thankYou) {
-                    thankYou.style.display = "block";
-                    setTimeout(() => { thankYou.style.display = "none"; }, 5000);
+                    thankYou.classList.add("is-visible");
+                    setTimeout(() => { thankYou.classList.remove("is-visible"); }, 5000);
                 }
                 form.reset();
             } else {

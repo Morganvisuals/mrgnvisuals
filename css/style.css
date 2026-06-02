@@ -40,11 +40,34 @@ html {
 }
 
 .thank-you-message {
-  display: none;
   color: #a78bfa;
   font-size: 1.6rem;
-  margin-top: 20px;
   text-align: center;
+  /* Masqué : on collapse la hauteur (max-height + margin-top à 0) pour
+     ne laisser AUCUN espace vide quand il n'y a pas de message, et on
+     anime opacity + translate pour une apparition/disparition fluides. */
+  opacity: 0;
+  transform: translateY(8px);
+  max-height: 0;
+  margin-top: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: opacity .45s ease, transform .45s ease,
+              max-height .45s ease, margin-top .45s ease;
+}
+
+.thank-you-message.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 6rem;
+  margin-top: 20px;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .thank-you-message {
+    transition: opacity .2s ease;
+  }
 }
 
 /*color set*/
