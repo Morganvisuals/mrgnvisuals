@@ -665,6 +665,28 @@ if (modal) {
     `;
   }
 
+  // Verrou de scroll : on fige le body en position fixed en mémorisant
+  // la position courante (fiable sur iOS Safari, contrairement à overflow:hidden).
+  let savedScrollY = 0;
+
+  function lockScroll() {
+    savedScrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${savedScrollY}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
+  }
+
+  function unlockScroll() {
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
+    window.scrollTo(0, savedScrollY);
+  }
+
   // Ouvrir le modal
   projectButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -675,14 +697,14 @@ if (modal) {
       renderModal(projectId);
       modal.classList.add('active');
       modal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
+      lockScroll();
     });
   });
 
   function closeModal() {
     modal.classList.remove('active');
     modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
+    unlockScroll();
     currentProjectId = null;
   }
 
