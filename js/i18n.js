@@ -70,6 +70,13 @@
       'card.view': "Voir le projet",
       'card.viewSite': "Voir le site web",
 
+      // Bouton "Voir plus" de la grille
+      'projects.showMore': "Voir plus",
+      'projects.showLess': "Voir moins",
+
+      // Visualiseur PDF
+      'viewer.back': "Retour",
+
       // Cartes projet (grille)
       'pcard.1.title': "Documentaire Cyparis",
       'pcard.1.desc': "Dans ce projet, j'ai eu pour but de créer un documentaire sur Cyparis en animation 2D.",
@@ -206,6 +213,13 @@
       // Card buttons
       'card.view': "View project",
       'card.viewSite': "View website",
+
+      // Grid "Show more" button
+      'projects.showMore': "See more",
+      'projects.showLess': "See less",
+
+      // PDF viewer
+      'viewer.back': "Back",
 
       // Project cards (grid)
       'pcard.1.title': "Cyparis Documentary",

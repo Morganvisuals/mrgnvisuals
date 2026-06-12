@@ -399,6 +399,8 @@
   border-radius: 3rem;
   font-size: 1.7rem;
   font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
@@ -661,6 +663,98 @@
 }
 
 /* ============================================
+   BOUTON "VOIR PLUS"
+   ============================================ */
+
+/* Projets repliés au-delà de la limite initiale (catégorie "Tous") */
+.project-item.is-clamped {
+  display: none;
+}
+
+.show-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.show-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.3rem 3.2rem;
+  background: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--main-color);
+  border-radius: 3rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.show-more-btn:hover {
+  background: var(--main-color);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(127, 90, 240, 0.5);
+}
+
+/* Au survol, le texte passe du dégradé (peu lisible sur le fond violet) au
+   blanc plein : on neutralise le background-clip hérité de la règle globale span. */
+.show-more-btn:hover .show-more-text {
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+
+.show-more-btn .icon {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+/* Chevron retourné quand la liste est dépliée */
+.show-more-btn[aria-expanded="true"] .icon {
+  transform: rotate(180deg);
+}
+
+/* Petit rebond du chevron au survol pour rendre le bouton plus vivant.
+   Deux variantes : vers le bas quand replié, vers le haut quand déplié
+   (la rotation est conservée dans les keyframes pour ne pas écraser le retournement). */
+@keyframes chevron-bounce-down {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(4px); }
+}
+
+@keyframes chevron-bounce-up {
+  0%, 100% { transform: rotate(180deg) translateY(0); }
+  50%      { transform: rotate(180deg) translateY(4px); }
+}
+
+.show-more-btn:hover .icon {
+  animation: chevron-bounce-down 0.8s ease-in-out infinite;
+}
+
+.show-more-btn[aria-expanded="true"]:hover .icon {
+  animation: chevron-bounce-up 0.8s ease-in-out infinite;
+}
+
+/* Respecte les préférences de mouvement réduit */
+@media (prefers-reduced-motion: reduce) {
+  .show-more-btn:hover .icon,
+  .show-more-btn[aria-expanded="true"]:hover .icon {
+    animation: none;
+  }
+}
+
+/* Masqué hors catégorie "Tous" ou quand tous les projets tiennent déjà */
+.show-more-btn.is-hidden {
+  display: none;
+}
+
+/* ============================================
    LIGHT MODE — modal
    ============================================ */
 body.light-mode .modal-link {
@@ -682,4 +776,130 @@ body.light-mode .modal-link:hover {
 
 body.light-mode .modal-overlay {
   background: rgba(15, 23, 42, 0.7);
+}
+
+/* ============================================
+   VISUALISEUR PDF PLEIN ÉCRAN
+   ============================================ */
+
+.pdf-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 11000; /* au-dessus du modal (9999 / 10000) */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pdf-viewer.active {
+  display: flex;
+  opacity: 1;
+}
+
+/* Fond assombri et flouté */
+.pdf-viewer-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+/* Fenêtre flottante */
+.pdf-viewer-window {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 880px;
+  height: 88vh;
+  max-height: 920px;
+  background: var(--second-bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.55);
+  animation: modalSlideIn 0.4s ease;
+}
+
+.pdf-viewer-bar {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 1.4rem 1.8rem;
+  background: var(--bg-color);
+  border-bottom: 1px solid var(--main-color);
+}
+
+.pdf-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2.4rem;
+  background: var(--main-color);
+  color: #fff;
+  border: none;
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pdf-back:hover {
+  transform: translateX(-4px);
+  box-shadow: 0 5px 15px rgba(127, 90, 240, 0.5);
+}
+
+.pdf-back .icon {
+  font-size: 2rem;
+}
+
+/* Flèche réutilisée à l'envers pour pointer vers la gauche (retour) */
+.pdf-back-arrow {
+  transform: scaleX(-1);
+}
+
+/* Texte du bouton en blanc plein (neutralise le dégradé global des span) */
+.pdf-back span {
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+
+.pdf-viewer-frame-wrap {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.pdf-viewer-frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .pdf-viewer-window {
+    width: 94%;
+    height: 90vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .pdf-viewer-window {
+    width: 96%;
+    height: 92vh;
+    border-radius: 1.5rem;
+  }
+
+  .pdf-back {
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+  }
 }

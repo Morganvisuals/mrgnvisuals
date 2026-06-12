@@ -104,7 +104,7 @@ const projectsData = {
         outils: "Illustrator, Photoshop",
         "U.E": "Exprimer"
       },
-      links: [{ url: "image/DASH pdf.pdf", text: "Télécharger la charte", icon: "bx-download" }]
+      links: [{ url: "image/DASH pdf.pdf", text: "Voir la charte", icon: "bx-download", preview: true }]
     },
     en: {
       title: "DASH Brand Guidelines",
@@ -117,7 +117,7 @@ const projectsData = {
         tools: "Illustrator, Photoshop",
         "U.E": "Express"
       },
-      links: [{ url: "image/DASH pdf.pdf", text: "Download the guidelines", icon: "bx-download" }]
+      links: [{ url: "image/DASH pdf.pdf", text: "View the guidelines", icon: "bx-download", preview: true }]
     }
   },
   5: {
@@ -577,6 +577,52 @@ const projectsData = {
 const filterButtons = document.querySelectorAll('.filter-btn');
 const projectItems = document.querySelectorAll('.project-item');
 
+// Nombre de projets affichés d'emblée dans la catégorie "Tous" avant le "Voir plus"
+const INITIAL_COUNT = 6;
+
+const projectsSection = document.querySelector('.projects-modern');
+const showMoreBtn = document.querySelector('.show-more-btn');
+const showMoreText = showMoreBtn?.querySelector('.show-more-text');
+
+let currentFilter = 'all';
+let expanded = false;
+
+// Items correspondant au filtre courant, en ignorant ceux masqués en dur (ex. projet 7)
+function getMatchingItems(filter) {
+  return [...projectItems].filter(item => {
+    if (item.style.display === 'none') return false;
+    const categories = (item.getAttribute('data-category') || '').trim();
+    return filter === 'all' || categories.split(/\s+/).includes(filter);
+  });
+}
+
+function updateShowMoreLabel() {
+  if (!showMoreText) return;
+  const lang = window.i18nLang === 'en' ? 'en' : 'fr';
+  const table = (window.i18nDict && window.i18nDict[lang]) || {};
+  showMoreText.textContent = expanded
+    ? (table['projects.showLess'] || 'Voir moins')
+    : (table['projects.showMore'] || 'Voir plus');
+}
+
+// Replie les projets au-delà de la limite et pilote l'affichage du bouton.
+// Le "Voir plus" n'existe que dans la catégorie "Tous".
+function applyShowMore() {
+  const matching = getMatchingItems(currentFilter);
+  const hasOverflow = currentFilter === 'all' && matching.length > INITIAL_COUNT;
+  const clampNow = hasOverflow && !expanded;
+
+  matching.forEach((item, i) => {
+    item.classList.toggle('is-clamped', clampNow && i >= INITIAL_COUNT);
+  });
+
+  if (showMoreBtn) {
+    showMoreBtn.classList.toggle('is-hidden', !hasOverflow);
+    showMoreBtn.setAttribute('aria-expanded', String(expanded));
+    updateShowMoreLabel();
+  }
+}
+
 filterButtons.forEach(button => {
   button.addEventListener('click', () => {
     filterButtons.forEach(btn => {
@@ -587,12 +633,13 @@ filterButtons.forEach(button => {
     button.classList.add('active');
     button.setAttribute('aria-pressed', 'true');
 
-    const filter = button.getAttribute('data-filter');
+    currentFilter = button.getAttribute('data-filter');
+    expanded = false; // on repart d'une liste repliée à chaque changement de filtre
 
     projectItems.forEach(item => {
       const categories = (item.getAttribute('data-category') || '').trim();
 
-      if (filter === 'all' || categories.split(/\s+/).includes(filter)) {
+      if (currentFilter === 'all' || categories.split(/\s+/).includes(currentFilter)) {
         // Remettre visible — le scroll-reveal gère opacity/transform
         item.classList.remove('hide');
       } else {
@@ -600,8 +647,28 @@ filterButtons.forEach(button => {
         item.classList.add('hide');
       }
     });
+
+    applyShowMore();
   });
 });
+
+if (showMoreBtn) {
+  showMoreBtn.addEventListener('click', () => {
+    expanded = !expanded;
+    applyShowMore();
+    // En repliant, on ramène l'utilisateur en haut de la section pour ne pas
+    // le laisser flotter loin sous des cartes qui viennent de disparaître.
+    if (!expanded) {
+      projectsSection?.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+}
+
+// Réétiquette le bouton si la langue change
+window.addEventListener('languagechange', updateShowMoreLabel);
+
+// État initial : catégorie "Tous" repliée à INITIAL_COUNT projets
+applyShowMore();
 
 
 // ============================================
@@ -655,12 +722,14 @@ if (modal) {
       </div>
 
       <div class="modal-links">
-        ${data.links.map(link => `
-          <a href="${escapeHTML(link.url)}" class="modal-link" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" aria-hidden="true"><use href="#i-${escapeHTML(link.icon)}"></use></svg>
-            <span>${escapeHTML(link.text)}</span>
-          </a>
-        `).join('')}
+        ${data.links.map(link => {
+          const inner = `<svg class="icon" aria-hidden="true"><use href="#i-${escapeHTML(link.icon)}"></use></svg>
+            <span>${escapeHTML(link.text)}</span>`;
+          // link.preview → ouvre le PDF dans le visualiseur intégré au site
+          return link.preview
+            ? `<button type="button" class="modal-link" data-pdf="${escapeHTML(encodeURI(link.url))}" data-pdf-title="${escapeHTML(data.title)}">${inner}</button>`
+            : `<a href="${escapeHTML(link.url)}" class="modal-link" target="_blank" rel="noopener noreferrer">${inner}</a>`;
+        }).join('')}
       </div>
     `;
   }
@@ -718,7 +787,10 @@ if (modal) {
   modalOverlay?.addEventListener('click', closeModal);
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
+    // Si le visualiseur PDF est ouvert par-dessus, Échap le ferme lui d'abord
+    // (géré plus bas) — on ne ferme pas le modal tant qu'il est actif.
+    const viewerOpen = document.getElementById('pdfViewer')?.classList.contains('active');
+    if (e.key === 'Escape' && modal.classList.contains('active') && !viewerOpen) {
       closeModal();
     }
   });
@@ -727,6 +799,93 @@ if (modal) {
   window.addEventListener('languagechange', () => {
     if (currentProjectId && modal.classList.contains('active')) {
       renderModal(currentProjectId);
+    }
+  });
+}
+
+
+// ============================================
+// VISUALISEUR PDF EN FENÊTRE FLOTTANTE
+// Ouvert depuis tout élément [data-pdf] (boutons "preview" du modal, bouton CV…).
+// ============================================
+
+const pdfViewer = document.getElementById('pdfViewer');
+
+if (pdfViewer) {
+  const pdfFrame = pdfViewer.querySelector('.pdf-viewer-frame');
+  const pdfBack = pdfViewer.querySelector('.pdf-back');
+
+  // Mémorise l'élément à refocaliser à la fermeture (accessibilité dialog)
+  let pdfReturnFocus = null;
+
+  // Verrou de scroll autonome : le visualiseur peut être ouvert sans modal
+  // (bouton CV). On ne pose le verrou que si le body n'est pas déjà figé par
+  // le modal projet, et on ne le retire alors que si c'est nous qui l'avons mis.
+  let pdfLockedByUs = false;
+  let pdfSavedScrollY = 0;
+
+  function lockPdfScroll() {
+    if (document.body.style.position === 'fixed') return; // déjà verrouillé par le modal
+    pdfSavedScrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${pdfSavedScrollY}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
+    pdfLockedByUs = true;
+  }
+
+  function unlockPdfScroll() {
+    if (!pdfLockedByUs) return;
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
+    const html = document.documentElement;
+    const prev = html.style.scrollBehavior;
+    html.style.scrollBehavior = 'auto';
+    window.scrollTo(0, pdfSavedScrollY);
+    html.style.scrollBehavior = prev;
+    pdfLockedByUs = false;
+  }
+
+  function openPdfViewer(url, title, trigger) {
+    if (!url) return;
+    lockPdfScroll();
+    // #view=FitH : ajuste la largeur de la page à la zone d'affichage
+    pdfFrame.src = `${url}#view=FitH`;
+    if (title) pdfFrame.title = title;
+    pdfReturnFocus = trigger || null;
+    pdfViewer.classList.add('active');
+    pdfViewer.setAttribute('aria-hidden', 'false');
+    pdfBack?.focus(); // déplace le focus dans le dialog
+  }
+
+  function closePdfViewer() {
+    pdfViewer.classList.remove('active');
+    pdfViewer.setAttribute('aria-hidden', 'true');
+    pdfFrame.src = ''; // stoppe le rendu du PDF en arrière-plan
+    unlockPdfScroll();
+    // Rend le focus à l'élément déclencheur (bouton CV, lien du modal…)
+    if (pdfReturnFocus) { pdfReturnFocus.focus(); pdfReturnFocus = null; }
+  }
+
+  // Délégation : déclenché par tout élément [data-pdf] (les liens "preview" du
+  // modal sont régénérés à chaque ouverture, d'où la délégation au document).
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-pdf]');
+    if (!trigger) return;
+    e.preventDefault();
+    openPdfViewer(trigger.getAttribute('data-pdf'), trigger.getAttribute('data-pdf-title'), trigger);
+  });
+
+  pdfBack?.addEventListener('click', closePdfViewer);
+  pdfViewer.querySelector('.pdf-viewer-overlay')?.addEventListener('click', closePdfViewer);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && pdfViewer.classList.contains('active')) {
+      closePdfViewer();
     }
   });
 }
