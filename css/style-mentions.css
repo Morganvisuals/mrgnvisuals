@@ -7,6 +7,16 @@
   font-family: "Poppins";
 }
 
+::selection {
+  background-color: #6366F1;
+  color: #FFFFFF;
+}
+
+::-moz-selection {
+  background-color: #6366F1;
+  color: #FFFFFF;
+}
+
 /*color set*/
 :root {
   --bg-color: radial-gradient(1200px circle at 10% 10%, rgba(124, 58, 237, 0.15), transparent 40%),
