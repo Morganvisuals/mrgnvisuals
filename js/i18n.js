@@ -76,6 +76,7 @@
 
       // Visualiseur PDF
       'viewer.back': "Retour",
+      'viewer.open': "Ouvrir",
 
       // Cartes projet (grille)
       'pcard.1.title': "Documentaire Cyparis",
@@ -220,6 +221,7 @@
 
       // PDF viewer
       'viewer.back': "Back",
+      'viewer.open': "Open",
 
       // Project cards (grid)
       'pcard.1.title': "Cyparis Documentary",

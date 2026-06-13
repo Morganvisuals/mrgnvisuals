@@ -814,6 +814,7 @@ const pdfViewer = document.getElementById('pdfViewer');
 if (pdfViewer) {
   const pdfFrame = pdfViewer.querySelector('.pdf-viewer-frame');
   const pdfBack = pdfViewer.querySelector('.pdf-back');
+  const pdfOpen = pdfViewer.querySelector('.pdf-open');
 
   // Mémorise l'élément à refocaliser à la fermeture (accessibilité dialog)
   let pdfReturnFocus = null;
@@ -855,6 +856,9 @@ if (pdfViewer) {
     lockPdfScroll();
     // #view=FitH : ajuste la largeur de la page à la zone d'affichage
     pdfFrame.src = `${url}#view=FitH`;
+    // Lien "Ouvrir" : visionnage natif plein écran (fiable sur mobile, où les
+    // iframes PDF s'affichent mal). On vise l'URL brute, sans le fragment.
+    if (pdfOpen) pdfOpen.href = url;
     if (title) pdfFrame.title = title;
     pdfReturnFocus = trigger || null;
     pdfViewer.classList.add('active');

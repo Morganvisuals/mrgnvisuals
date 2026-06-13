@@ -828,9 +828,36 @@ body.light-mode .modal-overlay {
   flex: 0 0 auto;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
   padding: 1.4rem 1.8rem;
+  /* Respecte l'encoche / les zones sûres (iOS paysage, PWA) */
+  padding-left: max(1.8rem, env(safe-area-inset-left));
+  padding-right: max(1.8rem, env(safe-area-inset-right));
   background: var(--bg-color);
   border-bottom: 1px solid var(--main-color);
+}
+
+/* Bouton secondaire : ouvre le PDF en natif (plein écran, fiable sur mobile) */
+.pdf-open {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2.4rem;
+  background: transparent;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.pdf-open:hover {
+  background: var(--main-color);
+  color: #fff;
 }
 
 .pdf-back {
@@ -891,15 +918,28 @@ body.light-mode .modal-overlay {
   }
 }
 
+/* Mobile : fenêtre plein écran (max de place pour le PDF) et la fenêtre
+   épouse exactement la zone visible (le parent fixed inset:0 gère la hauteur,
+   plus fiable que vh qui déborde sous la barre du navigateur). */
 @media (max-width: 600px) {
   .pdf-viewer-window {
-    width: 96%;
-    height: 92vh;
-    border-radius: 1.5rem;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    border: none;
+    border-radius: 0;
   }
 
-  .pdf-back {
-    padding: 0.8rem 2rem;
+  .pdf-viewer-bar {
+    padding: 1rem 1.4rem;
+    padding-left: max(1.4rem, env(safe-area-inset-left));
+    padding-right: max(1.4rem, env(safe-area-inset-right));
+  }
+
+  .pdf-back,
+  .pdf-open {
+    padding: 0.8rem 1.8rem;
     font-size: 1.4rem;
   }
 }
