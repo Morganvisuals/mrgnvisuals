@@ -440,8 +440,48 @@ body.light-mode .header {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-body.light-mode .navbar {
-  background: rgba(255, 255, 255, 0.95) !important;
+/* Liquid glass version claire — hérite du blur(22px) saturate() de .header.scrolled */
+body.light-mode .header.scrolled {
+  background: rgba(255, 255, 255, 0.55);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 8px 32px rgba(15, 23, 42, 0.12),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.75),
+    inset 0 -1px 0 0 rgba(15, 23, 42, 0.03);
+}
+
+/* Ombre flottante de la capsule en light (géométrie partagée via navbar-interactive.css) */
+@media(min-width: 1025px) {
+  body.light-mode .header.scrolled {
+    box-shadow:
+      0 14px 40px rgba(15, 23, 42, 0.14),
+      0 2px 8px rgba(15, 23, 42, 0.08),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.8),
+      inset 0 -1px 0 0 rgba(15, 23, 42, 0.04);
+  }
+}
+
+@media(max-width: 1024px) {
+  /* Tiroir liquid glass clair : translucide pour laisser transparaître le blur */
+  body.light-mode .navbar {
+    background: rgba(255, 255, 255, 0.6) !important;
+    box-shadow:
+      -8px 0 40px rgba(15, 23, 42, 0.12),
+      inset 1px 0 0 0 rgba(255, 255, 255, 0.8);
+  }
+
+  /* Liens du tiroir en light : remplace le fond violet foncé hérité du dark
+     (violet sur violet illisible) par une teinte indigo claire. */
+  body.light-mode .navbar a {
+    border-bottom-color: rgba(15, 23, 42, 0.08);
+  }
+
+  body.light-mode .navbar a:hover,
+  body.light-mode .navbar a.active,
+  body.light-mode .navbar a.active:hover {
+    background: rgba(99, 102, 241, 0.12);
+    color: var(--main-color);
+  }
 }
 
 body.light-mode .navbar a {
@@ -508,8 +548,10 @@ body.light-mode .mention {
   gap: 0.6rem;
   height: 3.2rem;
   padding: 0 1.1rem;
-  background-color: #050510;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.07);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+  backdrop-filter: blur(10px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 3.2rem;
   color: var(--text-color);
   font-family: "Poppins", sans-serif;
@@ -519,11 +561,16 @@ body.light-mode .mention {
   cursor: pointer;
   outline: none;
   transition: all 0.3s ease;
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.22),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.15);
 }
 
 .lang-current:hover {
-  border-color: var(--main-color);
-  box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+  border-color: rgba(99, 102, 241, 0.7);
+  box-shadow:
+    0 0 15px rgba(99, 102, 241, 0.3),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.28);
 }
 
 .lang-current .lang-globe {
@@ -642,8 +689,18 @@ body.light-mode .mention {
 }
 
 body.light-mode .lang-current {
-  background-color: #E2E8F0;
-  border-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.55);
+  border-color: rgba(15, 23, 42, 0.18);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9),
+    0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+body.light-mode .lang-current:hover {
+  border-color: rgba(99, 102, 241, 0.6);
+  box-shadow:
+    0 0 15px rgba(99, 102, 241, 0.25),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
 }
 
 body.light-mode .lang-current .lang-caret {
@@ -676,20 +733,27 @@ body.light-mode .lang-item.active {
   position: relative;
   width: 6.4rem;
   height: 3.2rem;
-  background-color: #050510;
+  background-color: rgba(255, 255, 255, 0.07);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+  backdrop-filter: blur(10px) saturate(160%);
   border-radius: 3.2rem;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   cursor: pointer;
   display: flex;
   align-items: center;
   padding: 0 0.4rem;
   transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
   outline: none;
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.22),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.15);
 }
 
 .theme-switch:hover {
-  border-color: var(--main-color);
-  box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+  border-color: rgba(99, 102, 241, 0.7);
+  box-shadow:
+    0 0 15px rgba(99, 102, 241, 0.3),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.28);
 }
 
 .switch-thumb {
@@ -713,12 +777,18 @@ body.light-mode .lang-item.active {
 }
 
 body.light-mode .theme-switch {
-  background-color: #E2E8F0;
-  border-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.55);
+  border-color: rgba(15, 23, 42, 0.18);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9),
+    0 1px 3px rgba(15, 23, 42, 0.08);
 }
 
 body.light-mode .theme-switch:hover {
-  border-color: var(--main-color);
+  border-color: rgba(99, 102, 241, 0.6);
+  box-shadow:
+    0 0 15px rgba(99, 102, 241, 0.25),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
 }
 
 body.light-mode .switch-thumb {

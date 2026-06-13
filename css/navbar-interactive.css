@@ -6,7 +6,9 @@
 :root {
   --navbar-height: 80px;
   --navbar-scroll-height: 70px;
-  --navbar-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --navbar-scroll-max-width: 1120px;
+  --navbar-scroll-gutter: 2rem;
+  --navbar-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ============================================
@@ -16,8 +18,15 @@
 .header {
   position: fixed;
   top: 0;
+  /* left + right (plutôt que width:100%) → permet d'animer les marges latérales
+     quand la barre se détache en capsule flottante au scroll.
+     margin auto + max-width : centre la capsule rétrécie au scroll. Le max-width
+     est posé en base (100%) pour qu'il s'anime vers sa valeur réduite sans saut. */
   left: 0;
-  width: 100%;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
   height: var(--navbar-height);
   padding: 0 8%;
   background: rgba(0, 0, 0, 0.3);
@@ -27,24 +36,112 @@
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  transition: var(--navbar-transition);
-  /* Même teinte que .header.scrolled mais alpha 0 → la transition n'interpole
-     que l'opacité, évite le passage par un gris terne (cyan → violet). */
-  border-bottom: 1px solid rgba(139, 55, 198, 0);
+  /* Transition explicite SANS backdrop-filter : animer la valeur du flou
+     (blur 10→22) recalcule le flou d'arrière-plan à chaque frame = très coûteux
+     et saccadé. Le flou change donc instantanément ; seule la géométrie + les
+     couleurs/ombres s'animent (propriétés peu coûteuses). */
+  transition:
+    top 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    max-width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+  /* Bord complet transparent (et non border-bottom seul) : la largeur 1px est
+     déjà posée → au scroll seule la couleur s'anime, et le radius de la capsule
+     peut s'appliquer proprement. border-box global → pas de décalage. */
+  border: 1px solid rgba(255, 255, 255, 0);
 }
 
-/* Header au scroll - ANIMATION FIXÉE */
+/* Reflet « liquid glass » : pseudo placé DERRIÈRE le contenu (z-index:-1, dans
+   le contexte d'empilement du header) et DEVANT le background de base.
+   Invisible sur le hero, il s'allume en fondu au scroll → la transition verre
+   se fait via l'opacité (les gradients ne sont pas animables en CSS). */
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 32%),
+    radial-gradient(140% 200% at 0% 0%, rgba(124, 58, 237, 0.22), transparent 55%),
+    radial-gradient(120% 200% at 100% 0%, rgba(44, 183, 255, 0.14), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.header.scrolled::before {
+  opacity: 1;
+}
+
+/* Header au scroll - MATÉRIAU LIQUID GLASS */
 .header.scrolled {
   height: var(--navbar-scroll-height);
-  background: rgba(0, 0, 0, 0.95);
-  box-shadow: 0 5px 30px rgba(75, 0, 130, 0.4);
-  border-bottom: 1px solid rgba(139, 55, 198, 0.4);
+  background: rgba(22, 18, 38, 0.45);
+  -webkit-backdrop-filter: blur(22px) saturate(185%);
+  backdrop-filter: blur(22px) saturate(185%);
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 8px 32px rgba(10, 5, 25, 0.45),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.22),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.04);
 }
 
+/* DESKTOP : la barre se DÉTACHE en capsule flottante arrondie au scroll
+   (style « liquid glass » Apple). Scopé ≥1025px : sur mobile la barre reste
+   pleine largeur car le tiroir burger est ancré sous le header. */
+@media(min-width: 1025px) {
+  /* La nav prend l'espace libre (flex:1) et centre ses liens → il ne reste AUCUN
+     espace libre au niveau du header, donc space-between n'a plus rien à étaler :
+     logo collé à gauche, actions à droite, liens centrés au milieu, à toute
+     largeur. C'est ce qui supprime le bug de répartition quand la pilule rétrécit.
+     Les liens gardent une transition de couleur/transform pour le hover, mais PAS
+     de padding → le compactage est instantané (aucun reflow animé). */
+  .navbar {
+    flex: 1 1 auto;
+    min-width: 0;
+    justify-content: center;
+  }
+
+  .navbar a {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .logo {
+    margin-right: 1.2rem;
+  }
+
+  .header.scrolled {
+    top: 1.1rem;
+    /* Capsule rétrécie + centrée (left:0/right:0 + margin auto de la base).
+       max-width chiffré (et non fit-content) → la largeur s'ANIME dans les deux
+       sens. Le min() garde une marge latérale sur les viewports proches du
+       breakpoint desktop tout en laissant assez de place au bouton formation. */
+    left: 0;
+    right: 0;
+    max-width: min(var(--navbar-scroll-max-width), calc(100% - var(--navbar-scroll-gutter)));
+    padding: 0 2.2rem;
+    border-radius: 100px;
+    box-shadow:
+      0 14px 40px rgba(10, 5, 25, 0.5),
+      0 2px 8px rgba(10, 5, 25, 0.3),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.25),
+      inset 0 -1px 0 0 rgba(255, 255, 255, 0.05);
+  }
+
+  /* Liens un peu resserrés dans la pilule (snap instantané, cf. transition nav a) */
+  .header.scrolled .navbar a {
+    padding: 1rem 1.6rem;
+  }
+}
 /* Logo - ANIMATION FIXÉE */
 .logo {
   text-decoration: none;
-  font-size: 2.8rem;
+  font-size: 2.3rem;
   color: var(--text-color);
   font-weight: 800;
   cursor: pointer;
@@ -52,6 +149,7 @@
   z-index: 1001;
   user-select: none;
   white-space: nowrap;
+  flex: 0 0 auto;
 }
 
 .logo:hover {
@@ -60,7 +158,7 @@
 }
 
 .header.scrolled .logo {
-  font-size: 2.4rem;
+  font-size: 2.1rem;
 }
 
 .logo span {
@@ -150,6 +248,16 @@
   color: var(--main-color);
 }
 
+/* Desktop : catégorie sélectionnée → on garde la couleur de texte normale
+   (le soulignement lumineux suffit à marquer l'état actif), pas de texte violet.
+   Scopé ≥1025px pour ne pas affecter le tiroir mobile. */
+@media(min-width: 1025px) {
+  .navbar a.active,
+  .navbar a.active:hover {
+    color: var(--text-color);
+  }
+}
+
 .navbar a.active::after {
   width: 80%;
   box-shadow: 0 0 15px rgba(127, 90, 240, 1);
@@ -159,6 +267,10 @@
 .navbar a.active:hover::after {
   width: 100%;
   box-shadow: 0 0 20px rgba(127, 90, 240, 1);
+}
+
+.header-actions {
+  flex: 0 0 auto;
 }
 
 /* ============================================
@@ -183,6 +295,7 @@
   box-shadow: 0 4px 15px rgba(103, 2, 174, 0.4);
   position: relative;
   overflow: hidden;
+  flex: 0 0 auto;
 }
 
 .gradient-btn::before {
@@ -238,11 +351,17 @@
     max-width: 85vw;
     height: calc(100vh - var(--navbar-height));
     padding: 3rem 0;
-    background: rgba(0, 0, 0, 0.98);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    border-left: 3px solid var(--main-color);
-    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.8);
+    /* Tiroir liquid glass : fond translucide (alpha bas → le blur du contenu
+       derrière transparaît), blur saturé, liseré clair + reflet spéculaire
+       interne sur l'arête gauche. */
+    background: rgba(15, 12, 28, 0.6);
+    -webkit-backdrop-filter: blur(26px) saturate(180%);
+    backdrop-filter: blur(26px) saturate(180%);
+    border-left: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 22px 0 0 22px;
+    box-shadow:
+      -8px 0 40px rgba(0, 0, 0, 0.5),
+      inset 1px 0 0 0 rgba(255, 255, 255, 0.18);
     flex-direction: column;
     gap: 0;
     align-items: flex-start;
@@ -437,7 +556,11 @@
   .navbar {
     width: 100%;
     border-left: none;
-    border-top: 3px solid var(--main-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 0;
+    box-shadow:
+      0 -8px 40px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.18);
     right: -100%;
   }
 
@@ -461,9 +584,9 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
+  background: rgba(5, 5, 15, 0.55);
+  -webkit-backdrop-filter: blur(8px) saturate(140%);
+  backdrop-filter: blur(8px) saturate(140%);
   z-index: 998;
   opacity: 0;
   visibility: hidden;
