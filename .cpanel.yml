@@ -3,3 +3,7 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/hocp8711/morganvisuals.fr/
     - /bin/rsync -av --delete --exclude='.git' --exclude='.cpanel.yml' /home/hocp8711/repositories/mrgnvisuals/ $DEPLOYPATH
+    - /bin/echo "DirectoryIndex index.html" > $DEPLOYPATH.htaccess
+    - /bin/chmod 755 $DEPLOYPATH
+    - /usr/bin/find $DEPLOYPATH -type d -exec /bin/chmod 755 {} \;
+    - /usr/bin/find $DEPLOYPATH -type f -exec /bin/chmod 644 {} \;
