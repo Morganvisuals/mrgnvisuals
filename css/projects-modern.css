@@ -881,22 +881,18 @@ body.light-mode .modal-overlay {
   box-shadow: 0 5px 15px rgba(127, 90, 240, 0.5);
 }
 
-/* Pas d'anneau de focus sur ouverture/tap (focus posé par JS pour le dialog) ;
-   on le garde uniquement pour la navigation clavier. */
+/* Pas d'anneau de focus : le focus est posé par JS à l'ouverture du dialog et
+   iOS le rendait visible (:focus-visible y compris). On le neutralise. */
 .pdf-back,
 .pdf-open {
   -webkit-tap-highlight-color: transparent;
 }
 
 .pdf-back:focus,
-.pdf-open:focus {
-  outline: none;
-}
-
+.pdf-open:focus,
 .pdf-back:focus-visible,
 .pdf-open:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 2px;
+  outline: none;
 }
 
 .pdf-back .icon {
