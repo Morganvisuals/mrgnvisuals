@@ -29,7 +29,7 @@
       'aria.lang': "Changer de langue",
 
       // --- Accueil ---
-      'home.greeting': "Salut, moi c'est Morgan !",
+      'home.greeting': "Je transforme les idées en créations visuelles, entre design, mouvement et émotion.",
       'home.cv': "CV",
       'home.contactBtn': "Contact",
 
@@ -174,7 +174,7 @@
       'aria.lang': "Change language",
 
       // --- Home ---
-      'home.greeting': "Hi, I'm Morgan!",
+      'home.greeting': "I bring ideas to life through visual creations that blend design, motion, and emotion.",
       'home.cv': "Resume",
       'home.contactBtn': "Contact",
 

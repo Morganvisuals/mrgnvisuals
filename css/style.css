@@ -204,9 +204,12 @@ section {
 }
 
 .home-content p {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.8;
+  max-width: 420px;
+  color: rgba(255, 255, 255, 0.88);
+  margin-top: 2rem;
 }
 
 .home-img img,
@@ -948,7 +951,10 @@ body.light-mode .marquee-item--swap .logo-light {
   }
 
   .home-content p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    max-width: 420px;
+    color: rgba(255, 255, 255, 0.88);
+    margin-top: 1.5rem;
   }
 
   .social-icons a {
@@ -1076,6 +1082,13 @@ body.light-mode .marquee-item--swap .logo-light {
 
   .home-content h3 {
     font-size: 2.5rem;
+  }
+
+  .home-content p {
+    font-size: 1.7rem;
+    max-width: 90%;
+    color: rgba(255, 255, 255, 0.88);
+    margin-top: 1.2rem;
   }
 
   .home-img img {
