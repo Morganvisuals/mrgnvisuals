@@ -36,12 +36,6 @@
 html {
   font-size: 60%;
   overflow-x: hidden;
-  /* Évite le flash blanc au reload avant que le bundle CSS ne s'applique */
-  background-color: #050510;
-}
-
-html.light-mode {
-  background-color: #F8FAFC;
 }
 
 body {
