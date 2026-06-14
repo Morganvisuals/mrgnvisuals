@@ -92,6 +92,7 @@ html {
     radial-gradient(700px circle at 50% 90%, rgba(236, 72, 153, 0.08), transparent 40%),
     linear-gradient(180deg, #0B0F19 0%, #050510 100%), #111827;
   --text-color: white;
+  --muted-text-color: rgba(255, 255, 255, 0.88);
   --main-color: #6366F1;
 }
 
@@ -208,7 +209,7 @@ section {
   font-weight: 500;
   line-height: 1.8;
   max-width: 420px;
-  color: rgba(255, 255, 255, 0.88);
+  color: var(--muted-text-color);
   margin-top: 2rem;
 }
 
@@ -321,7 +322,7 @@ section {
 .about-content p {
   font-size: 1.8rem;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.88);
+  color: var(--muted-text-color);
 }
 
 .about-content .btn {
@@ -954,7 +955,6 @@ body.light-mode .marquee-item--swap .logo-light {
   .home-content p {
     font-size: 1.6rem;
     max-width: 420px;
-    color: rgba(255, 255, 255, 0.88);
     margin-top: 1.5rem;
   }
 
@@ -1088,7 +1088,6 @@ body.light-mode .marquee-item--swap .logo-light {
   .home-content p {
     font-size: 1.7rem;
     max-width: 90%;
-    color: rgba(255, 255, 255, 0.88);
     margin-top: 1.2rem;
   }
 
@@ -1146,6 +1145,7 @@ body.light-mode {
   --bg-color: #F8FAFC;
   --second-bg-color: #F1F5F9;
   --text-color: #0F172A;
+  --muted-text-color: #334155;
   --main-color: #6366F1;
 }
 

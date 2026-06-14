@@ -9,6 +9,10 @@
     content="Mentions légales du portfolio de Morgan Visual's : éditeur, hébergement, propriété intellectuelle et protection des données.">
   <meta name="robots" content="noindex, follow">
   <meta name="theme-color" content="#6366F1">
+  <!-- Fond sombre inline pour le 1er paint (évite le flash blanc) -->
+  <style>html{background-color:#050510}html.pre-light{background-color:#F8FAFC}body{background-color:#050510}</style>
+  <script>if(localStorage.getItem('theme')==='light')document.documentElement.classList.add('pre-light');</script>
+
   <!--CSS bundle minifié (regénérer via : bash css/build.sh)-->
   <link rel="stylesheet" href="css/bundle-mentions.min.css?v=20260614" />
   <link rel="stylesheet" href="css/navbar-interactive.css" />

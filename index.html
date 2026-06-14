@@ -28,8 +28,22 @@
     content="Portfolio de Morgan Marie-Joseph : motion design, montage vidéo et développement web.">
   <meta name="twitter:image" content="image/pp linkedin purple.jpg">
 
-  <!--CSS bundle minifié (regénérer via : bash css/build.sh)-->
-  <link rel="stylesheet" href="css/bundle.min.css?v=20260614" />
+  <!-- CSS critique inline : garantit un 1er paint sombre + préloader sans attendre le bundle (évite le flash blanc au reload quand le CSS n'est pas en cache) -->
+  <style>
+    html{background-color:#050510}
+    html.pre-light{background-color:#F8FAFC}
+    body{background-color:#050510}
+    #preloader{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background-color:#050510;transition:opacity .5s ease,visibility .5s ease}
+    #preloader.fade-out{opacity:0;visibility:hidden}
+    html.pre-light #preloader{background-color:#F8FAFC}
+  </style>
+  <script>if(localStorage.getItem('theme')==='light')document.documentElement.classList.add('pre-light');</script>
+
+  <!-- Bundle CSS chargé en non-bloquant ; le préloader (stylé inline ci-dessus) masque le contenu jusqu'à window.load. Regénérer via : bash css/build.sh -->
+  <link rel="preload" href="css/bundle.min.css?v=20260614b" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="css/bundle.min.css?v=20260614b" />
+  </noscript>
 
   <!--Icon-->
   <link rel="icon" type="image/png" href="image/Logo white.png">
