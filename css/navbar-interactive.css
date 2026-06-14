@@ -374,13 +374,16 @@
     right: 0;
   }
 
+  /* Liens du tiroir en px (et non rem) : le html{font-size} diffère entre index
+     (55%/50%) et mentions (60%), donc des rem rendraient les liens plus gros sur
+     mentions. Valeurs calées sur le rendu d'index → menu identique sur les 2 pages. */
   .navbar a {
     display: block;
     width: 100%;
-    font-size: 1.8rem;
-    padding: 2rem 3rem;
+    font-size: 16px;
+    padding: 18px 26px;
     margin: 0;
-    border-bottom: 1px solid rgba(75, 0, 130, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     transform: translateX(0);
     transition: all 0.3s ease;
   }
@@ -390,20 +393,22 @@
   }
 
   .navbar a.active {
-    background: rgba(75, 0, 130, 0.4);
-    color: var(--main-color);
+    background: rgba(99, 102, 241, 0.28);
+    color: var(--text-color);
     border-left: 4px solid var(--main-color);
-    padding-left: calc(3rem - 4px);
+    padding-left: calc(26px - 4px);
   }
 
   .navbar a:hover {
-    background: rgba(75, 0, 130, 0.4);
-    padding-left: 3.5rem;
+    background: rgba(99, 102, 241, 0.28);
+    color: var(--text-color);
+    padding-left: 30px;
     transform: translateX(0);
   }
 
   .navbar a.active:hover {
-    background: rgba(75, 0, 130, 0.4);
+    background: rgba(99, 102, 241, 0.28);
+    color: var(--text-color);
   }
 
   .gradient-btn {
@@ -569,8 +574,16 @@
   }
 
   .navbar a {
-    font-size: 1.6rem;
-    padding: 1.8rem 2.5rem;
+    font-size: 13px;
+    padding: 14px 20px;
+  }
+
+  .navbar a.active {
+    padding-left: calc(20px - 4px);
+  }
+
+  .navbar a:hover {
+    padding-left: 24px;
   }
 }
 
