@@ -38,12 +38,13 @@ $css =~ s/(?<=[\s:,(])0+(\.\d+)/$1/g;
 print $css . "\n";
 PERL
 
-# Mise à jour automatique du cache-bust dans les HTML
+# Mise à jour automatique du cache-bust dans les HTML.
+# Le ?v=... est optionnel dans le motif : si absent, il est ajouté (sinon mis à jour).
 HASH=$(md5 -q bundle.min.css | cut -c1-8)
-sed -i '' "s/bundle\.min\.css?v=[^\"']*/bundle.min.css?v=$HASH/" ../index.html
+sed -i '' -E "s/bundle\.min\.css(\?v=[^\"']*)?/bundle.min.css?v=$HASH/" ../index.html
 
 HASH_ML=$(md5 -q bundle-mentions.min.css | cut -c1-8)
-sed -i '' "s/bundle-mentions\.min\.css?v=[^\"']*/bundle-mentions.min.css?v=$HASH_ML/" ../mentions-legales.html
+sed -i '' -E "s/bundle-mentions\.min\.css(\?v=[^\"']*)?/bundle-mentions.min.css?v=$HASH_ML/" ../mentions-legales.html
 
 echo "✅ Bundles regénérés :"
 ls -la bundle*.min.css
