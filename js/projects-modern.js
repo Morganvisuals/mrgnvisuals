@@ -95,7 +95,7 @@ const projectsData = {
     image: "image/dash.jpg",
     fr: {
       title: "Charte graphique DASH",
-      tags: ["Design", "SAÉ"],
+      tags: ["Design", "Scolaire"],
       description: "Une charte graphique complète pour le logo d'une plateforme de streaming fictive nommée 'DASH', avec des couleurs jaune et noir dynamiques, et un logo représentant un petit fantôme stylisé. Le projet comprend l'identité visuelle complète : logo, typographie, palette de couleurs, et déclinaisons.",
       details: {
         "type de projet": "Charte graphique (SAÉ 4.CRÉA.01)",
@@ -108,7 +108,7 @@ const projectsData = {
     },
     en: {
       title: "DASH Brand Guidelines",
-      tags: ["Design", "SAÉ"],
+      tags: ["Design", "Academic"],
       description: "A complete brand guideline for the logo of a fictional streaming platform named 'DASH', with dynamic yellow and black colors, and a logo featuring a small stylised ghost. The project includes the full visual identity: logo, typography, color palette and variations.",
       details: {
         "project type": "Brand guidelines (SAÉ 4.CRÉA.01)",
@@ -124,7 +124,7 @@ const projectsData = {
     image: "image/portfolionew.jpg",
     fr: {
       title: "Portfolio Personnel",
-      tags: ["Web", "SAÉ"],
+      tags: ["Web", "Scolaire"],
       description: "Portfolio développé en HTML, CSS et JavaScript dans le cadre de la SAE 3.CREA.03. Ce site met en avant l'ensemble de mes projets réalisés durant ma formation en BUT MMI, ainsi que mes créations personnelles et mes expériences professionnelles en entreprise. Design responsive et moderne avec animations fluides.",
       details: {
         "type de projet": "SAÉ 3.CREA.03",
@@ -137,7 +137,7 @@ const projectsData = {
     },
     en: {
       title: "Personal Portfolio",
-      tags: ["Web", "SAÉ"],
+      tags: ["Web", "Academic"],
       description: "Portfolio built with HTML, CSS and JavaScript as part of the SAE 3.CREA.03. This site showcases all the projects I created during my BUT MMI studies, as well as my personal creations and professional experiences in companies. Responsive and modern design with smooth animations.",
       details: {
         "project type": "SAÉ 3.CREA.03",
