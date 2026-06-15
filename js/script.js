@@ -144,25 +144,45 @@ document.addEventListener('DOMContentLoaded', () => {
         if (tip) item.setAttribute('data-tip', tip);
     });
 
-    // Sur écran tactile (pas de :hover), on affiche la bulle au tap : on pose
-    // .show-tip sur l'item touché et on la retire des autres. Re-tap ou tap
-    // ailleurs referme.
+    // Sur écran tactile (pas de :hover), on affiche la bulle au tap. Le
+    // défilement est figé dès que le doigt se pose (.is-paused), pour que la
+    // cible ne bouge plus sous le doigt — sinon on sélectionne le mauvais logo.
     if (window.matchMedia('(hover: none)').matches) {
+        const marquee = document.querySelector('.skills-marquee');
+        const track = marquee && marquee.querySelector('.marquee-track');
+        if (!marquee || !track) return;
+
         let activeTip = null;
-        const hideTip = () => {
-            if (activeTip) { activeTip.classList.remove('show-tip'); activeTip = null; }
+        // item = élément à mettre en avant, ou null pour tout refermer/reprendre.
+        const setTip = (item) => {
+            if (activeTip) activeTip.classList.remove('show-tip');
+            activeTip = item;
+            if (item) item.classList.add('show-tip');
+            // La bande reste figée tant qu'une bulle est ouverte.
+            track.classList.toggle('is-paused', !!item);
         };
-        items.forEach((item) => {
-            if (!item.hasAttribute('data-tip')) return;
-            item.addEventListener('click', () => {
-                if (activeTip === item) { hideTip(); return; }
-                hideTip();
-                item.classList.add('show-tip');
-                activeTip = item;
-            });
+
+        // Fige dès le contact pour stabiliser la cible avant le tap…
+        marquee.addEventListener('touchstart', () => {
+            track.classList.add('is-paused');
+        }, { passive: true });
+        // …mais reprend si le geste est un scroll (et non un tap), sauf si une
+        // bulle est déjà ouverte.
+        marquee.addEventListener('touchmove', () => {
+            if (!activeTip) track.classList.remove('is-paused');
+        }, { passive: true });
+
+        marquee.addEventListener('click', (e) => {
+            const item = e.target.closest('.marquee-item[data-tip]');
+            // Tap dans un trou → on referme et on relance le défilement.
+            if (!item) { setTip(null); return; }
+            // Re-tap sur le même logo → on referme.
+            setTip(activeTip === item ? null : item);
         });
+
+        // Tap hors de la bande → referme et relance.
         document.addEventListener('click', (e) => {
-            if (activeTip && !e.target.closest('.marquee-item')) hideTip();
+            if (!e.target.closest('.skills-marquee')) setTip(null);
         });
     }
 })();

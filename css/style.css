@@ -463,6 +463,15 @@ section {
   display: flex;
   width: max-content;
   animation: marquee-scroll 48s linear infinite;
+  /* Couche GPU dédiée : évite les sauts à la reprise après throttle de scroll
+     tactile (iOS Safari) et le jank en fin de boucle. */
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Pause posée au toucher sur mobile (JS) : fige la cible avant le tap. */
+.marquee-track.is-paused {
+  animation-play-state: paused;
 }
 
 .marquee-item {
@@ -592,8 +601,11 @@ body.light-mode .marquee-item--swap .logo-light {
 }
 
 @keyframes marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
   to {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
