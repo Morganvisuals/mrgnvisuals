@@ -531,12 +531,14 @@ section {
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.marquee-item[data-tip]:hover::after {
+.marquee-item[data-tip]:hover::after,
+.marquee-item[data-tip].show-tip::after {
   opacity: 1;
   transform: translate(-50%, 0) scale(1);
 }
 
-.marquee-item[data-tip]:hover::before {
+.marquee-item[data-tip]:hover::before,
+.marquee-item[data-tip].show-tip::before {
   opacity: 1;
   transform: translate(-50%, 0) rotate(45deg);
 }
@@ -555,12 +557,8 @@ body.light-mode .marquee-item[data-tip]::before {
   border-bottom-color: rgba(15, 23, 42, 0.1);
 }
 
-@media (hover: none) {
-  .marquee-item[data-tip]::after,
-  .marquee-item[data-tip]::before {
-    display: none;
-  }
-}
+/* Sur écran tactile, la bulle s'affiche au tap (classe .show-tip posée par JS),
+   le :hover n'existant pas. */
 
 .marquee-item img {
   width: 5rem;

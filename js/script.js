@@ -143,5 +143,27 @@ document.addEventListener('DOMContentLoaded', () => {
         const tip = labels[primary.getAttribute('src')];
         if (tip) item.setAttribute('data-tip', tip);
     });
+
+    // Sur écran tactile (pas de :hover), on affiche la bulle au tap : on pose
+    // .show-tip sur l'item touché et on la retire des autres. Re-tap ou tap
+    // ailleurs referme.
+    if (window.matchMedia('(hover: none)').matches) {
+        let activeTip = null;
+        const hideTip = () => {
+            if (activeTip) { activeTip.classList.remove('show-tip'); activeTip = null; }
+        };
+        items.forEach((item) => {
+            if (!item.hasAttribute('data-tip')) return;
+            item.addEventListener('click', () => {
+                if (activeTip === item) { hideTip(); return; }
+                hideTip();
+                item.classList.add('show-tip');
+                activeTip = item;
+            });
+        });
+        document.addEventListener('click', (e) => {
+            if (activeTip && !e.target.closest('.marquee-item')) hideTip();
+        });
+    }
 })();
 
