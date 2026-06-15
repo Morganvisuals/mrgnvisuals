@@ -33,13 +33,16 @@
   // ================= MENU =================
   const menuIconUse = menuIcon?.querySelector('use');
   function setMenuIcon(name) {
-    if (menuIconUse) menuIconUse.setAttribute('href', `image/icons.svg#i-${name}`);
+    // Référence même-document (#i-NOM) : le sprite est injecté inline dans le DOM.
+    // Un href externe (image/icons.svg#i-NOM) ne se résout pas sur Safari/iOS → icône invisible.
+    if (menuIconUse) menuIconUse.setAttribute('href', `#i-${name}`);
   }
 
   function openMenu() {
     if (!menuIcon) return;
     setMenuIcon('bx-x');
     menuIcon.classList.add('is-open');
+    menuIcon.setAttribute('aria-expanded', 'true');
     navbar.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -50,15 +53,37 @@
     if (!menuIcon) return;
     setMenuIcon('bx-menu');
     menuIcon.classList.remove('is-open');
+    menuIcon.setAttribute('aria-expanded', 'false');
     navbar.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = '';
     state.menuOpen = false;
   }
 
+  function toggleMenu() {
+    state.menuOpen ? closeMenu() : openMenu();
+  }
+
   menuIcon?.addEventListener('click', e => {
     e.preventDefault();
-    state.menuOpen ? closeMenu() : openMenu();
+    toggleMenu();
+  });
+
+  // Le menu-icon est un <svg role="button"> : on l'active aussi au clavier
+  // (Entrée / Espace), comme un vrai bouton.
+  menuIcon?.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+      e.preventDefault();
+      toggleMenu();
+    }
+  });
+
+  // Échap ferme le menu et rend le focus au bouton burger
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && state.menuOpen) {
+      closeMenu();
+      menuIcon?.focus();
+    }
   });
 
   overlay.addEventListener('click', closeMenu);

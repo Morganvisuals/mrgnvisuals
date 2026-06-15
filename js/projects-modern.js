@@ -15,7 +15,7 @@ const projectsData = {
         date: "2026",
         role: "Motion Designer, Monteur, Sound Designer",
         outils: "After Effects, FL Studio, Artlist.IA",
-        "U.E": "Exprimer"
+        "U.E": "Exprimer, Concevoir"
       },
       links: [{ url: "https://youtu.be/__3YGMU6w24", text: "Voir la vidéo", icon: "bx-play-circle" }]
     },
@@ -28,7 +28,7 @@ const projectsData = {
         date: "2026",
         role: "Motion Designer, Editor, Sound Designer",
         tools: "After Effects, FL Studio, Artlist.AI",
-        "U.E": "Express"
+        "U.E": "Express, Design"
       },
       links: [{ url: "https://youtu.be/__3YGMU6w24", text: "Watch the video", icon: "bx-play-circle" }]
     }
@@ -102,7 +102,7 @@ const projectsData = {
         date: "2024",
         role: "Designer Graphique",
         outils: "Illustrator, Photoshop",
-        "U.E": "Exprimer"
+        "U.E": "Exprimer, Concevoir"
       },
       links: [{ url: "image/DASH pdf.pdf", text: "Voir la charte", icon: "bx-download", preview: true }]
     },
@@ -115,7 +115,7 @@ const projectsData = {
         date: "2024",
         role: "Graphic Designer",
         tools: "Illustrator, Photoshop",
-        "U.E": "Express"
+        "U.E": "Express, Design"
       },
       links: [{ url: "image/DASH pdf.pdf", text: "View the guidelines", icon: "bx-download", preview: true }]
     }
@@ -131,7 +131,7 @@ const projectsData = {
         date: "2026",
         role: "Développeur Front-End",
         outils: "HTML, CSS, JavaScript",
-        "U.E": "Développer"
+        "U.E": "Développer, Concevoir"
       },
       links: [{ url: "#home", text: "Vous êtes dessus !", icon: "bx-home" }]
     },
@@ -144,7 +144,7 @@ const projectsData = {
         date: "2026",
         role: "Front-End Developer",
         tools: "HTML, CSS, JavaScript",
-        "U.E": "Develop"
+        "U.E": "Develop, Design"
       },
       links: [{ url: "#home", text: "You're on it!", icon: "bx-home" }]
     }
@@ -343,7 +343,7 @@ const projectsData = {
   13: {
     image: "image/boheme.jpg",
     fr: {
-      title: "Clip vidéo &quot;La bohème&quot;",
+      title: 'Clip vidéo "La bohème"',
       tags: ["Vidéo", "Personnel"],
       description: "Dans ce projet, en collaboration avec Mighty Production, j'ai été amené à être le monteur vidéo et le VFX de ce clip. J'ai pu mettre en avant mes compétences en montage et en effets visuels pour donner une nouvelle dimension au clip.",
       details: {
@@ -355,7 +355,7 @@ const projectsData = {
       links: [{ url: "https://www.youtube.com/watch?v=GlWtgka-Hqs&list=RDGlWtgka-Hqs&start_radio=1", text: "Voir la vidéo", icon: "bx-play-circle" }]
     },
     en: {
-      title: "Music Video &quot;La bohème&quot;",
+      title: 'Music Video "La bohème"',
       tags: ["Video", "Personal"],
       description: "For this project, in collaboration with Mighty Production, I was the video editor and VFX artist for this music video. I was able to showcase my skills in editing and visual effects to give the video a new dimension.",
       details: {
@@ -465,7 +465,7 @@ const projectsData = {
         date: "2025",
         role: "Chef de projet & Communication",
         outils: "Canva, Google Docs",
-        "U.E": "Entreprendre, Comprendre"
+        "U.E": "Entreprendre, Comprendre, Concevoir"
       },
       links: [{ url: "image/gwada-mobilite.pdf", text: "Voir le projet", icon: "bx-download", preview: true }]
     },
@@ -478,7 +478,7 @@ const projectsData = {
         date: "2025",
         role: "Project Manager & Communication",
         tools: "Canva, Google Docs",
-        "U.E": "Undertake, Understand"
+        "U.E": "Undertake, Understand, Design"
       },
       links: [{ url: "image/gwada-mobilite.pdf", text: "View the project", icon: "bx-download", preview: true }]
     }
@@ -550,6 +550,7 @@ const projectsData = {
         date: "2024",
         role: "Développeur Front-End",
         outils: "HTML, CSS, JavaScript",
+        "U.E": "Développer, Concevoir"
       },
       links: [{ url: "https://morganvisuals.vercel.app/", text: "Voir le projet", icon: "bx-code-alt" }]
     },
@@ -561,7 +562,8 @@ const projectsData = {
         "project type": "Website (Academic)",
         date: "2024",
         role: "Front-End Developer",
-        tools: "HTML, CSS, JavaScript"
+        tools: "HTML, CSS, JavaScript",
+        "U.E": "Develop, Design"
       },
       links: [{ url: "https://morganvisuals.vercel.app/", text: "View the project", icon: "bx-code-alt" }]
     }
@@ -684,6 +686,7 @@ if (modal) {
   const projectButtons = document.querySelectorAll('.project-btn');
 
   let currentProjectId = null;
+  let modalReturnFocus = null; // élément à refocaliser à la fermeture (a11y dialog)
 
   const escapeHTML = (str) => String(str).replace(/[&<>"']/g, (c) => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
@@ -705,7 +708,7 @@ if (modal) {
       </div>
 
       <div class="modal-image">
-        <img src="${escapeHTML(project.image)}" alt="${escapeHTML(data.title)}">
+        <img src="${escapeHTML(project.image)}" alt="${escapeHTML(lang === 'en' ? `Project preview: ${data.title}` : `Aperçu du projet : ${data.title}`)}">
       </div>
 
       <div class="modal-description">
@@ -769,10 +772,12 @@ if (modal) {
       if (!projectsData[projectId]) return;
 
       currentProjectId = projectId;
+      modalReturnFocus = button; // pour rendre le focus à la fermeture
       renderModal(projectId);
       modal.classList.add('active');
       modal.setAttribute('aria-hidden', 'false');
       lockScroll();
+      modalClose?.focus(); // déplace le focus dans le dialog
     });
   });
 
@@ -781,7 +786,27 @@ if (modal) {
     modal.setAttribute('aria-hidden', 'true');
     unlockScroll();
     currentProjectId = null;
+    // Rend le focus à la carte projet qui a ouvert le modal
+    if (modalReturnFocus) { modalReturnFocus.focus(); modalReturnFocus = null; }
   }
+
+  // Piège de focus : maintient la tabulation à l'intérieur du dialog ouvert
+  modal.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab' || !modal.classList.contains('active')) return;
+    const focusables = modal.querySelectorAll(
+      'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"]), iframe'
+    );
+    if (!focusables.length) return;
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
 
   modalClose?.addEventListener('click', closeModal);
   modalOverlay?.addEventListener('click', closeModal);

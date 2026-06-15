@@ -27,6 +27,9 @@
       'header.education': "Ma Formation",
       'aria.theme': "Changer de mode",
       'aria.lang': "Changer de langue",
+      'aria.menu': "Ouvrir le menu de navigation",
+      'aria.skip': "Aller au contenu principal",
+      'skip.link': "Aller au contenu",
 
       // --- Accueil ---
       'home.greeting': "Je transforme les idées en créations visuelles, entre design, mouvement et émotion.",
@@ -172,6 +175,9 @@
       'header.education': "My Education",
       'aria.theme': "Toggle theme",
       'aria.lang': "Change language",
+      'aria.menu': "Open navigation menu",
+      'aria.skip': "Skip to main content",
+      'skip.link': "Skip to content",
 
       // --- Home ---
       'home.greeting': "I bring ideas to life through visual creations that blend design, motion, and emotion.",

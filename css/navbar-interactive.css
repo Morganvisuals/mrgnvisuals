@@ -661,6 +661,48 @@ section {
   border-radius: 4px;
 }
 
+/* Indicateur de focus clavier global : ne s'affiche qu'au clavier
+   (:focus-visible), jamais au clic souris. Bat les `outline:none` posés
+   sur .btn / .lang-current grâce à la spécificité élément + pseudo-classe. */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--main-color);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Cible programmatique du lien d'évitement : pas d'anneau autour de tout <main> */
+#main:focus {
+  outline: none;
+}
+
+/* Lien d'évitement : caché hors écran, glisse à l'écran au focus clavier */
+.skip-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10001;
+  margin: 0.6rem;
+  padding: 0.8rem 1.4rem;
+  background: var(--main-color);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transform: translateY(-150%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
 /* Réduire les animations si demandé */
 @media (prefers-reduced-motion: reduce) {
 

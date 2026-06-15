@@ -40,9 +40,9 @@
   <script>if(localStorage.getItem('theme')==='light')document.documentElement.classList.add('pre-light');</script>
 
   <!-- Bundle CSS chargé en non-bloquant ; le préloader (stylé inline ci-dessus) masque le contenu jusqu'à window.load. Regénérer via : bash css/build.sh -->
-  <link rel="preload" href="css/bundle.min.css?v=20260615d" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="css/bundle.min.css?v=20260615e" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link rel="stylesheet" href="css/bundle.min.css?v=20260615d" />
+    <link rel="stylesheet" href="css/bundle.min.css?v=20260615e" />
   </noscript>
 
   <!--Icon-->
@@ -90,13 +90,16 @@
     </div>
   </div>
 
+  <!-- Lien d'évitement : 1er élément focusable, masqué jusqu'au focus clavier -->
+  <a href="#main" class="skip-link" data-i18n="skip.link" data-i18n-aria="aria.skip">Aller au contenu</a>
+
   <!--navigation-->
   <header class="header">
     <a href="#home" class="logo">
       Morgan <span>Visual's</span>
     </a>
 
-    <nav class="navbar">
+    <nav class="navbar" id="primary-nav">
       <a href="#home" class="active" data-i18n="nav.home">Accueil</a>
       <a href="#about" data-i18n="nav.about">À propos</a>
       <a href="#services" data-i18n="nav.skills">Compétences</a>
@@ -146,7 +149,8 @@
       </div>
       <a class="gradient-btn" href="https://www.butmmi.fr/" target="_blank" rel="noopener noreferrer"
         data-i18n="header.education">Ma Formation</a>
-      <svg class="icon" id="menu-icon" aria-hidden="true">
+      <svg class="icon" id="menu-icon" role="button" tabindex="0" aria-label="Ouvrir le menu de navigation"
+        data-i18n-aria="aria.menu" aria-expanded="false" aria-controls="primary-nav">
         <use href="#i-bx-menu"></use>
       </svg>
     </div>
@@ -154,7 +158,7 @@
 
   <!--Accueil-->
 
-  <main>
+  <main id="main" tabindex="-1">
     <section class="home" id="home">
       <div class="home-content">
         <h1>Morgan <span>Visual's</span></h1>
@@ -1114,10 +1118,10 @@
     </footer>
 
     <!--liens script-->
-    <script src="js/i18n.js?v=5"></script>
+    <script src="js/i18n.js?v=6"></script>
     <script src="js/script.js?v=5"></script>
-    <script src="js/navbar-interactive.js?v=2"></script>
-    <script src="js/projects-modern.js?v=11"></script>
+    <script src="js/navbar-interactive.js?v=4"></script>
+    <script src="js/projects-modern.js?v=15"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
     <script src="js/particles-bg.js"></script>
 
