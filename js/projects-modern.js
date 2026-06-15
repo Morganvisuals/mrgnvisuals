@@ -75,7 +75,7 @@ const projectsData = {
         outils: "Canva, Google Docs",
         "U.E": "Comprendre"
       },
-      links: [{ url: "https://docs.google.com/document/d/1_wmGODrmdui6cYz_ow7nCwkrx3zdMsb6X74O0PVqYNg/edit?usp=sharing", text: "Voir le projet", icon: "bx-download" }]
+      links: [{ url: "image/coart.pdf", text: "Voir le projet", icon: "bx-download", preview: true }]
     },
     en: {
       title: "CoArt Strategy",
@@ -88,7 +88,7 @@ const projectsData = {
         tools: "Canva, Google Docs",
         "U.E": "Understand"
       },
-      links: [{ url: "https://docs.google.com/document/d/1_wmGODrmdui6cYz_ow7nCwkrx3zdMsb6X74O0PVqYNg/edit?usp=sharing", text: "View the project", icon: "bx-download" }]
+      links: [{ url: "image/coart.pdf", text: "View the project", icon: "bx-download", preview: true }]
     }
   },
   4: {
@@ -380,7 +380,7 @@ const projectsData = {
         outils: "Canva, Google Docs",
         "U.E": "Comprendre"
       },
-      links: [{ url: "https://canva.link/sako4q8rjo8z7i5", text: "Voir le projet", icon: "bx-download" }]
+      links: [{ url: "image/business-process-management.pdf", text: "Voir le projet", icon: "bx-download", preview: true }]
     },
     en: {
       title: "Business Process Management",
@@ -393,7 +393,7 @@ const projectsData = {
         tools: "Canva, Google Docs",
         "U.E": "Understand"
       },
-      links: [{ url: "https://canva.link/sako4q8rjo8z7i5", text: "View the project", icon: "bx-download" }]
+      links: [{ url: "image/business-process-management.pdf", text: "View the project", icon: "bx-download", preview: true }]
     }
   },
   15: {
@@ -438,7 +438,7 @@ const projectsData = {
         outils: "Canva, Google Docs",
         "U.E": "Entreprendre, Comprendre"
       },
-      links: [{ url: "https://canva.link/gh9rmpqopi1t4d1", text: "Voir le projet", icon: "bx-download" }]
+      links: [{ url: "image/flora-beauty.pdf", text: "Voir le projet", icon: "bx-download", preview: true }]
     },
     en: {
       title: "Flora Beauty",
@@ -451,7 +451,7 @@ const projectsData = {
         tools: "Canva, Google Docs",
         "U.E": "Undertake, Understand"
       },
-      links: [{ url: "https://canva.link/gh9rmpqopi1t4d1", text: "View the project", icon: "bx-download" }]
+      links: [{ url: "image/flora-beauty.pdf", text: "View the project", icon: "bx-download", preview: true }]
     }
   },
   17: {
@@ -467,7 +467,7 @@ const projectsData = {
         outils: "Canva, Google Docs",
         "U.E": "Entreprendre, Comprendre"
       },
-      links: [{ url: "https://canva.link/c08ghus6vaxvh9w", text: "Voir le projet", icon: "bx-download" }]
+      links: [{ url: "image/gwada-mobilite.pdf", text: "Voir le projet", icon: "bx-download", preview: true }]
     },
     en: {
       title: "Gwada Mobilité",
@@ -480,7 +480,7 @@ const projectsData = {
         tools: "Canva, Google Docs",
         "U.E": "Undertake, Understand"
       },
-      links: [{ url: "https://canva.link/c08ghus6vaxvh9w", text: "View the project", icon: "bx-download" }]
+      links: [{ url: "image/gwada-mobilite.pdf", text: "View the project", icon: "bx-download", preview: true }]
     }
   },
   18: {
@@ -496,7 +496,7 @@ const projectsData = {
         outils: "Canva, Google Docs",
         "U.E": "Comprendre"
       },
-      links: [{ url: "https://canva.link/1kyqv8n5kh9yruy", text: "Voir le projet", icon: "bx-download" }]
+      links: [{ url: "image/lean-management.pdf", text: "Voir le projet", icon: "bx-download", preview: true }]
     },
     en: {
       title: "Lean Management",
@@ -509,7 +509,7 @@ const projectsData = {
         tools: "Canva, Google Docs",
         "U.E": "Understand"
       },
-      links: [{ url: "https://canva.link/1kyqv8n5kh9yruy", text: "View the project", icon: "bx-download" }]
+      links: [{ url: "image/lean-management.pdf", text: "View the project", icon: "bx-download", preview: true }]
     }
   },
   19: {
