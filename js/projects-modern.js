@@ -567,6 +567,35 @@ const projectsData = {
       },
       links: [{ url: "https://morganvisuals.vercel.app/", text: "View the project", icon: "bx-code-alt" }]
     }
+  },
+  21: {
+    image: "image/DOM.jpg",
+    fr: {
+      title: "DOM-COM",
+      tags: ["Web", "Scolaire"],
+      description: "DOM-COM est un site web que j'ai réalisé en première année de BUT MMI. Il présente trois territoires français d'outre-mer — la Martinique, la Guadeloupe et la Guyane — sous forme de portail informatif, avec une page dédiée à chaque destination. Ce projet m'a permis de poser mes premières bases en intégration HTML/CSS et en structuration d'un site multi-pages.",
+      details: {
+        "type de projet": "Site web (Scolaire)",
+        date: "2023",
+        role: "Webdesigner & Développeur Front-End",
+        outils: "HTML, CSS",
+        "U.E": "Concevoir, Développer"
+      },
+      links: [{ url: "https://domcom.vercel.app/index.html", text: "Voir le site web", icon: "bx-code-alt" }]
+    },
+    en: {
+      title: "DOM-COM",
+      tags: ["Web", "Academic"],
+      description: "DOM-COM is a website I built during my first year of BUT MMI. It showcases three French overseas territories — Martinique, Guadeloupe and French Guiana — as an informative portal, with a dedicated page for each destination. This project gave me my first hands-on experience with HTML/CSS integration and structuring a multi-page site.",
+      details: {
+        "project type": "Website (Academic)",
+        date: "2023",
+        role: "Web Designer & Front-End Developer",
+        tools: "HTML, CSS",
+        "U.E": "Design, Develop"
+      },
+      links: [{ url: "https://domcom.vercel.app/index.html", text: "View the website", icon: "bx-code-alt" }]
+    }
   }
 
 };
