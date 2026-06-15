@@ -296,7 +296,7 @@ const projectsData = {
         role: "Web Designer & développeur",
         outils: "HTML, CSS, JavaScript, Claude Code"
       },
-      links: [{ url: "https://djskylight.vercel.app/", text: "Voir le site web", icon: "bx-code-alt" }]
+      links: [{ url: "https://djskylight.fr", text: "Voir le site web", icon: "bx-code-alt" }]
     },
     en: {
       title: "DJ Skylight Website",
@@ -308,7 +308,7 @@ const projectsData = {
         role: "Web Designer & developer",
         tools: "HTML, CSS, JavaScript, Claude Code"
       },
-      links: [{ url: "https://djskylight.vercel.app/", text: "Visit the website", icon: "bx-code-alt" }]
+      links: [{ url: "https://djskylight.fr", text: "Visit the website", icon: "bx-code-alt" }]
     }
   },
 
