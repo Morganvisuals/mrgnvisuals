@@ -1177,6 +1177,7 @@ body.light-mode .marquee-item--swap .logo-light {
 
   .home-content h1 {
     font-size: 4rem;
+    text-wrap: balance;
   }
 
   .home-content h3 {
@@ -1187,16 +1188,24 @@ body.light-mode .marquee-item--swap .logo-light {
     font-size: 1.7rem;
     max-width: 90%;
     margin-top: 1.2rem;
+    text-wrap: pretty;
   }
 
-  .home-img img {
-    width: 70vw;
+  /* Le hero affiche un <video> rond : on cible img ET video (l'ancienne règle
+     ne visait que img → sans effet sur le hero). Média réduit pour laisser
+     respirer le texte et les boutons sur petit écran. */
+  .home-img img,
+  .home-img video {
+    width: 56vw;
+    max-width: 240px;
   }
 
   .social-icons a {
     font-size: 2.2rem;
     padding: 0.8rem;
-    margin: 1.5rem 0.3rem;
+    margin: 1.5rem 0.4rem;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   .heading {
@@ -1709,6 +1718,31 @@ body.light-mode .lang-item.active {
 @media(max-width: 480px) {
   .header-actions {
     gap: 0.7rem;
+  }
+}
+
+/* Très petits écrans : compacte le hero pour tout garder visible sans scroll */
+@media (max-width: 400px) {
+  .home {
+    gap: 1.5rem;
+  }
+
+  .home-content h1 {
+    font-size: 3.4rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.1rem;
+  }
+
+  .home-content p {
+    font-size: 1.6rem;
+  }
+
+  .home-img img,
+  .home-img video {
+    width: 52vw;
+    max-width: 200px;
   }
 }
 
