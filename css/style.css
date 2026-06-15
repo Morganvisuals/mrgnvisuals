@@ -452,8 +452,8 @@ section {
 
 /* ===== Bande défilante de logos ===== */
 .skills-marquee {
-  margin-top: 4rem;
-  padding: 1rem 0;
+  margin-top: 3.6rem;
+  padding: 5rem 0 1rem;
   overflow: hidden;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
@@ -465,11 +465,8 @@ section {
   animation: marquee-scroll 48s linear infinite;
 }
 
-.skills-marquee:hover .marquee-track {
-  animation-play-state: paused;
-}
-
 .marquee-item {
+  position: relative;
   width: 9rem;
   height: 9rem;
   margin-right: 2.5rem;
@@ -488,6 +485,81 @@ section {
 .marquee-item:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 30px rgba(99, 102, 241, 0.18);
+}
+
+/* Bulle (tooltip) au survol — nom de l'outil */
+.marquee-item[data-tip]::after,
+.marquee-item[data-tip]::before {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 20;
+}
+
+.marquee-item[data-tip]::after {
+  content: attr(data-tip);
+  margin-bottom: 1.2rem;
+  transform: translate(-50%, 0.6rem) scale(0.96);
+  transform-origin: bottom center;
+  padding: 0.7rem 1.3rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  line-height: 1;
+  white-space: nowrap;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(28, 33, 52, 0.92), rgba(17, 21, 36, 0.92));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(99, 102, 241, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+.marquee-item[data-tip]::before {
+  content: "";
+  margin-bottom: 0.65rem;
+  width: 1rem;
+  height: 1rem;
+  transform: translate(-50%, 0.6rem) rotate(45deg);
+  background: rgba(20, 24, 40, 0.92);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.marquee-item[data-tip]:hover::after {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
+}
+
+.marquee-item[data-tip]:hover::before {
+  opacity: 1;
+  transform: translate(-50%, 0) rotate(45deg);
+}
+
+body.light-mode .marquee-item[data-tip]::after {
+  color: #0b0f19;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 246, 252, 0.96));
+  border-color: rgba(15, 23, 42, 0.1);
+  box-shadow: 0 12px 30px rgba(31, 41, 55, 0.18), 0 0 0 1px rgba(99, 102, 241, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+body.light-mode .marquee-item[data-tip]::before {
+  background: rgba(249, 250, 254, 0.96);
+  border-right-color: rgba(15, 23, 42, 0.1);
+  border-bottom-color: rgba(15, 23, 42, 0.1);
+}
+
+@media (hover: none) {
+  .marquee-item[data-tip]::after,
+  .marquee-item[data-tip]::before {
+    display: none;
+  }
 }
 
 .marquee-item img {

@@ -124,3 +124,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Bulles (tooltips) au survol des logos de la bande compétences.
+// Le nom vient de l'alt de la 1re moitié ; on le mappe par src pour
+// l'appliquer aussi aux copies dupliquées (alt vide, aria-hidden).
+(function initMarqueeTips() {
+    const items = document.querySelectorAll('.skills-marquee .marquee-item');
+    if (!items.length) return;
+    const primaryOf = (item) => item.querySelector('img.logo-dark') || item.querySelector('img');
+    const labels = {};
+    items.forEach((item) => {
+        const named = item.querySelector('img[alt]:not([alt=""])');
+        const primary = primaryOf(item);
+        if (named && primary) labels[primary.getAttribute('src')] = named.getAttribute('alt').trim();
+    });
+    items.forEach((item) => {
+        const primary = primaryOf(item);
+        if (!primary) return;
+        const tip = labels[primary.getAttribute('src')];
+        if (tip) item.setAttribute('data-tip', tip);
+    });
+})();
+
