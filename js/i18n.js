@@ -17,6 +17,7 @@
       // --- Méta ---
       'meta.title': "Morgan Visual's — Motion Designer, Monteur vidéo & Développeur Front-End",
       'meta.titleLegal': "Mentions Légales - Morgan Visual's",
+      'meta.titleCgu': "Conditions Générales d'Utilisation - Morgan Visual's",
 
       // --- Navigation ---
       'nav.home': "Accueil",
@@ -119,7 +120,7 @@
       'contact.thanks': "Merci ! Votre message a été envoyé avec succès. 😊",
 
       // --- Pied de page ---
-      'footer.copyright': "© Morgan Visual's | Tous droits réservés | <a class=\"mention\" href=\"mentions-legales.html\">Mentions Légales</a>",
+      'footer.copyright': "© Morgan Visual's | Tous droits réservés | <a class=\"mention\" href=\"mentions-legales.html\">Mentions Légales</a> | <a class=\"mention\" href=\"cgu.html\">CGU</a>",
 
       // --- Mentions légales ---
       'legal.heading': "Mentions <span>Légales</span>",
@@ -158,13 +159,45 @@
       'legal.s9.email': "<strong>Email :</strong> <a href=\"mailto:morgan.rmx@gmail.com\">morgan.rmx@gmail.com</a>",
       'legal.s9.form': "<strong>Via le formulaire de contact :</strong> <a href=\"index.html#contact\">Accéder au formulaire</a>",
       'legal.updated': "<strong>Dernière mise à jour :</strong> Juin 2026",
-      'legal.backHome': "Retour à l'accueil"
+      'legal.backHome': "Retour à l'accueil",
+
+      // --- Conditions Générales d'Utilisation ---
+      'cgu.heading': "Conditions Générales <span>d'Utilisation</span>",
+      'cgu.s1.title': "Objet",
+      'cgu.s1.p1': "Les présentes Conditions Générales d'Utilisation (CGU) ont pour objet de définir les modalités et conditions d'accès et d'utilisation du site Morgan Visual's, accessible à l'adresse de ce portfolio.",
+      'cgu.s1.p2': "Ce site est un portfolio personnel présentant les travaux et services de Morgan Visual's en motion design, montage vidéo et développement front-end.",
+      'cgu.s2.title': "Acceptation des conditions",
+      'cgu.s2.p1': "L'accès et l'utilisation du site impliquent l'acceptation pleine et entière des présentes CGU par l'utilisateur.",
+      'cgu.s2.p2': "Si vous n'acceptez pas tout ou partie de ces conditions, vous êtes invité à ne pas utiliser le site.",
+      'cgu.s3.title': "Accès au site",
+      'cgu.s3.p1': "Le site est accessible gratuitement à tout utilisateur disposant d'un accès à Internet. Tous les frais nécessaires à l'accès au site (matériel informatique, connexion Internet, etc.) sont à la charge de l'utilisateur.",
+      'cgu.s3.p2': "Morgan Visual's s'efforce de maintenir le site accessible en permanence, mais ne peut être tenu responsable en cas d'indisponibilité, notamment pour des raisons de maintenance, de mise à jour ou de cas de force majeure.",
+      'cgu.s4.title': "Propriété intellectuelle",
+      'cgu.s4.p1': "L'ensemble des éléments présents sur ce site (textes, images, vidéos, logos, animations, code) est la propriété exclusive de Morgan Visual's, sauf mention contraire, et est protégé par le droit de la propriété intellectuelle.",
+      'cgu.s4.p2': "Toute reproduction, représentation ou diffusion, totale ou partielle, sans autorisation écrite préalable, est interdite et constitue une contrefaçon sanctionnée par le Code de la propriété intellectuelle.",
+      'cgu.s5.title': "Utilisation et responsabilité",
+      'cgu.s5.p1': "L'utilisateur s'engage à utiliser le site conformément à sa destination et à ne pas porter atteinte à son bon fonctionnement, à sa sécurité ou à son intégrité.",
+      'cgu.s5.p2': "Morgan Visual's ne saurait être tenu responsable des dommages directs ou indirects résultant de l'accès ou de l'utilisation du site, y compris l'inaccessibilité, les pertes de données ou la présence de virus.",
+      'cgu.s6.title': "Liens hypertextes",
+      'cgu.s6.p1': "Le site peut contenir des liens vers des sites tiers. Morgan Visual's n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu ou à leur politique de confidentialité.",
+      'cgu.s7.title': "Données personnelles",
+      'cgu.s7.p1': "Les données personnelles éventuellement collectées via le formulaire de contact sont traitées dans le respect du RGPD. Pour plus de détails, consultez les <a href=\"mentions-legales.html\">mentions légales</a>.",
+      'cgu.s8.title': "Modification des CGU",
+      'cgu.s8.p1': "Morgan Visual's se réserve le droit de modifier les présentes CGU à tout moment et sans préavis. Les CGU applicables sont celles en vigueur au moment de la consultation du site.",
+      'cgu.s9.title': "Droit applicable",
+      'cgu.s9.p1': "Les présentes CGU sont régies par le droit français. En cas de litige, et à défaut de résolution amiable, les tribunaux français seront seuls compétents.",
+      'cgu.s10.title': "Contact",
+      'cgu.s10.p1': "Pour toute question concernant ces conditions générales d'utilisation, vous pouvez me contacter :",
+      'cgu.s10.email': "<strong>Email :</strong> <a href=\"mailto:morgan.rmx@gmail.com\">morgan.rmx@gmail.com</a>",
+      'cgu.updated': "<strong>Dernière mise à jour :</strong> Juin 2026",
+      'cgu.backHome': "Retour à l'accueil"
     },
 
     en: {
       // --- Meta ---
       'meta.title': "Morgan Visual's — Motion Designer, Video Editor & Front-End Developer",
       'meta.titleLegal': "Legal Notice - Morgan Visual's",
+      'meta.titleCgu': "Terms of Use - Morgan Visual's",
 
       // --- Navigation ---
       'nav.home': "Home",
@@ -267,7 +300,7 @@
       'contact.thanks': "Thank you! Your message has been sent successfully. 😊",
 
       // --- Footer ---
-      'footer.copyright': "© Morgan Visual's | All rights reserved | <a class=\"mention\" href=\"mentions-legales.html\">Legal Notice</a>",
+      'footer.copyright': "© Morgan Visual's | All rights reserved | <a class=\"mention\" href=\"mentions-legales.html\">Legal Notice</a> | <a class=\"mention\" href=\"cgu.html\">Terms</a>",
 
       // --- Legal notice ---
       'legal.heading': "Legal <span>Notice</span>",
@@ -306,7 +339,38 @@
       'legal.s9.email': "<strong>Email:</strong> <a href=\"mailto:morgan.rmx@gmail.com\">morgan.rmx@gmail.com</a>",
       'legal.s9.form': "<strong>Via the contact form:</strong> <a href=\"index.html#contact\">Go to the form</a>",
       'legal.updated': "<strong>Last updated:</strong> June 2026",
-      'legal.backHome': "Back to home"
+      'legal.backHome': "Back to home",
+
+      // --- Terms of Use ---
+      'cgu.heading': "Terms <span>of Use</span>",
+      'cgu.s1.title': "Purpose",
+      'cgu.s1.p1': "These Terms of Use (ToU) set out the terms and conditions governing access to and use of the Morgan Visual's website, available at this portfolio's address.",
+      'cgu.s1.p2': "This site is a personal portfolio presenting the work and services of Morgan Visual's in motion design, video editing and front-end development.",
+      'cgu.s2.title': "Acceptance of the terms",
+      'cgu.s2.p1': "Accessing and using the site implies the user's full and unreserved acceptance of these Terms of Use.",
+      'cgu.s2.p2': "If you do not accept all or part of these terms, you are advised not to use the site.",
+      'cgu.s3.title': "Access to the site",
+      'cgu.s3.p1': "The site is freely accessible to any user with Internet access. All costs required to access the site (computer hardware, Internet connection, etc.) are the responsibility of the user.",
+      'cgu.s3.p2': "Morgan Visual's strives to keep the site accessible at all times but cannot be held liable in the event of unavailability, in particular for maintenance, updates or force majeure.",
+      'cgu.s4.title': "Intellectual Property",
+      'cgu.s4.p1': "All elements on this site (text, images, videos, logos, animations, code) are the exclusive property of Morgan Visual's, unless otherwise stated, and are protected by intellectual property law.",
+      'cgu.s4.p2': "Any reproduction, representation or distribution, in whole or in part, without prior written authorisation, is prohibited and constitutes infringement punishable under the Intellectual Property Code.",
+      'cgu.s5.title': "Use and liability",
+      'cgu.s5.p1': "The user agrees to use the site in accordance with its intended purpose and not to impair its proper functioning, security or integrity.",
+      'cgu.s5.p2': "Morgan Visual's cannot be held liable for any direct or indirect damage resulting from access to or use of the site, including inaccessibility, data loss or the presence of viruses.",
+      'cgu.s6.title': "Hyperlinks",
+      'cgu.s6.p1': "The site may contain links to third-party sites. Morgan Visual's has no control over these sites and disclaims all responsibility for their content or privacy policies.",
+      'cgu.s7.title': "Personal data",
+      'cgu.s7.p1': "Any personal data collected via the contact form is processed in compliance with the GDPR. For more details, please see the <a href=\"mentions-legales.html\">legal notice</a>.",
+      'cgu.s8.title': "Changes to the Terms",
+      'cgu.s8.p1': "Morgan Visual's reserves the right to modify these Terms of Use at any time and without notice. The applicable Terms are those in force at the time the site is accessed.",
+      'cgu.s9.title': "Applicable law",
+      'cgu.s9.p1': "These Terms of Use are governed by French law. In the event of a dispute, and failing an amicable resolution, the French courts shall have sole jurisdiction.",
+      'cgu.s10.title': "Contact",
+      'cgu.s10.p1': "For any question regarding these terms of use, you can contact me:",
+      'cgu.s10.email': "<strong>Email:</strong> <a href=\"mailto:morgan.rmx@gmail.com\">morgan.rmx@gmail.com</a>",
+      'cgu.updated': "<strong>Last updated:</strong> June 2026",
+      'cgu.backHome': "Back to home"
     }
   };
 
@@ -339,8 +403,9 @@
     });
 
     // Titre de l'onglet
+    const isCgu = !!document.querySelector('.cgu-page');
     const isLegal = !!document.querySelector('.mentions-legales');
-    const titleKey = isLegal ? 'meta.titleLegal' : 'meta.title';
+    const titleKey = isCgu ? 'meta.titleCgu' : (isLegal ? 'meta.titleLegal' : 'meta.title');
     if (table[titleKey]) document.title = table[titleKey];
 
     document.documentElement.lang = lang;
