@@ -596,6 +596,60 @@ const projectsData = {
       },
       links: [{ url: "https://domcom.vercel.app/index.html", text: "View the website", icon: "bx-code-alt" }]
     }
+  },
+  22: {
+    image: "image/photolux.jpg",
+    fr: {
+      title: "Maquette Photolux",
+      tags: ["Design", "Entreprise"],
+      description: "Dans le cadre de mon expérience en entreprise, j'ai conçu sur Adobe XD la maquette du site web de Photolux, un studio photo implanté en Guadeloupe depuis plus de 50 ans. J'ai réalisé l'ensemble de l'interface : page d'accueil, présentation du studio et de ses services (photos d'identité, impressions, encadrement, retouches et montages). L'objectif était de proposer une direction visuelle moderne et lisible, fidèle à l'identité de l'enseigne, avant l'étape d'intégration.",
+      details: {
+        "type de projet": "Maquette web (entreprise)",
+        date: "2026",
+        role: "UI/UX Designer",
+        outils: "Adobe XD"
+      },
+      links: [{ url: "image/photolux.pdf", text: "Voir la maquette", icon: "bx-download", preview: true }]
+    },
+    en: {
+      title: "Photolux Mockup",
+      tags: ["Design", "Company"],
+      description: "During my in-company experience, I designed the website mockup of Photolux on Adobe XD, a photo studio established in Guadeloupe for over 50 years. I built the entire interface: home page, presentation of the studio and its services (ID photos, prints, framing, retouching and editing). The goal was to define a modern and readable visual direction, true to the brand's identity, ahead of the integration stage.",
+      details: {
+        "project type": "Web mockup (company)",
+        date: "2026",
+        role: "UI/UX Designer",
+        tools: "Adobe XD"
+      },
+      links: [{ url: "image/photolux.pdf", text: "View the mockup", icon: "bx-download", preview: true }]
+    }
+  },
+  23: {
+    image: "image/maison.jpg",
+    fr: {
+      title: "Maquette Maison & Paysage",
+      tags: ["Design", "Entreprise"],
+      description: "Réalisée sur Adobe XD lors de mon expérience en entreprise, cette maquette présente le site web d'un constructeur de maisons sur mesure en Guadeloupe. J'ai conçu la page d'accueil et l'ensemble du parcours : mise en avant des offres, comparatif des solutions, contenu de l'étude de conception et formulaire de contact. Le travail s'est concentré sur une interface claire et rassurante pour accompagner les clients dans leur projet de construction.",
+      details: {
+        "type de projet": "Maquette web (entreprise)",
+        date: "2026",
+        role: "UI/UX Designer",
+        outils: "Adobe XD"
+      },
+      links: [{ url: "image/maison.pdf", text: "Voir la maquette", icon: "bx-download", preview: true }]
+    },
+    en: {
+      title: "Maison & Paysage Mockup",
+      tags: ["Design", "Company"],
+      description: "Designed on Adobe XD during my in-company experience, this mockup presents the website of a custom home builder in Guadeloupe. I created the home page and the full journey: highlighting the offers, comparing the solutions, the design study content and the contact form. The work focused on a clear and reassuring interface to support clients throughout their construction project.",
+      details: {
+        "project type": "Web mockup (company)",
+        date: "2026",
+        role: "UI/UX Designer",
+        tools: "Adobe XD"
+      },
+      links: [{ url: "image/maison.pdf", text: "View the mockup", icon: "bx-download", preview: true }]
+    }
   }
 
 };

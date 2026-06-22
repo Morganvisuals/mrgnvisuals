@@ -103,6 +103,10 @@
       'pcard.9.desc': "Dans ce projet, j'ai été amené à être le VFX de ce clip vidéo.",
       'pcard.10.title': "Site web Exterria",
       'pcard.10.desc': "Dans ce projet, j'ai été amené à être le webdesigner et le concepteur de ce site web.",
+      'pcard.22.title': "Maquette Photolux",
+      'pcard.22.desc': "Maquette du site d'un studio photo en Guadeloupe, conçue sur Adobe XD en entreprise.",
+      'pcard.23.title': "Maquette Maison & Paysage",
+      'pcard.23.desc': "Maquette du site d'un constructeur de maisons sur mesure en Guadeloupe, conçue sur Adobe XD en entreprise.",
 
       // --- Contact ---
       'contact.heading': "Contactez-<span>Moi</span>",
@@ -283,6 +287,10 @@
       'pcard.9.desc': "For this project, I worked as the VFX artist on this music video.",
       'pcard.10.title': "Exterria Website",
       'pcard.10.desc': "For this project, I was the web designer and creator of this website.",
+      'pcard.22.title': "Photolux Mockup",
+      'pcard.22.desc': "Website mockup for a photo studio in Guadeloupe, designed on Adobe XD in-company.",
+      'pcard.23.title': "Maison & Paysage Mockup",
+      'pcard.23.desc': "Website mockup for a custom home builder in Guadeloupe, designed on Adobe XD in-company.",
 
       // --- Contact ---
       'contact.heading': "Get in <span>Touch</span>",
