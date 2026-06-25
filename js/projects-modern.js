@@ -598,7 +598,7 @@ const projectsData = {
     }
   },
   22: {
-    image: "image/photolux.jpg",
+    image: "image/photolux.png",
     fr: {
       title: "Maquette Photolux",
       tags: ["Design", "Entreprise"],
@@ -649,6 +649,89 @@ const projectsData = {
         tools: "Adobe XD"
       },
       links: [{ url: "image/maison.pdf", text: "View the mockup", icon: "bx-download", preview: true }]
+    }
+  },
+  24: {
+    image: "image/ppp-marie-joseph-morgan.png",
+    fr: {
+      title: "Projet Professionnel Personnalisé",
+      tags: ["Gestion de projet", "Stratégie", "Scolaire"],
+      description: "Le Projet Professionnel Personnalisé (PPP) est un dossier dans lequel je structure mon parcours et prépare mon entrée dans les métiers de l'audiovisuel. J'y définis mes objectifs professionnels, notamment devenir monteur vidéo / motion designer et publier un morceau en tant que DJ. J'y présente également mes compétences, mes justificatifs de qualification, une cartographie des aides à la formation et au financement, un budget prévisionnel, un rétroplanning, ainsi que les règles juridiques liées à mon futur métier. Ce travail m'a permis d'établir une feuille de route réaliste et cohérente afin de développer mes compétences, mieux organiser mon projet et construire progressivement mon identité professionnelle.",
+      details: {
+        "type de projet": "Projet professionnel personnalisé (Scolaire)",
+        date: "2026",
+        role: "Étudiant",
+        outils: "Canva",
+        "U.E": "Entreprendre, Comprendre"
+      },
+      links: [{ url: "image/ppp-marie-joseph-morgan.pdf", text: "Voir le projet", icon: "bx-download", preview: true }]
+    },
+    en: {
+      title: "Personalised Professional Project",
+      tags: ["Project Management", "Strategy", "Academic"],
+      description: "The Personalised Professional Project (PPP) is a report in which I structure my career path and prepare my entry into the audiovisual industry. I define my professional goals, notably becoming a video editor / motion designer and releasing a track as a DJ. I also present my skills, qualification records, a map of training and funding support, a forecast budget, a schedule, as well as the legal rules tied to my future profession. This work allowed me to set out a realistic and coherent roadmap to develop my skills, better organise my project and progressively build my professional identity.",
+      details: {
+        "project type": "Personalised professional project (Academic)",
+        date: "2026",
+        role: "Student",
+        tools: "Canva",
+        "U.E": "Undertake, Understand"
+      },
+      links: [{ url: "image/ppp-marie-joseph-morgan.pdf", text: "View the project", icon: "bx-download", preview: true }]
+    }
+  },
+  25: {
+    image: "image/forever.jpg",
+    fr: {
+      title: "Forever Caribbean — Spot promotionnel",
+      tags: ["Vidéo", "Entreprise"],
+      description: "Pour Forever Caribbean, j'ai réalisé un spot publicitaire de 30 secondes visant à promouvoir l'univers et le savoir-faire de la marque. La vidéo rassemble plusieurs mariages réalisés par Forever Caribbean afin de créer un montage dynamique, élégant et émotionnel, capable de transmettre rapidement l'énergie, la beauté et l'intensité de ces moments uniques. L'objectif du projet était de concevoir une vidéo courte, impactante et rythmée, pensée pour les réseaux sociaux et la communication digitale. À travers une sélection d'images fortes, de détails visuels et d'instants authentiques, le spot met en avant l'expérience proposée par Forever Caribbean : capturer et sublimer les souvenirs les plus précieux.",
+      details: {
+        "type de projet": "Spot promotionnel (Entreprise)",
+        date: "2026",
+        role: "Monteur vidéo",
+        outils: "Premiere Pro"
+      },
+      links: [{ url: "https://www.youtube.com/watch?v=Nsx32WtB3lI", text: "Voir la vidéo", icon: "bx-play-circle" }]
+    },
+    en: {
+      title: "Forever Caribbean — Promotional Video",
+      tags: ["Video", "Company"],
+      description: "For Forever Caribbean, I created a 30-second promotional video to showcase the brand's world and craftsmanship. The video brings together several weddings produced by Forever Caribbean to create a dynamic, elegant and emotional edit that quickly conveys the energy, beauty and intensity of these unique moments. The goal of the project was to design a short, impactful and fast-paced video, made for social media and digital communication. Through a selection of strong images, visual details and authentic moments, the video highlights the experience offered by Forever Caribbean: capturing and enhancing the most precious memories.",
+      details: {
+        "project type": "Promotional video (Company)",
+        date: "2026",
+        role: "Video Editor",
+        tools: "Premiere Pro"
+      },
+      links: [{ url: "https://www.youtube.com/watch?v=Nsx32WtB3lI", text: "Watch the video", icon: "bx-play-circle" }]
+    }
+  },
+  26: {
+    image: "image/kannaripann.jpg",
+    fr: {
+      title: "Kannari Pann — Montage vidéo",
+      tags: ["Vidéo", "Entreprise"],
+      description: "Pour Kannari Pann, j'ai réalisé différents montages vidéo destinés à accompagner la communication digitale du magazine. Mon travail s'est principalement concentré sur le montage d'interviews de personnalités et d'acteurs liés à l'univers de Kannari Pann, tout en incluant également d'autres formats, comme des vidéos récapitulatives d'événements. L'objectif était de créer des contenus vidéo clairs, fluides et dynamiques, capables de mettre en valeur les intervenants, les moments forts et l'identité du magazine. Pour les interviews, mon rôle consistait à sélectionner les meilleures prises, structurer les échanges, rendre le discours lisible et agréable à suivre, puis soigner le rythme et les transitions afin de maintenir l'attention du spectateur. À travers ces différents montages, j'ai contribué à valoriser l'image de Kannari Pann en créant des vidéos professionnelles, cohérentes et adaptées aux réseaux sociaux, entre formats d'interviews, contenus éditoriaux et récapitulatifs d'événements.",
+      details: {
+        "type de projet": "Montage vidéo (Entreprise)",
+        date: "2026",
+        role: "Monteur vidéo",
+        outils: "Premiere Pro"
+      },
+      links: [{ url: "https://www.instagram.com/kannaripann_magazine/", text: "Voir sur Instagram", icon: "bxl-instagram-alt" }]
+    },
+    en: {
+      title: "Kannari Pann — Video Editing",
+      tags: ["Video", "Company"],
+      description: "For Kannari Pann, I produced various video edits to support the magazine's digital communication. My work mainly focused on editing interviews of personalities and figures connected to the Kannari Pann world, while also including other formats such as event recap videos. The goal was to create clear, smooth and dynamic video content that showcases the speakers, the highlights and the magazine's identity. For the interviews, my role was to select the best takes, structure the exchanges, make the speech readable and pleasant to follow, then refine the pacing and transitions to keep the viewer's attention. Through these various edits, I helped enhance Kannari Pann's image by creating professional, consistent video content tailored to social media, across interview formats, editorial content and event recaps.",
+      details: {
+        "project type": "Video editing (Company)",
+        date: "2026",
+        role: "Video Editor",
+        tools: "Premiere Pro"
+      },
+      links: [{ url: "https://www.instagram.com/kannaripann_magazine/", text: "View on Instagram", icon: "bxl-instagram-alt" }]
     }
   }
 

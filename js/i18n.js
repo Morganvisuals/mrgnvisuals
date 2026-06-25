@@ -107,6 +107,12 @@
       'pcard.22.desc': "Maquette du site d'un studio photo en Guadeloupe, conçue sur Adobe XD en entreprise.",
       'pcard.23.title': "Maquette Maison & Paysage",
       'pcard.23.desc': "Maquette du site d'un constructeur de maisons sur mesure en Guadeloupe, conçue sur Adobe XD en entreprise.",
+      'pcard.24.title': "Projet Professionnel Personnalisé",
+      'pcard.24.desc': "Dossier structurant mon parcours et mon entrée dans les métiers de l'audiovisuel : objectifs, compétences, aides, budget et plan d'action.",
+      'pcard.25.title': "Forever Caribbean — Spot promotionnel",
+      'pcard.25.desc': "Spot publicitaire de 30 secondes réalisé pour promouvoir l'univers de la marque Forever Caribbean à travers un montage de mariages.",
+      'pcard.26.title': "Kannari Pann — Montage vidéo",
+      'pcard.26.desc': "Montages vidéo pour le magazine Kannari Pann : interviews de personnalités et récapitulatifs d'événements pour la communication digitale.",
 
       // --- Contact ---
       'contact.heading': "Contactez-<span>Moi</span>",
@@ -291,6 +297,12 @@
       'pcard.22.desc': "Website mockup for a photo studio in Guadeloupe, designed on Adobe XD in-company.",
       'pcard.23.title': "Maison & Paysage Mockup",
       'pcard.23.desc': "Website mockup for a custom home builder in Guadeloupe, designed on Adobe XD in-company.",
+      'pcard.24.title': "Personalised Professional Project",
+      'pcard.24.desc': "A report structuring my career path and entry into the audiovisual industry: goals, skills, support, budget and action plan.",
+      'pcard.25.title': "Forever Caribbean — Promotional Video",
+      'pcard.25.desc': "A 30-second promotional video created to showcase the Forever Caribbean brand through an edit of weddings.",
+      'pcard.26.title': "Kannari Pann — Video Editing",
+      'pcard.26.desc': "Video edits for Kannari Pann magazine: interviews of personalities and event recaps for digital communication.",
 
       // --- Contact ---
       'contact.heading': "Get in <span>Touch</span>",
