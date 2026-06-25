@@ -56,13 +56,13 @@
       'filter.design': "Design",
       'filter.management': "Gestion de projet",
       'filter.strategy': "Stratégie & Com",
-      'filter.school': "Scolaire",
+      'filter.school': "Universitaire",
       'filter.company': "Entreprise",
       'filter.personal': "Personnel",
 
       // Tags partagés des cartes projet
       'tag.video': "Vidéo",
-      'tag.school': "Scolaire",
+      'tag.school': "Universitaire",
       'tag.design': "Design",
       'tag.personal': "Personnel",
       'tag.management': "Gestion de projet",

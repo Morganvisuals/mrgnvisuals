@@ -8,7 +8,7 @@ const projectsData = {
     image: "image/cyparis.jpg",
     fr: {
       title: "Documentaire Cyparis",
-      tags: ["Vidéo", "Scolaire"],
+      tags: ["Vidéo", "Universitaire"],
       description: "Dans ce projet, j'ai eu pour but de créer un documentaire sur Cyparis en animation 2D. Pour cela, j'ai utilisé plusieurs outils comme Artlist.IA pour la génération d'images, After Effects pour l'animation et FL Studio pour le sound design.",
       details: {
         "type de projet": "Documentaire animé",
@@ -66,7 +66,7 @@ const projectsData = {
     image: "image/coa.jpg",
     fr: {
       title: "Stratégie CoArt",
-      tags: ["Stratégie", "Scolaire"],
+      tags: ["Stratégie", "Universitaire"],
       description: "Ce projet est la réalisation d'un espace de Coworking en Guadeloupe, nommé 'CoArt'. Ce projet a été réalisé en groupe avec 2 autres participants. Mon rôle principal dans ce projet a été de faire l'analyse des différentes stratégies de communication, et la réalisation d'un spot radio. Nous avons uniquement fait la partie communication du projet.",
       details: {
         "type de projet": "Stratégie de communication (SAÉ 4.STRAT.01)",
@@ -95,7 +95,7 @@ const projectsData = {
     image: "image/dash.jpg",
     fr: {
       title: "Charte graphique DASH",
-      tags: ["Design", "Scolaire"],
+      tags: ["Design", "Universitaire"],
       description: "Une charte graphique complète pour le logo d'une plateforme de streaming fictive nommée 'DASH', avec des couleurs jaune et noir dynamiques, et un logo représentant un petit fantôme stylisé. Le projet comprend l'identité visuelle complète : logo, typographie, palette de couleurs, et déclinaisons.",
       details: {
         "type de projet": "Charte graphique (SAÉ 4.CRÉA.01)",
@@ -124,7 +124,7 @@ const projectsData = {
     image: "image/portfolionew.jpg",
     fr: {
       title: "Portfolio Personnel",
-      tags: ["Web", "Scolaire"],
+      tags: ["Web", "Universitaire"],
       description: "Portfolio développé en HTML, CSS et JavaScript dans le cadre de la SAE 3.CREA.03. Ce site met en avant l'ensemble de mes projets réalisés durant ma formation en BUT MMI, ainsi que mes créations personnelles et mes expériences professionnelles en entreprise. Design responsive et moderne avec animations fluides.",
       details: {
         "type de projet": "SAÉ 3.CREA.03",
@@ -371,10 +371,10 @@ const projectsData = {
     image: "image/Businessprocessmanagement.jpg",
     fr: {
       title: "Business Process Management",
-      tags: ["Stratégie", "Scolaire"],
+      tags: ["Stratégie", "Universitaire"],
       description: "Dans ce projet, j'ai appris à structurer les processus pour transformer le chaos créatif en performance durable. Nous avons analysé et identifié les meilleures façons d'optimiser l'organisation d'une entreprise à travers un cas pratique.",
       details: {
-        "type de projet": "Gestion de processus (Scolaire)",
+        "type de projet": "Gestion de processus (Universitaire)",
         date: "2025",
         role: "Étudiant",
         outils: "Canva, Google Docs",
@@ -400,10 +400,10 @@ const projectsData = {
     image: "image/blok.jpg",
     fr: {
       title: "Réels Instagram pour Le média BLOK",
-      tags: ["Vidéo", "Scolaire"],
+      tags: ["Vidéo", "Universitaire"],
       description: "Dans ce projet, j'ai réalisé des réels Instagram pour Le média BLOK. L'objectif était de créer des contenus vidéo courts et engageants.",
       details: {
-        "type de projet": "Réels Instagram (Scolaire)",
+        "type de projet": "Réels Instagram (Universitaire)",
         date: "2026",
         role: "Monteur vidéo",
         outils: "Premiere Pro",
@@ -429,10 +429,10 @@ const projectsData = {
     image: "image/flora.jpg",
     fr: {
       title: "Flora Beauty",
-      tags: ["Gestion de projet", "Stratégie", "Scolaire"],
+      tags: ["Gestion de projet", "Stratégie", "Universitaire"],
       description: "Dans le cadre de ce projet, mon groupe et moi avons créé une marque nommée « Flora Beauty » et développé l'ensemble de sa stratégie entrepreneuriale : étude de marché, positionnement, identité visuelle, plan de communication et stratégie commerciale.",
       details: {
-        "type de projet": "Projet entrepreneurial (Scolaire)",
+        "type de projet": "Projet entrepreneurial (Universitaire)",
         date: "2026",
         role: "Chef de projet & Stratégie",
         outils: "Canva, Google Docs",
@@ -458,10 +458,10 @@ const projectsData = {
     image: "image/gwadamobilite.jpg",
     fr: {
       title: "Gwada Mobilité",
-      tags: ["Gestion de projet", "Stratégie", "Scolaire"],
+      tags: ["Gestion de projet", "Stratégie", "Universitaire"],
       description: "Projet de groupe autour de GuadaMobilité, une application mobile fictive pensée pour faciliter les déplacements en Guadeloupe en centralisant différents modes de transport (bus, covoiturage, mobilité plus responsable).\n\nNous avons construit l'univers global du projet : concept, modèle économique, proposition de valeur, cibles et stratégie de communication, sans oublier la gestion de projet et l'impact social, économique et environnemental de l'application.\n\nMon rôle : création du concept, réflexion stratégique, business model, définition des cibles et stratégie de communication.",
       details: {
-        "type de projet": "Projet entrepreneurial (Scolaire)",
+        "type de projet": "Projet entrepreneurial (Universitaire)",
         date: "2025",
         role: "Chef de projet & Communication",
         outils: "Canva, Google Docs",
@@ -487,10 +487,10 @@ const projectsData = {
     image: "image/LeanManagement.jpg",
     fr: {
       title: "Lean Management",
-      tags: ["Stratégie", "Scolaire"],
+      tags: ["Stratégie", "Universitaire"],
       description: "Dans ce projet, j'ai appris avec mon groupe les principes de la gestion lean et leur application dans un contexte professionnel. Nous avons étudié les méthodes d'élimination des gaspillages et d'amélioration continue pour optimiser les flux de production.",
       details: {
-        "type de projet": "Gestion & Stratégie (Scolaire)",
+        "type de projet": "Gestion & Stratégie (Universitaire)",
         date: "2025",
         role: "Étudiant",
         outils: "Canva, Google Docs",
@@ -542,11 +542,11 @@ const projectsData = {
   20: {
     image: "image/premier-site-web.jpg",
     fr: {
-      title: "Mon premier portfolio en HTML/CSS",
-      tags: ["Web", "Scolaire"],
-      description: "Dans ce projet, j'ai créé mon premier portfolio en utilisant HTML et CSS. Ce premier site m'a permis de poser les bases du développement web et de découvrir la structure d'une page HTML, les sélecteurs CSS et la mise en page responsive.",
+      title: "Mon ancien portfolio",
+      tags: ["Web", "Universitaire"],
+      description: "Mon ancien portfolio, réalisé durant ma 2e année de BUT MMI en HTML, CSS et JavaScript. Ce site m'a permis de mettre en pratique mes compétences en intégration web à travers un projet concret, d'apprendre à concevoir une mise en page responsive et d'ajouter des animations pour présenter l'ensemble de mes travaux.",
       details: {
-        "type de projet": "Site web (Scolaire)",
+        "type de projet": "Site web (Universitaire)",
         date: "2024",
         role: "Développeur Front-End",
         outils: "HTML, CSS, JavaScript",
@@ -555,9 +555,9 @@ const projectsData = {
       links: [{ url: "https://morganvisuals.vercel.app/", text: "Voir le projet", icon: "bx-code-alt" }]
     },
     en: {
-      title: "My first HTML/CSS portfolio",
+      title: "My old portfolio",
       tags: ["Web", "Academic"],
-      description: "For this project, I built my first portfolio using HTML and CSS. This first site allowed me to lay the foundations of web development and discover HTML page structure, CSS selectors and responsive layout.",
+      description: "My old portfolio, built during my second year of BUT MMI using HTML, CSS and JavaScript. This site let me put my web integration skills into practice through a concrete project, learn to design a responsive layout and add animations to showcase all of my work.",
       details: {
         "project type": "Website (Academic)",
         date: "2024",
@@ -572,10 +572,10 @@ const projectsData = {
     image: "image/DOM.jpg",
     fr: {
       title: "DOM-COM",
-      tags: ["Web", "Scolaire"],
-      description: "DOM-COM est un site web que j'ai réalisé en première année de BUT MMI. Il présente trois territoires français d'outre-mer — la Martinique, la Guadeloupe et la Guyane — sous forme de portail informatif, avec une page dédiée à chaque destination. Ce projet m'a permis de poser mes premières bases en intégration HTML/CSS et en structuration d'un site multi-pages.",
+      tags: ["Web", "Universitaire"],
+      description: "DOM-COM est un site web que j'ai réalisé en groupe en première année de BUT MMI. Il présente trois territoires français d'outre-mer — la Martinique, la Guadeloupe et la Guyane — sous forme de portail informatif, avec une page dédiée à chaque destination. Ce projet m'a permis de poser mes premières bases en intégration HTML/CSS et en structuration d'un site multi-pages.",
       details: {
-        "type de projet": "Site web (Scolaire)",
+        "type de projet": "Site web (Universitaire)",
         date: "2023",
         role: "Webdesigner & Développeur Front-End",
         outils: "HTML, CSS",
@@ -586,7 +586,7 @@ const projectsData = {
     en: {
       title: "DOM-COM",
       tags: ["Web", "Academic"],
-      description: "DOM-COM is a website I built during my first year of BUT MMI. It showcases three French overseas territories — Martinique, Guadeloupe and French Guiana — as an informative portal, with a dedicated page for each destination. This project gave me my first hands-on experience with HTML/CSS integration and structuring a multi-page site.",
+      description: "DOM-COM is a website I built as part of a team during my first year of BUT MMI. It showcases three French overseas territories — Martinique, Guadeloupe and French Guiana — as an informative portal, with a dedicated page for each destination. This project gave me my first hands-on experience with HTML/CSS integration and structuring a multi-page site.",
       details: {
         "project type": "Website (Academic)",
         date: "2023",
@@ -655,10 +655,10 @@ const projectsData = {
     image: "image/ppp-marie-joseph-morgan.png",
     fr: {
       title: "Projet Professionnel Personnalisé",
-      tags: ["Gestion de projet", "Stratégie", "Scolaire"],
+      tags: ["Gestion de projet", "Stratégie", "Universitaire"],
       description: "Le Projet Professionnel Personnalisé (PPP) est un dossier dans lequel je structure mon parcours et prépare mon entrée dans les métiers de l'audiovisuel. J'y définis mes objectifs professionnels, notamment devenir monteur vidéo / motion designer et publier un morceau en tant que DJ. J'y présente également mes compétences, mes justificatifs de qualification, une cartographie des aides à la formation et au financement, un budget prévisionnel, un rétroplanning, ainsi que les règles juridiques liées à mon futur métier. Ce travail m'a permis d'établir une feuille de route réaliste et cohérente afin de développer mes compétences, mieux organiser mon projet et construire progressivement mon identité professionnelle.",
       details: {
-        "type de projet": "Projet professionnel personnalisé (Scolaire)",
+        "type de projet": "Projet professionnel personnalisé (Universitaire)",
         date: "2026",
         role: "Étudiant",
         outils: "Canva",
