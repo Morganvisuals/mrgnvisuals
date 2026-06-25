@@ -459,7 +459,7 @@ const projectsData = {
     fr: {
       title: "Gwada Mobilité",
       tags: ["Gestion de projet", "Stratégie", "Scolaire"],
-      description: "Dans le cadre de ce projet, j'ai contribué avec mon groupe à la création d'une entreprise fictive de mobilité en Guadeloupe. Nous avons développé le modèle économique, la stratégie de communication et la gestion du projet.",
+      description: "Projet de groupe autour de GuadaMobilité, une application mobile fictive pensée pour faciliter les déplacements en Guadeloupe en centralisant différents modes de transport (bus, covoiturage, mobilité plus responsable).\n\nNous avons construit l'univers global du projet : concept, modèle économique, proposition de valeur, cibles et stratégie de communication, sans oublier la gestion de projet et l'impact social, économique et environnemental de l'application.\n\nMon rôle : création du concept, réflexion stratégique, business model, définition des cibles et stratégie de communication.",
       details: {
         "type de projet": "Projet entrepreneurial (Scolaire)",
         date: "2025",
@@ -472,7 +472,7 @@ const projectsData = {
     en: {
       title: "Gwada Mobilité",
       tags: ["Project Management", "Strategy", "Academic"],
-      description: "For this project, I contributed with my team to the creation of a fictional mobility company in Guadeloupe. We developed the business model, communication strategy and project management.",
+      description: "Group project around GuadaMobilité, a fictional mobile app designed to make getting around Guadeloupe easier by bringing together different modes of transport (buses, carpooling, more responsible mobility).\n\nWe built the project's overall identity: concept, business model, value proposition, target audiences and communication strategy, along with project management and the app's social, economic and environmental impact.\n\nMy role: concept creation, strategic thinking, business model, target audience definition and communication strategy.",
       details: {
         "project type": "Entrepreneurial project (Academic)",
         date: "2025",
@@ -1066,13 +1066,22 @@ if (pdfViewer) {
     if (pdfReturnFocus) { pdfReturnFocus.focus(); pdfReturnFocus = null; }
   }
 
+  // Sur mobile, le visualiseur PDF en iframe s'affiche mal : on ouvre alors le
+  // PDF directement dans le visionneur natif (nouvel onglet) plutôt que la fenêtre flottante.
+  const isMobilePdf = () => window.matchMedia('(max-width: 768px)').matches;
+
   // Délégation : déclenché par tout élément [data-pdf] (les liens "preview" du
   // modal sont régénérés à chaque ouverture, d'où la délégation au document).
   document.addEventListener('click', (e) => {
     const trigger = e.target.closest('[data-pdf]');
     if (!trigger) return;
     e.preventDefault();
-    openPdfViewer(trigger.getAttribute('data-pdf'), trigger.getAttribute('data-pdf-title'), trigger);
+    const url = trigger.getAttribute('data-pdf');
+    if (isMobilePdf()) {
+      if (url) window.open(url, '_blank', 'noopener');
+      return;
+    }
+    openPdfViewer(url, trigger.getAttribute('data-pdf-title'), trigger);
   });
 
   pdfBack?.addEventListener('click', closePdfViewer);

@@ -433,7 +433,7 @@ span {
 }
 
 .mention {
-  color: white;
+  color: var(--main-color);
   text-decoration: underline;
 }
 

@@ -355,6 +355,7 @@
   line-height: 2;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 3rem;
+  white-space: pre-line;
 }
 
 .modal-details {
