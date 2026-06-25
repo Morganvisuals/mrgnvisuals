@@ -159,7 +159,8 @@ const projectsData = {
         "type de projet": "Animation 3D",
         date: "2025",
         role: "Motion Designer",
-        outils: "After Effects"
+        outils: "After Effects",
+        "U.E": "Exprimer"
       },
       links: [{ url: "https://youtu.be/oZmUKvjlo48", text: "Voir la vidéo", icon: "bx-play-circle" }]
     },
@@ -171,7 +172,8 @@ const projectsData = {
         "project type": "3D Animation",
         date: "2025",
         role: "Motion Designer",
-        tools: "After Effects"
+        tools: "After Effects",
+        "U.E": "Express"
       },
       links: [{ url: "https://youtu.be/oZmUKvjlo48", text: "Watch the video", icon: "bx-play-circle" }]
     }
@@ -186,7 +188,8 @@ const projectsData = {
         "type de projet": "Réels Instagram (Entreprise)",
         date: "2025",
         role: "Monteur vidéo",
-        outils: "Premiere Pro"
+        outils: "Premiere Pro",
+        "U.E": "Exprimer"
       },
       links: [{ url: "https://www.instagram.com/p/DRXSO-cl1e4/", text: "Voir la vidéo", icon: "bx-play-circle" }]
     },
@@ -198,7 +201,8 @@ const projectsData = {
         "project type": "Instagram Reels (Company)",
         date: "2025",
         role: "Video Editor",
-        tools: "Premiere Pro"
+        tools: "Premiere Pro",
+        "U.E": "Express"
       },
       links: [{ url: "https://www.instagram.com/p/DRXSO-cl1e4/", text: "Watch the video", icon: "bx-play-circle" }]
     }
@@ -213,7 +217,8 @@ const projectsData = {
         "type de projet": "Animation 3D (projet personnel)",
         date: "2025",
         role: "Motion Designer",
-        outils: "After Effects"
+        outils: "After Effects",
+        "U.E": "Exprimer"
       },
       links: [{ url: "https://youtu.be/ht3zFmFcb4k", text: "Voir la vidéo", icon: "bx-play-circle" }]
     },
@@ -225,7 +230,8 @@ const projectsData = {
         "project type": "3D Animation (personal project)",
         date: "2025",
         role: "Motion Designer",
-        tools: "After Effects"
+        tools: "After Effects",
+        "U.E": "Express"
       },
       links: [{ url: "https://youtu.be/ht3zFmFcb4k", text: "Watch the video", icon: "bx-play-circle" }]
     }
@@ -240,7 +246,8 @@ const projectsData = {
         "type de projet": "Clip vidéo (projet personnel)",
         date: "2025",
         role: "VFX",
-        outils: "After Effects"
+        outils: "After Effects",
+        "U.E": "Exprimer"
       },
       links: [{ url: "https://www.youtube.com/watch?v=Nxt36rOShPU", text: "Voir la vidéo", icon: "bx-play-circle" }]
     },
@@ -252,7 +259,8 @@ const projectsData = {
         "project type": "Music video (personal project)",
         date: "2025",
         role: "VFX",
-        tools: "After Effects"
+        tools: "After Effects",
+        "U.E": "Express"
       },
       links: [{ url: "https://www.youtube.com/watch?v=Nxt36rOShPU", text: "Watch the video", icon: "bx-play-circle" }]
     }
@@ -267,7 +275,8 @@ const projectsData = {
         "type de projet": "Site web (entreprise)",
         date: "2026",
         role: "Web designer",
-        outils: "Wordpress Elementor, Figma"
+        outils: "Wordpress Elementor, Figma",
+        "U.E": "Développer, Concevoir"
       },
       links: [{ url: "https://exterria.fr/", text: "Voir le site web", icon: "bx-code-alt" }]
     },
@@ -279,7 +288,8 @@ const projectsData = {
         "project type": "Website (company)",
         date: "2026",
         role: "Web Designer",
-        tools: "Wordpress Elementor, Figma"
+        tools: "Wordpress Elementor, Figma",
+        "U.E": "Develop, Design"
       },
       links: [{ url: "https://exterria.fr/", text: "Visit the website", icon: "bx-code-alt" }]
     }
@@ -294,7 +304,8 @@ const projectsData = {
         "type de projet": "Site web (projet personnel)",
         date: "2026",
         role: "Web Designer & développeur",
-        outils: "HTML, CSS, JavaScript, Claude Code"
+        outils: "HTML, CSS, JavaScript, Claude Code",
+        "U.E": "Développer, Concevoir"
       },
       links: [{ url: "https://djskylight.fr", text: "Voir le site web", icon: "bx-code-alt" }]
     },
@@ -306,7 +317,8 @@ const projectsData = {
         "project type": "Website (personal project)",
         date: "2026",
         role: "Web Designer & developer",
-        tools: "HTML, CSS, JavaScript, Claude Code"
+        tools: "HTML, CSS, JavaScript, Claude Code",
+        "U.E": "Develop, Design"
       },
       links: [{ url: "https://djskylight.fr", text: "Visit the website", icon: "bx-code-alt" }]
     }
@@ -322,7 +334,8 @@ const projectsData = {
         "type de projet": "Vidéos (projet d'entreprise)",
         date: "2026",
         role: "Monteur vidéo",
-        outils: "Premiere Pro"
+        outils: "Premiere Pro",
+        "U.E": "Exprimer"
       },
       links: [{ url: "https://www.instagram.com/p/DSp-O9QAH2t/", text: "Voir une des vidéos", icon: "bx-play-circle" }]
     },
@@ -334,7 +347,8 @@ const projectsData = {
         "project type": "Videos (company project)",
         date: "2026",
         role: "Video Editor",
-        tools: "Premiere Pro"
+        tools: "Premiere Pro",
+        "U.E": "Express"
       },
       links: [{ url: "https://www.instagram.com/p/DSp-O9QAH2t/", text: "Watch the video", icon: "bx-play-circle" }]
     }
@@ -350,7 +364,8 @@ const projectsData = {
         "type de projet": "Clip vidéo (projet personnel)",
         date: "2026",
         role: "Monteur vidéo & VFX",
-        outils: "After Effects, Premiere Pro"
+        outils: "After Effects, Premiere Pro",
+        "U.E": "Exprimer"
       },
       links: [{ url: "https://www.youtube.com/watch?v=GlWtgka-Hqs&list=RDGlWtgka-Hqs&start_radio=1", text: "Voir la vidéo", icon: "bx-play-circle" }]
     },
@@ -362,7 +377,8 @@ const projectsData = {
         "project type": "Music video (personal project)",
         date: "2026",
         role: "Video Editor & VFX",
-        tools: "After Effects, Premiere Pro"
+        tools: "After Effects, Premiere Pro",
+        "U.E": "Express"
       },
       links: [{ url: "https://www.youtube.com/watch?v=GlWtgka-Hqs&list=RDGlWtgka-Hqs&start_radio=1", text: "Watch the video", icon: "bx-play-circle" }]
     }
@@ -522,7 +538,8 @@ const projectsData = {
         "type de projet": "Réels Instagram (Entreprise)",
         date: "2026",
         role: "Monteur vidéo",
-        outils: "Premiere Pro"
+        outils: "Premiere Pro",
+        "U.E": "Exprimer"
       },
       links: [{ url: "https://www.instagram.com/p/DYX3P0uN951/", text: "Voir une des vidéos", icon: "bx-play-circle" }]
     },
@@ -534,7 +551,8 @@ const projectsData = {
         "project type": "Instagram Reels (Company)",
         date: "2026",
         role: "Video Editor",
-        tools: "Premiere Pro"
+        tools: "Premiere Pro",
+        "U.E": "Express"
       },
       links: [{ url: "https://www.instagram.com/p/DYX3P0uN951/", text: "Watch the video", icon: "bx-play-circle" }]
     }
@@ -607,7 +625,8 @@ const projectsData = {
         "type de projet": "Maquette web (entreprise)",
         date: "2026",
         role: "UI/UX Designer",
-        outils: "Adobe XD"
+        outils: "Adobe XD",
+        "U.E": "Concevoir"
       },
       links: [{ url: "image/photolux.pdf", text: "Voir la maquette", icon: "bx-download", preview: true }]
     },
@@ -619,7 +638,8 @@ const projectsData = {
         "project type": "Web mockup (company)",
         date: "2026",
         role: "UI/UX Designer",
-        tools: "Adobe XD"
+        tools: "Adobe XD",
+        "U.E": "Design"
       },
       links: [{ url: "image/photolux.pdf", text: "View the mockup", icon: "bx-download", preview: true }]
     }
@@ -634,7 +654,8 @@ const projectsData = {
         "type de projet": "Maquette web (entreprise)",
         date: "2026",
         role: "UI/UX Designer",
-        outils: "Adobe XD"
+        outils: "Adobe XD",
+        "U.E": "Concevoir"
       },
       links: [{ url: "image/maison.pdf", text: "Voir la maquette", icon: "bx-download", preview: true }]
     },
@@ -646,7 +667,8 @@ const projectsData = {
         "project type": "Web mockup (company)",
         date: "2026",
         role: "UI/UX Designer",
-        tools: "Adobe XD"
+        tools: "Adobe XD",
+        "U.E": "Design"
       },
       links: [{ url: "image/maison.pdf", text: "View the mockup", icon: "bx-download", preview: true }]
     }
@@ -656,7 +678,7 @@ const projectsData = {
     fr: {
       title: "Projet Professionnel Personnalisé",
       tags: ["Gestion de projet", "Universitaire"],
-      description: "Le Projet Professionnel Personnalisé (PPP) est un dossier dans lequel je structure mon parcours et prépare mon entrée dans les métiers de l'audiovisuel. J'y définis mes objectifs professionnels, notamment devenir monteur vidéo / motion designer et publier un morceau en tant que DJ. J'y présente également mes compétences, mes justificatifs de qualification, une cartographie des aides à la formation et au financement, un budget prévisionnel, un rétroplanning, ainsi que les règles juridiques liées à mon futur métier. Ce travail m'a permis d'établir une feuille de route réaliste et cohérente afin de développer mes compétences, mieux organiser mon projet et construire progressivement mon identité professionnelle.",
+      description: "Le Projet Professionnel Personnalisé (PPP) est un dossier structurant mon parcours. J'y définis mes objectifs professionnels, notamment devenir monteur vidéo / motion designer et publier un morceau en tant que DJ. J'y présente également mes compétences, mes justificatifs de qualification, une cartographie des aides à la formation et au financement, un budget prévisionnel, un rétroplanning, ainsi que les règles juridiques liées à mon futur métier. Ce travail m'a permis d'établir une feuille de route réaliste et cohérente afin de développer mes compétences, mieux organiser mon projet et construire progressivement mon identité professionnelle.",
       details: {
         "type de projet": "Projet professionnel personnalisé (Universitaire)",
         date: "2026",
@@ -669,7 +691,7 @@ const projectsData = {
     en: {
       title: "Personalised Professional Project",
       tags: ["Project Management", "Academic"],
-      description: "The Personalised Professional Project (PPP) is a report in which I structure my career path and prepare my entry into the audiovisual industry. I define my professional goals, notably becoming a video editor / motion designer and releasing a track as a DJ. I also present my skills, qualification records, a map of training and funding support, a forecast budget, a schedule, as well as the legal rules tied to my future profession. This work allowed me to set out a realistic and coherent roadmap to develop my skills, better organise my project and progressively build my professional identity.",
+      description: "The Personalised Professional Project (PPP) is a report that structures my career path. I define my professional goals, notably becoming a video editor / motion designer and releasing a track as a DJ. I also present my skills, qualification records, a map of training and funding support, a forecast budget, a schedule, as well as the legal rules tied to my future profession. This work allowed me to set out a realistic and coherent roadmap to develop my skills, better organise my project and progressively build my professional identity.",
       details: {
         "project type": "Personalised professional project (Academic)",
         date: "2026",
@@ -690,7 +712,8 @@ const projectsData = {
         "type de projet": "Spot promotionnel (Entreprise)",
         date: "2026",
         role: "Monteur vidéo",
-        outils: "Premiere Pro"
+        outils: "Premiere Pro",
+        "U.E": "Exprimer"
       },
       links: [{ url: "https://www.youtube.com/watch?v=Nsx32WtB3lI", text: "Voir la vidéo", icon: "bx-play-circle" }]
     },
@@ -702,7 +725,8 @@ const projectsData = {
         "project type": "Promotional video (Company)",
         date: "2026",
         role: "Video Editor",
-        tools: "Premiere Pro"
+        tools: "Premiere Pro",
+        "U.E": "Express"
       },
       links: [{ url: "https://www.youtube.com/watch?v=Nsx32WtB3lI", text: "Watch the video", icon: "bx-play-circle" }]
     }
@@ -717,7 +741,8 @@ const projectsData = {
         "type de projet": "Montage vidéo (Entreprise)",
         date: "2026",
         role: "Monteur vidéo",
-        outils: "Premiere Pro"
+        outils: "Premiere Pro",
+        "U.E": "Exprimer"
       },
       links: [{ url: "https://www.instagram.com/kannaripann_magazine/", text: "Voir sur Instagram", icon: "bxl-instagram-alt" }]
     },
@@ -729,7 +754,8 @@ const projectsData = {
         "project type": "Video editing (Company)",
         date: "2026",
         role: "Video Editor",
-        tools: "Premiere Pro"
+        tools: "Premiere Pro",
+        "U.E": "Express"
       },
       links: [{ url: "https://www.instagram.com/kannaripann_magazine/", text: "View on Instagram", icon: "bxl-instagram-alt" }]
     }
