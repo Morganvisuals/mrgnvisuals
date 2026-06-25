@@ -14,7 +14,7 @@ const projectsData = {
         "type de projet": "Documentaire animé",
         date: "2026",
         role: "Motion Designer, Monteur, Sound Designer",
-        outils: "After Effects, FL Studio, Artlist.IA",
+        outils: "After Effects, Photoshop, FL Studio, Artlist.IA",
         "U.E": "Exprimer, Concevoir"
       },
       links: [{ url: "https://youtu.be/__3YGMU6w24", text: "Voir la vidéo", icon: "bx-play-circle" }]
@@ -27,7 +27,7 @@ const projectsData = {
         "project type": "Animated documentary",
         date: "2026",
         role: "Motion Designer, Editor, Sound Designer",
-        tools: "After Effects, FL Studio, Artlist.AI",
+        tools: "After Effects, Photoshop, FL Studio, Artlist.AI",
         "U.E": "Express, Design"
       },
       links: [{ url: "https://youtu.be/__3YGMU6w24", text: "Watch the video", icon: "bx-play-circle" }]
@@ -655,7 +655,7 @@ const projectsData = {
     image: "image/ppp-marie-joseph-morgan.png",
     fr: {
       title: "Projet Professionnel Personnalisé",
-      tags: ["Gestion de projet", "Stratégie", "Universitaire"],
+      tags: ["Gestion de projet", "Universitaire"],
       description: "Le Projet Professionnel Personnalisé (PPP) est un dossier dans lequel je structure mon parcours et prépare mon entrée dans les métiers de l'audiovisuel. J'y définis mes objectifs professionnels, notamment devenir monteur vidéo / motion designer et publier un morceau en tant que DJ. J'y présente également mes compétences, mes justificatifs de qualification, une cartographie des aides à la formation et au financement, un budget prévisionnel, un rétroplanning, ainsi que les règles juridiques liées à mon futur métier. Ce travail m'a permis d'établir une feuille de route réaliste et cohérente afin de développer mes compétences, mieux organiser mon projet et construire progressivement mon identité professionnelle.",
       details: {
         "type de projet": "Projet professionnel personnalisé (Universitaire)",
@@ -668,7 +668,7 @@ const projectsData = {
     },
     en: {
       title: "Personalised Professional Project",
-      tags: ["Project Management", "Strategy", "Academic"],
+      tags: ["Project Management", "Academic"],
       description: "The Personalised Professional Project (PPP) is a report in which I structure my career path and prepare my entry into the audiovisual industry. I define my professional goals, notably becoming a video editor / motion designer and releasing a track as a DJ. I also present my skills, qualification records, a map of training and funding support, a forecast budget, a schedule, as well as the legal rules tied to my future profession. This work allowed me to set out a realistic and coherent roadmap to develop my skills, better organise my project and progressively build my professional identity.",
       details: {
         "project type": "Personalised professional project (Academic)",
