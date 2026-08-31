@@ -26,6 +26,7 @@
       'nav.projects': "Projets",
       'nav.contact': "Contact",
       'header.education': "Ma Formation",
+      'header.contact': "Me contacter",
       'aria.theme': "Changer de mode",
       'aria.lang': "Changer de langue",
       'aria.menu': "Ouvrir le menu de navigation",
@@ -33,7 +34,8 @@
       'skip.link': "Aller au contenu",
 
       // --- Accueil ---
-      'home.greeting': "Je transforme les idées en créations visuelles, entre design, mouvement et émotion.",
+      'home.role': "Créateur <span id=\"clavier\">multimédia</span>",
+      'home.greeting': "Je crée des contenus visuels et digitaux qui donnent vie aux marques et à leurs idées.",
       'home.cv': "CV",
       'home.contactBtn': "Contact",
 
@@ -216,6 +218,7 @@
       'nav.projects': "Projects",
       'nav.contact': "Contact",
       'header.education': "My Education",
+      'header.contact': "Contact me",
       'aria.theme': "Toggle theme",
       'aria.lang': "Change language",
       'aria.menu': "Open navigation menu",
@@ -223,7 +226,8 @@
       'skip.link': "Skip to content",
 
       // --- Home ---
-      'home.greeting': "I bring ideas to life through visual creations that blend design, motion, and emotion.",
+      'home.role': "Multimedia <span id=\"clavier\">Creator</span>",
+      'home.greeting': "I create visual and digital content that brings brands and their ideas to life.",
       'home.cv': "Resume",
       'home.contactBtn': "Contact",
 

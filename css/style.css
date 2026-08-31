@@ -185,7 +185,9 @@ section {
 }
 
 .home-content h3 {
-  margin: 1rem 0;
+  /* Pas de marge basse : l'écart avec le sous-titre est piloté par
+     .home-content p { margin-top } (les marges ne fusionnent pas en flex). */
+  margin: 1rem 0 0;
   font-size: 4rem;
 }
 
@@ -210,7 +212,7 @@ section {
   line-height: 1.8;
   max-width: 420px;
   color: var(--muted-text-color);
-  margin-top: 2rem;
+  margin-top: 1.4rem;
 }
 
 .home-img img,
@@ -1053,7 +1055,7 @@ body.light-mode .marquee-item--swap .logo-light {
   .home-content p {
     font-size: 1.6rem;
     max-width: 420px;
-    margin-top: 1.5rem;
+    margin-top: 1.2rem;
   }
 
   .social-icons a {
@@ -1187,7 +1189,7 @@ body.light-mode .marquee-item--swap .logo-light {
   .home-content p {
     font-size: 1.7rem;
     max-width: 90%;
-    margin-top: 1.2rem;
+    margin-top: 1rem;
     text-wrap: pretty;
   }
 
