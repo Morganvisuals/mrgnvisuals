@@ -34,7 +34,7 @@
       'skip.link': "Aller au contenu",
 
       // --- Accueil ---
-      'home.role': "Créateur <span id=\"clavier\">multimédia</span>",
+      'home.role': "Designer <span id=\"clavier\">multimédia</span>",
       'home.greeting': "Je crée des contenus visuels et digitaux qui donnent vie aux marques et à leurs idées.",
       'home.cv': "CV",
       'home.contactBtn': "Contact",
@@ -226,7 +226,7 @@
       'skip.link': "Skip to content",
 
       // --- Home ---
-      'home.role': "Multimedia <span id=\"clavier\">Creator</span>",
+      'home.role': "Multimedia <span id=\"clavier\">Designer</span>",
       'home.greeting': "I create visual and digital content that brings brands and their ideas to life.",
       'home.cv': "Resume",
       'home.contactBtn': "Contact",
