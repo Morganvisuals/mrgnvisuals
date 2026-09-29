@@ -323,8 +323,7 @@ const projectsData = {
       links: [{ url: "https://djskylight.fr", text: "Visit the website", icon: "bx-code-alt" }]
     }
   },
-
-    12: {
+  12: {
     image: "image/audrey.jpg",
     fr: {
       title: "Vidéos de personal branding pour un client",
@@ -352,8 +351,7 @@ const projectsData = {
       },
       links: [{ url: "https://www.instagram.com/p/DSp-O9QAH2t/", text: "Watch the video", icon: "bx-play-circle" }]
     }
-   
-    },
+  },
   13: {
     image: "image/boheme.jpg",
     fr: {
@@ -1011,6 +1009,24 @@ if (modal) {
     const zoomLabel = ((window.i18nDict && window.i18nDict[lang]) || {})['viewer.zoom']
       || (lang === 'en' ? 'Enlarge' : 'Agrandir');
 
+    // La vignette n'est agrandissable que si l'image EST le livrable, ce que
+    // signale déjà un lien `image: true`. Ailleurs (couverture de vidéo, de PDF
+    // ou de site en ligne) elle reste une simple image : le lien du projet est
+    // la vraie action, et l'agrandir n'apporterait rien.
+    const zoomable = data.links.some(link => link.image);
+
+    const thumbnail = zoomable
+      ? `<button type="button" class="modal-image" data-image="${escapeHTML(encodeURI(project.image))}" data-image-alt="${escapeHTML(imageAlt)}" aria-label="${escapeHTML(zoomLabel)} : ${escapeHTML(data.title)}">
+          <img src="${escapeHTML(project.image)}" alt="${escapeHTML(imageAlt)}">
+          <span class="modal-image-zoom" aria-hidden="true">
+            <svg class="icon" aria-hidden="true"><use href="#i-bx-image"></use></svg>
+            ${escapeHTML(zoomLabel)}
+          </span>
+        </button>`
+      : `<div class="modal-image">
+          <img src="${escapeHTML(project.image)}" alt="${escapeHTML(imageAlt)}">
+        </div>`;
+
     modalBody.innerHTML = `
       <div class="modal-header">
         <h2>${escapeHTML(data.title)}</h2>
@@ -1019,13 +1035,7 @@ if (modal) {
         </div>
       </div>
 
-      <button type="button" class="modal-image" data-image="${escapeHTML(encodeURI(project.image))}" data-image-alt="${escapeHTML(imageAlt)}" aria-label="${escapeHTML(zoomLabel)} : ${escapeHTML(data.title)}">
-        <img src="${escapeHTML(project.image)}" alt="${escapeHTML(imageAlt)}">
-        <span class="modal-image-zoom" aria-hidden="true">
-          <svg class="icon" aria-hidden="true"><use href="#i-bx-image"></use></svg>
-          ${escapeHTML(zoomLabel)}
-        </span>
-      </button>
+      ${thumbnail}
 
       <div class="modal-description">
         <p>${escapeHTML(data.description)}</p>
