@@ -83,6 +83,7 @@
       // Visualiseur PDF
       'viewer.back': "Retour",
       'viewer.open': "Ouvrir",
+      'viewer.zoom': "Agrandir",
 
       // Cartes projet (grille)
       'pcard.1.title': "Documentaire Cyparis",
@@ -115,6 +116,14 @@
       'pcard.25.desc': "Spot publicitaire de 30 secondes réalisé pour promouvoir l'univers de la marque Forever Caribbean à travers un montage de mariages.",
       'pcard.26.title': "Kannari Pann — Montage vidéo",
       'pcard.26.desc': "Montages vidéo pour le magazine Kannari Pann : interviews de personnalités et récapitulatifs d'événements pour la communication digitale.",
+      'pcard.27.title': "Cover « Everything Is Nice »",
+      'pcard.27.desc': "Pochette du single de Lucky Luke x Skycee : photomontage, fond chaud et lettrage lumineux.",
+      'pcard.28.title': "Affiche Samaritaine",
+      'pcard.28.desc': "Affiche publicitaire pour le grand magasin, entièrement composée en photomontage.",
+      'pcard.29.title': "Affiche The Six Triple Eight",
+      'pcard.29.desc': "Réinterprétation de l'affiche du film, avec les codes de typographie et de couleur du cinéma.",
+      'pcard.30.title': "Maquette VintageShop",
+      'pcard.30.desc': "Page d'accueil d'une boutique en ligne d'objets vintage, en gris foncé et orange vif",
 
       // --- Contact ---
       'contact.heading': "Contactez-<span>Moi</span>",
@@ -275,6 +284,7 @@
       // PDF viewer
       'viewer.back': "Back",
       'viewer.open': "Open",
+      'viewer.zoom': "Enlarge",
 
       // Project cards (grid)
       'pcard.1.title': "Cyparis Documentary",
@@ -307,6 +317,14 @@
       'pcard.25.desc': "A 30-second promotional video created to showcase the Forever Caribbean brand through an edit of weddings.",
       'pcard.26.title': "Kannari Pann — Video Editing",
       'pcard.26.desc': "Video edits for Kannari Pann magazine: interviews of personalities and event recaps for digital communication.",
+      'pcard.27.title': "“Everything Is Nice” Cover Art",
+      'pcard.27.desc': "Single cover for Lucky Luke x Skycee: photo montage, warm background and glowing lettering.",
+      'pcard.28.title': "Samaritaine Poster",
+      'pcard.28.desc': "Advertising poster for the department store, built entirely as a photo montage.",
+      'pcard.29.title': "The Six Triple Eight Poster",
+      'pcard.29.desc': "A reinterpretation of the film poster, using the typography and colour codes of cinema.",
+      'pcard.30.title': "VintageShop Mockup",
+      'pcard.30.desc': "Homepage for a vintage online store, in dark grey and bright orange",
 
       // --- Contact ---
       'contact.heading': "Get in <span>Touch</span>",

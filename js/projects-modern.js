@@ -759,6 +759,122 @@ const projectsData = {
       },
       links: [{ url: "https://www.instagram.com/kannaripann_magazine/", text: "View on Instagram", icon: "bxl-instagram-alt" }]
     }
+  },
+  27: {
+    image: "image/bullit3.jpg",
+    fr: {
+      title: "Cover « Everything Is Nice »",
+      tags: ["Design", "Personnel"],
+      description: "Pochette de single réalisée pour le titre « Everything Is Nice » de Lucky Luke x Skycee. J'ai détouré les deux artistes, créé un fond rouge et orange avec des effets de lumière, puis travaillé un lettrage épais et lumineux pour que le titre reste lisible même en petit sur les plateformes de streaming. Les balles rappellent l'ambiance du morceau.",
+      details: {
+        "type de projet": "Pochette de single",
+        date: "2025",
+        role: "Directeur artistique, Designer graphique",
+        outils: "Photoshop, Illustrator",
+        "U.E": "Exprimer, Concevoir"
+      },
+      links: [{ url: "image/bullit3.jpg", text: "Voir la cover en grand", icon: "bx-image", image: true }]
+    },
+    en: {
+      title: "“Everything Is Nice” Cover Art",
+      tags: ["Design", "Personal"],
+      description: "Single cover created for the track “Everything Is Nice” by Lucky Luke x Skycee. I cut out both artists, built a red and orange background with lighting effects, then worked on thick, glowing lettering so the title stays readable even at thumbnail size on streaming platforms. The bullets echo the mood of the track.",
+      details: {
+        "project type": "Single cover art",
+        date: "2025",
+        role: "Art Director, Graphic Designer",
+        tools: "Photoshop, Illustrator",
+        "U.E": "Express, Design"
+      },
+      links: [{ url: "image/bullit3.jpg", text: "View the full cover", icon: "bx-image", image: true }]
+    }
+  },
+  28: {
+    image: "image/affiche-samaritaine.jpg",
+    fr: {
+      title: "Affiche publicitaire Samaritaine",
+      tags: ["Design", "Universitaire"],
+      description: "Affiche publicitaire conçue pour le grand magasin La Samaritaine. J'ai composé toute la scène en photomontage : détourage du modèle, mise en place des produits sur les podiums, création des ombres et de la lumière de studio pour rendre l'ensemble crédible. Le cadre jaune et les tons violet clair structurent l'image et laissent de la place au logo de la marque.",
+      details: {
+        "type de projet": "Affiche publicitaire",
+        date: "2025",
+        role: "Designer graphique",
+        outils: "Photoshop, Illustrator",
+        "U.E": "Exprimer, Concevoir"
+      },
+      links: [{ url: "image/affiche-samaritaine.jpg", text: "Voir l'affiche en grand", icon: "bx-image", image: true }]
+    },
+    en: {
+      title: "Samaritaine Advertising Poster",
+      tags: ["Design", "Academic"],
+      description: "Advertising poster designed for the Samaritaine department store. I built the whole scene as a photo montage: cutting out the model, placing the products on the podiums, and creating the shadows and studio lighting that make it all believable. The yellow frame and the light purple tones structure the image and leave room for the brand logo.",
+      details: {
+        "project type": "Advertising poster",
+        date: "2025",
+        role: "Graphic Designer",
+        tools: "Photoshop, Illustrator",
+        "U.E": "Express, Design"
+      },
+      links: [{ url: "image/affiche-samaritaine.jpg", text: "View the full poster", icon: "bx-image", image: true }]
+    }
+  },
+  29: {
+    image: "image/affiche-six-triple-eight.jpg",
+    fr: {
+      title: "Affiche The Six Triple Eight",
+      tags: ["Design", "Universitaire"],
+      description: "Réinterprétation de l'affiche du film « The Six Triple Eight ». L'exercice portait sur les codes de l'affiche de cinéma : un portrait au premier plan, un arrière-plan qui raconte l'histoire (soldats, ruines, fumée) et des teintes sépia pour situer l'époque. Les textes suivent la mise en page classique d'une affiche, du nom de l'actrice en haut jusqu'au bloc diffuseur et à la date de sortie en bas.",
+      details: {
+        "type de projet": "Affiche de film",
+        date: "2025",
+        role: "Designer graphique",
+        outils: "Photoshop",
+        "U.E": "Exprimer, Concevoir"
+      },
+      links: [{ url: "image/affiche-six-triple-eight.jpg", text: "Voir l'affiche en grand", icon: "bx-image", image: true }]
+    },
+    en: {
+      title: "The Six Triple Eight Poster",
+      tags: ["Design", "Academic"],
+      description: "A reinterpretation of the poster for the film “The Six Triple Eight”. The exercise focused on the codes of movie posters: a portrait in the foreground, a background that tells the story (soldiers, ruins, smoke) and sepia tones to set the period. The text follows the classic poster layout, from the lead actress's name at the top down to the distributor block and release date at the bottom.",
+      details: {
+        "project type": "Movie poster",
+        date: "2025",
+        role: "Graphic Designer",
+        tools: "Photoshop",
+        "U.E": "Express, Design"
+      },
+      links: [{ url: "image/affiche-six-triple-eight.jpg", text: "View the full poster", icon: "bx-image", image: true }]
+    }
+  },
+  30: {
+    image: "image/maquette-vintageshop.jpg",
+    fr: {
+      title: "Maquette VintageShop",
+      tags: ["Design", "Universitaire"],
+      description: "Maquette de la page d'accueil de « VintageShop », une boutique en ligne fictive spécialisée dans les objets vintage. Le fond gris foncé texturé et l'orange vif mettent en avant le produit du moment, ici le téléphone à cadran d'Alexander Graham Bell. La page pose la barre de navigation, le titre avec sa date, le bouton d'action et l'espace produit, sur une grille réutilisable pour le reste du site.",
+      details: {
+        "type de projet": "Maquette web (page d'accueil)",
+        date: "2025",
+        role: "UI Designer",
+        outils: "Figma, Photoshop",
+        "U.E": "Concevoir, Exprimer"
+      },
+      links: [{ url: "image/maquette-vintageshop.jpg", text: "Voir la maquette en grand", icon: "bx-image", image: true }]
+    },
+    en: {
+      title: "VintageShop Mockup",
+      tags: ["Design", "Academic"],
+      description: "Homepage mockup for “VintageShop”, a fictional online store specialising in vintage objects. The textured dark grey background and the bright orange put the featured product forward, here Alexander Graham Bell's rotary telephone. The page sets out the navigation bar, the headline with its date, the action button and the product area, on a grid that can be reused across the rest of the site.",
+      details: {
+        "project type": "Web mockup (homepage)",
+        date: "2025",
+        role: "UI Designer",
+        tools: "Figma, Photoshop",
+        "U.E": "Design, Express"
+      },
+      links: [{ url: "image/maquette-vintageshop.jpg", text: "View the full mockup", icon: "bx-image", image: true }]
+    }
   }
 
 };
@@ -891,6 +1007,10 @@ if (modal) {
     const lang = window.i18nLang === 'en' ? 'en' : 'fr';
     const data = project[lang] || project.fr;
 
+    const imageAlt = lang === 'en' ? `Project preview: ${data.title}` : `Aperçu du projet : ${data.title}`;
+    const zoomLabel = ((window.i18nDict && window.i18nDict[lang]) || {})['viewer.zoom']
+      || (lang === 'en' ? 'Enlarge' : 'Agrandir');
+
     modalBody.innerHTML = `
       <div class="modal-header">
         <h2>${escapeHTML(data.title)}</h2>
@@ -899,9 +1019,13 @@ if (modal) {
         </div>
       </div>
 
-      <div class="modal-image">
-        <img src="${escapeHTML(project.image)}" alt="${escapeHTML(lang === 'en' ? `Project preview: ${data.title}` : `Aperçu du projet : ${data.title}`)}">
-      </div>
+      <button type="button" class="modal-image" data-image="${escapeHTML(encodeURI(project.image))}" data-image-alt="${escapeHTML(imageAlt)}" aria-label="${escapeHTML(zoomLabel)} : ${escapeHTML(data.title)}">
+        <img src="${escapeHTML(project.image)}" alt="${escapeHTML(imageAlt)}">
+        <span class="modal-image-zoom" aria-hidden="true">
+          <svg class="icon" aria-hidden="true"><use href="#i-bx-image"></use></svg>
+          ${escapeHTML(zoomLabel)}
+        </span>
+      </button>
 
       <div class="modal-description">
         <p>${escapeHTML(data.description)}</p>
@@ -920,7 +1044,10 @@ if (modal) {
         ${data.links.map(link => {
           const inner = `<svg class="icon" aria-hidden="true"><use href="#i-${escapeHTML(link.icon)}"></use></svg>
             <span>${escapeHTML(link.text)}</span>`;
-          // link.preview → ouvre le PDF dans le visualiseur intégré au site
+          // link.preview → visualiseur PDF intégré ; link.image → visionneuse d'image
+          if (link.image) {
+            return `<button type="button" class="modal-link" data-image="${escapeHTML(encodeURI(link.url))}" data-image-alt="${escapeHTML(imageAlt)}">${inner}</button>`;
+          }
           return link.preview
             ? `<button type="button" class="modal-link" data-pdf="${escapeHTML(encodeURI(link.url))}" data-pdf-title="${escapeHTML(data.title)}">${inner}</button>`
             : `<a href="${escapeHTML(link.url)}" class="modal-link" target="_blank" rel="noopener noreferrer">${inner}</a>`;
@@ -1006,7 +1133,8 @@ if (modal) {
   document.addEventListener('keydown', (e) => {
     // Si le visualiseur PDF est ouvert par-dessus, Échap le ferme lui d'abord
     // (géré plus bas) — on ne ferme pas le modal tant qu'il est actif.
-    const viewerOpen = document.getElementById('pdfViewer')?.classList.contains('active');
+    const viewerOpen = document.getElementById('pdfViewer')?.classList.contains('active')
+      || document.getElementById('imageViewer')?.classList.contains('active');
     if (e.key === 'Escape' && modal.classList.contains('active') && !viewerOpen) {
       closeModal();
     }
@@ -1116,6 +1244,98 @@ if (pdfViewer) {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && pdfViewer.classList.contains('active')) {
       closePdfViewer();
+    }
+  });
+}
+
+
+// ============================================
+// VISUALISEUR D'IMAGE EN FENÊTRE FLOTTANTE
+// Ouvert depuis tout élément [data-image] (vignette du modal projet…).
+// Même mécanique que le visualiseur PDF, sans repli mobile : une image
+// s'affiche correctement dans la fenêtre, contrairement à une iframe PDF.
+// ============================================
+
+const imageViewer = document.getElementById('imageViewer');
+
+if (imageViewer) {
+  const imageEl = imageViewer.querySelector('.image-viewer-img');
+  const imageBack = imageViewer.querySelector('.image-back');
+  const imageOpen = imageViewer.querySelector('.image-open');
+
+  let imageReturnFocus = null;
+
+  // Verrou de scroll autonome : la visionneuse s'ouvre presque toujours
+  // par-dessus le modal projet (body déjà figé) — on ne pose alors rien.
+  let imageLockedByUs = false;
+  let imageSavedScrollY = 0;
+
+  function lockImageScroll() {
+    if (document.body.style.position === 'fixed') return;
+    imageSavedScrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${imageSavedScrollY}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
+    imageLockedByUs = true;
+  }
+
+  function unlockImageScroll() {
+    if (!imageLockedByUs) return;
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
+    const html = document.documentElement;
+    const prev = html.style.scrollBehavior;
+    html.style.scrollBehavior = 'auto';
+    window.scrollTo(0, imageSavedScrollY);
+    html.style.scrollBehavior = prev;
+    imageLockedByUs = false;
+  }
+
+  function openImageViewer(url, alt, trigger) {
+    if (!url) return;
+    lockImageScroll();
+    imageEl.src = url;
+    imageEl.alt = alt || '';
+    if (imageOpen) imageOpen.href = url;
+    imageReturnFocus = trigger || null;
+    imageViewer.classList.add('active');
+    imageViewer.setAttribute('aria-hidden', 'false');
+    imageBack?.focus();
+  }
+
+  function closeImageViewer() {
+    imageViewer.classList.remove('active');
+    imageViewer.setAttribute('aria-hidden', 'true');
+    // removeAttribute plutôt que src='' : une src vide fait re-télécharger la page
+    imageEl.removeAttribute('src');
+    imageEl.alt = '';
+    unlockImageScroll();
+    if (imageReturnFocus) { imageReturnFocus.focus(); imageReturnFocus = null; }
+  }
+
+  // Délégation : la vignette du modal est régénérée à chaque ouverture
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-image]');
+    if (!trigger) return;
+    e.preventDefault();
+    openImageViewer(
+      trigger.getAttribute('data-image'),
+      trigger.getAttribute('data-image-alt'),
+      trigger
+    );
+  });
+
+  imageBack?.addEventListener('click', closeImageViewer);
+  imageViewer.querySelector('.image-viewer-overlay')?.addEventListener('click', closeImageViewer);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && imageViewer.classList.contains('active')) {
+      closeImageViewer();
     }
   });
 }
