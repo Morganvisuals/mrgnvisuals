@@ -39,13 +39,29 @@ window.addEventListener('load', function () {
         return (dict[lang] && dict[lang][key]) || (dict.fr && dict.fr[key]) || '';
     };
 
+    const STATUS_DURATION = 20000; // le message d'erreur disparaît au bout de 20 s
+    let statusTimer = null;
+
+    function renderStatus() {
+        if (statusEl && statusKey) statusEl.innerHTML = t(statusKey);
+    }
+
     function showStatus(key) {
+        clearTimeout(statusTimer);
         statusKey = key;
         if (!statusEl) return;
-        statusEl.innerHTML = key ? t(key) : '';
-        statusEl.classList.toggle('is-visible', !!key);
+        if (key) {
+            renderStatus();
+            statusEl.classList.add('is-visible');
+            statusTimer = setTimeout(() => showStatus(null), STATUS_DURATION);
+        } else {
+            // On replie d'abord (transition), puis on vide le texte.
+            statusEl.classList.remove('is-visible');
+            statusTimer = setTimeout(() => { if (!statusKey) statusEl.innerHTML = ''; }, 400);
+        }
     }
-    window.addEventListener('languagechange', () => { if (statusKey) showStatus(statusKey); });
+    // Changement de langue : on traduit le message affiché sans relancer le minuteur.
+    window.addEventListener('languagechange', renderStatus);
 
     function markInvalid(names) {
         FIELD_NAMES.forEach((n) => {
