@@ -11,37 +11,240 @@ window.addEventListener('load', function () {
     }
 });
 
-//formulaire
-const contactForm = document.querySelector(".modern-form");
-if (contactForm) {
-    contactForm.addEventListener("submit", async function (e) {
-        e.preventDefault();
+// Formulaire de contact (anti-spam : jeton signé + Cloudflare Turnstile invisible).
+// Le serveur (contact.php) fait toutes les vérifications ; ici on ne fait que
+// préparer l'envoi et afficher des messages clairs.
+(function initContactForm() {
+    const form = document.querySelector('.modern-form');
+    if (!form) return;
 
-        const form = e.target;
-        const formData = new FormData(form);
+    const endpoint = form.getAttribute('action') || 'contact.php';
+    const statusEl = form.querySelector('.form-status');
+    const thankYou = document.getElementById('thank-you-message');
+    const submitBtn = form.querySelector('.contact-submit-btn');
+    const MIN_TOKEN_AGE = 3500;            // le serveur refuse sous 3 s
+    const MAX_TOKEN_AGE = 100 * 60 * 1000; // le serveur refuse au-delà de 2 h
+    const FIELD_NAMES = ['name', 'email', 'subject', 'message'];
 
-        try {
-            let response = await fetch(form.action, {
-                method: form.method,
-                body: formData,
-                headers: { "Accept": "application/json" }
-            });
+    let token = null;        // { value, siteKey, at }
+    let tokenPromise = null;
+    let primed = false;
+    let busy = false;
+    let statusKey = null;
+    const ts = { box: null, id: null, value: '', waiters: [], loading: null };
 
-            if (response.ok) {
-                const thankYou = document.getElementById("thank-you-message");
-                if (thankYou) {
-                    thankYou.classList.add("is-visible");
-                    setTimeout(() => { thankYou.classList.remove("is-visible"); }, 5000);
-                }
-                form.reset();
-            } else {
-                alert("Une erreur est survenue, veuillez réessayer.");
-            }
-        } catch (error) {
-            alert("Erreur de connexion, vérifiez votre internet.");
+    const t = (key) => {
+        const lang = window.i18nLang || document.documentElement.lang || 'fr';
+        const dict = window.i18nDict || {};
+        return (dict[lang] && dict[lang][key]) || (dict.fr && dict.fr[key]) || '';
+    };
+
+    function showStatus(key) {
+        statusKey = key;
+        if (!statusEl) return;
+        statusEl.innerHTML = key ? t(key) : '';
+        statusEl.classList.toggle('is-visible', !!key);
+    }
+    window.addEventListener('languagechange', () => { if (statusKey) showStatus(statusKey); });
+
+    function markInvalid(names) {
+        FIELD_NAMES.forEach((n) => {
+            const el = form.elements[n];
+            if (!el) return;
+            const bad = names.includes(n);
+            el.classList.toggle('is-invalid', bad);
+            if (bad) el.setAttribute('aria-invalid', 'true');
+            else el.removeAttribute('aria-invalid');
+        });
+    }
+    form.addEventListener('input', (e) => {
+        if (e.target.classList && e.target.classList.contains('is-invalid')) {
+            e.target.classList.remove('is-invalid');
+            e.target.removeAttribute('aria-invalid');
         }
     });
-}
+
+    // --- Jeton signé délivré par le serveur (+ clé publique Turnstile) ---
+    function fetchToken() {
+        if (tokenPromise) return tokenPromise;
+        tokenPromise = fetch(endpoint + '?token=1', {
+            headers: { 'Accept': 'application/json' },
+            cache: 'no-store',
+            credentials: 'same-origin'
+        })
+            .then((r) => r.json())
+            .then((d) => {
+                if (d && d.ok && d.token) token = { value: d.token, siteKey: d.siteKey || null, at: Date.now() };
+                return token;
+            })
+            .catch(() => null)
+            .finally(() => { tokenPromise = null; });
+        return tokenPromise;
+    }
+
+    async function freshToken(force) {
+        if (force || !token || Date.now() - token.at > MAX_TOKEN_AGE) {
+            token = null;
+            await fetchToken();
+        }
+        if (!token) return null;
+        const wait = MIN_TOKEN_AGE - (Date.now() - token.at);
+        if (wait > 0) await new Promise((res) => setTimeout(res, wait));
+        return token;
+    }
+
+    // --- Cloudflare Turnstile, chargé au premier focus du formulaire ---
+    function resolveTs(value) {
+        ts.value = value || '';
+        ts.waiters.splice(0).forEach((fn) => fn(ts.value));
+    }
+
+    function loadTurnstile(siteKey) {
+        if (!siteKey || ts.loading) return ts.loading;
+        ts.box = document.createElement('div');
+        ts.box.className = 'ts-box';
+        if (submitBtn) submitBtn.before(ts.box); else form.appendChild(ts.box);
+
+        ts.loading = new Promise((resolve) => {
+            window.__mvTurnstileReady = () => resolve(window.turnstile);
+            const s = document.createElement('script');
+            s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=__mvTurnstileReady';
+            s.async = true;
+            s.defer = true;
+            s.onerror = () => resolve(null);
+            document.head.appendChild(s);
+        }).then((api) => {
+            if (!api) { resolveTs(''); return null; }
+            ts.id = api.render(ts.box, {
+                sitekey: siteKey,
+                action: 'contact',
+                appearance: 'interaction-only',
+                theme: document.body.classList.contains('light-mode') ? 'light' : 'dark',
+                language: window.i18nLang || 'fr',
+                'response-field': false,
+                callback: (v) => resolveTs(v),
+                'error-callback': () => { resolveTs(''); return true; },
+                'expired-callback': () => { ts.value = ''; },
+                'before-interactive-callback': () => ts.box.classList.add('is-active'),
+                'after-interactive-callback': () => ts.box.classList.remove('is-active')
+            });
+            return api;
+        });
+        return ts.loading;
+    }
+
+    function turnstileToken() {
+        if (ts.value) return Promise.resolve(ts.value);
+        return new Promise((resolve) => {
+            ts.waiters.push(resolve);
+            // Si un défi interactif est affiché, on laisse plus de temps à l'humain.
+            const limit = () => (ts.box && ts.box.classList.contains('is-active') ? 120000 : 15000);
+            const started = Date.now();
+            (function check() {
+                if (!ts.waiters.includes(resolve)) return;
+                if (Date.now() - started > limit()) {
+                    ts.waiters.splice(ts.waiters.indexOf(resolve), 1);
+                    resolve('');
+                } else setTimeout(check, 500);
+            })();
+        });
+    }
+
+    function resetTurnstile() {
+        ts.value = '';
+        if (window.turnstile && ts.id != null) {
+            try { window.turnstile.reset(ts.id); } catch (_) { /* widget déjà détruit */ }
+        }
+    }
+
+    function prime() {
+        if (primed) return;
+        primed = true;
+        fetchToken().then((tk) => { if (tk && tk.siteKey) loadTurnstile(tk.siteKey); });
+    }
+    form.addEventListener('focusin', prime);
+    form.addEventListener('pointerdown', prime);
+
+    // --- Vérifications locales (confort ; le serveur refait tout) ---
+    function localErrors() {
+        const v = (n) => (form.elements[n] ? form.elements[n].value.trim() : '');
+        const bad = [];
+        if (v('name').length < 2) bad.push('name');
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v('email'))) bad.push('email');
+        if (v('message').length < 10) bad.push('message');
+        return bad;
+    }
+
+    async function send(retried) {
+        const tk = await freshToken(retried);
+        if (!tk) return { code: 'network' };
+
+        const data = new FormData(form);
+        data.set('form_token', tk.value);
+        if (tk.siteKey) {
+            await loadTurnstile(tk.siteKey);
+            data.set('cf_turnstile', await turnstileToken());
+        }
+
+        let res;
+        let body = {};
+        try {
+            res = await fetch(endpoint, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' },
+                credentials: 'same-origin'
+            });
+            body = await res.json().catch(() => ({}));
+        } catch (_) {
+            return { code: 'network' };
+        } finally {
+            if (tk.siteKey) resetTurnstile(); // un jeton Turnstile ne sert qu'une fois
+        }
+        if (res.ok && body.ok) return { ok: true };
+        // Jeton expiré (page restée ouverte longtemps) : on en reprend un et on réessaie une fois.
+        if (body.code === 'token' && !retried) return send(true);
+        return { code: body.code || 'server', fields: body.fields || [] };
+    }
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (busy) return;
+        showStatus(null);
+
+        const bad = localErrors();
+        markInvalid(bad);
+        if (bad.length) {
+            showStatus('form.err.fields');
+            const first = form.elements[bad[0]];
+            if (first) first.focus();
+            return;
+        }
+
+        busy = true;
+        if (submitBtn) { submitBtn.disabled = true; submitBtn.setAttribute('aria-busy', 'true'); }
+        prime();
+        try {
+            const result = await send(false);
+            if (result.ok) {
+                markInvalid([]);
+                form.reset();
+                if (thankYou) {
+                    thankYou.classList.add('is-visible');
+                    setTimeout(() => { thankYou.classList.remove('is-visible'); }, 5000);
+                }
+            } else {
+                const known = ['fields', 'spam', 'captcha', 'rate', 'server', 'network'];
+                const code = result.code === 'token' ? 'captcha' : result.code;
+                if (code === 'fields') markInvalid(result.fields);
+                showStatus('form.err.' + (known.includes(code) ? code : 'server'));
+            }
+        } finally {
+            busy = false;
+            if (submitBtn) { submitBtn.disabled = false; submitBtn.removeAttribute('aria-busy'); }
+        }
+    });
+})();
 
 
 //fade home

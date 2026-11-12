@@ -139,6 +139,12 @@
       'ph.message': "Votre Message",
       'contact.send': "Envoyer",
       'contact.thanks': "Merci ! Votre message a été envoyé avec succès. 😊",
+      'form.err.fields': "Certains champs sont à corriger (en rouge) : nom sans lien ni caractères spéciaux, adresse e-mail valide et message d'au moins 10 caractères.",
+      'form.err.spam': "Votre message n'a pas pu être envoyé par le formulaire. Écrivez-moi directement à <a href=\"mailto:morgan.rmx@gmail.com\">morgan.rmx@gmail.com</a>.",
+      'form.err.captcha': "La vérification anti-robot n'a pas abouti. Rechargez la page et réessayez, ou écrivez-moi à <a href=\"mailto:morgan.rmx@gmail.com\">morgan.rmx@gmail.com</a>.",
+      'form.err.rate': "Trop d'envois en peu de temps. Réessayez un peu plus tard, ou écrivez-moi à <a href=\"mailto:morgan.rmx@gmail.com\">morgan.rmx@gmail.com</a>.",
+      'form.err.server': "Une erreur est survenue, votre message n'a pas été envoyé. Réessayez dans un instant, ou écrivez-moi à <a href=\"mailto:morgan.rmx@gmail.com\">morgan.rmx@gmail.com</a>.",
+      'form.err.network': "Connexion impossible. Vérifiez votre accès à internet, ou écrivez-moi à <a href=\"mailto:morgan.rmx@gmail.com\">morgan.rmx@gmail.com</a>.",
 
       // --- Pied de page ---
       'footer.copyright': "© Morgan Visual's | Tous droits réservés | <a class=\"mention\" href=\"mentions-legales.html\">Mentions Légales</a> | <a class=\"mention\" href=\"cgu.html\">CGU</a>",
@@ -340,6 +346,12 @@
       'ph.message': "Your message",
       'contact.send': "Send",
       'contact.thanks': "Thank you! Your message has been sent successfully. 😊",
+      'form.err.fields': "Some fields need fixing (in red): a name without links or special characters, a valid email address and a message of at least 10 characters.",
+      'form.err.spam': "Your message could not be sent through the form. Please email me directly at <a href=\"mailto:morgan.rmx@gmail.com\">morgan.rmx@gmail.com</a>.",
+      'form.err.captcha': "The anti-bot check did not go through. Reload the page and try again, or email me at <a href=\"mailto:morgan.rmx@gmail.com\">morgan.rmx@gmail.com</a>.",
+      'form.err.rate': "Too many messages in a short time. Please try again later, or email me at <a href=\"mailto:morgan.rmx@gmail.com\">morgan.rmx@gmail.com</a>.",
+      'form.err.server': "Something went wrong and your message was not sent. Please try again shortly, or email me at <a href=\"mailto:morgan.rmx@gmail.com\">morgan.rmx@gmail.com</a>.",
+      'form.err.network': "Unable to connect. Check your internet connection, or email me at <a href=\"mailto:morgan.rmx@gmail.com\">morgan.rmx@gmail.com</a>.",
 
       // --- Footer ---
       'footer.copyright': "© Morgan Visual's | All rights reserved | <a class=\"mention\" href=\"mentions-legales.html\">Legal Notice</a> | <a class=\"mention\" href=\"cgu.html\">Terms</a>",

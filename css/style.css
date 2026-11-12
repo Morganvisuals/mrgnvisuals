@@ -74,8 +74,65 @@ html {
   pointer-events: auto;
 }
 
+/* Message d'erreur du formulaire : même repli que le message de remerciement
+   (aucune emprise tant qu'il est vide). */
+.form-status {
+  color: #f87171;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-align: center;
+  opacity: 0;
+  max-height: 0;
+  margin-top: 0;
+  overflow: hidden;
+  transition: opacity .3s ease, max-height .3s ease, margin-top .3s ease;
+}
+
+.form-status.is-visible {
+  opacity: 1;
+  max-height: 14rem;
+  margin-top: 20px;
+}
+
+.form-status a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+body.light-mode .form-status {
+  color: #b91c1c;
+}
+
+.modern-form .input-box .is-invalid,
+.modern-form .input-box .is-invalid:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.35);
+}
+
+.contact-submit-btn[aria-busy="true"] {
+  opacity: .6;
+  cursor: progress;
+}
+
+/* Conteneur Cloudflare Turnstile : hors flux et sans taille tant que le widget
+   est invisible (mode interaction-only) ; n'apparaît que si un défi est demandé. */
+.ts-box {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.ts-box.is-active {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .thank-you-message {
+  .thank-you-message,
+  .form-status {
     transition: opacity .2s ease;
   }
 }
